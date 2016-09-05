@@ -10,6 +10,7 @@ body{
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: lato;
 }
 a:hover{text-decoration: none; cursor:pointer;}
 
@@ -35,24 +36,53 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 #bloc-1{
-    background-image: url(img/bg-desk.jpg);
+    background-color:#ffb400;
 }
-#bloc-3{
-    background: #ffc000;
+#bloc-1 h1{
+    font-size: 64px;
+    letter-spacing: -1px;
+    font-family: "neutonBold", sans-serif;
+    color:#fff;
 }
-#bloc-3 h3, #bloc-3 p, #bloc-3 .btn{
-    color: #3b3b43;
+#bloc-1 .btn{
+    border-radius:35px;
+    background-color: #fff;
+    color:#232126;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: lato;
+    border: 2px solid #fff;
 }
-#bloc-3 .btn:hover, #bloc-3 .btn:focus{
-    background: rgba(0,0,0,.7);
-    border-color: #3b3b43;
-    color: #ffc000;
+#bloc-1 .btn:hover{
+    background-color: #000;
+    border: 2px solid #000;
+    color:#ffb400;
 }
-#bloc-3 img{
-    max-width: 100%;
-    height: auto;
+#bloc-2 img{
+    padding-top:60px;
 }
-
+#bloc-2 h3{
+    font-family: NeutonBold;
+    font-size: 44px;
+}
+#bloc-2 .btn{
+    border-radius:35px;
+    background-color: #ffb400;
+    color:#fff;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: lato;
+    border: 2px solid #ffb400;
+}
+#bloc-2 .btn:hover{
+    background-color: #fff;
+    border: 2px solid #ffb400;
+    color:#ffb400;
+}
 
 /* Sizes */
 
@@ -83,10 +113,6 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
 /* Bloc text custom styling */
 
-#bloc-1 h1{
-	font-size: 60px;
-    letter-spacing: -1px;
-}
 #bloc-1 p{
 	font-family: Lato;
 	font-weight: 400;
@@ -282,10 +308,6 @@ img.mg-lg{
     padding : 15px 40px 18px 30px;
     display: inline-block;
     letter-spacing: -0.03em;
-    -moz-box-shadow: 0px 5px 10px 5px rgba(0,0,0,.1);
-    -webkit-box-shadow: 0px 5px 10px 5px rgba(0,0,0,.1);
-    -o-box-shadow: 0px 5px 10px 5px rgba(0,0,0,.1);
-    box-shadow: 0px 5px 10px 5px rgba(0,0,0,.1);
 }
 .btn:hover, .btn:focus{
     background: rgba(0,0,0,.7);
@@ -382,10 +404,13 @@ iframe{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,a{
-	font-family:"Lato";
 	background-color:rgba(116,111,111,0.0);
 	font-weight:900;
     color: rgba(0,0,0,.7);
+}
+h2{
+    font-size: 44px;
+    font-family: NeutonBold;
 }
 .btn {
     font-family:"Lato";

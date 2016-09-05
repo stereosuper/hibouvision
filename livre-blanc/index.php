@@ -77,7 +77,7 @@
 <html lang='fr-FR' class='no-js'>
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="La gestion des notifications en supervision IT - Livre blanc, mai 2016, par Sensor Factory">
+    <meta name="description" content="La gestion des notifications en supervision IT - Livre blanc, septembre 2016, par Sensor Factory">
     <meta name='viewport' content='width=device-width,initial-scale=1'>
     <title>Sensor Factory</title>
 
@@ -87,7 +87,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="./css/animate.min.css" />
 	<link rel='stylesheet' href='./css/font-awesome.min.css'/>
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='./css/font-lato.css'/>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -108,7 +108,7 @@
 	<div class="container">
 		<nav class="navbar row">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="http://www.sensorfactory.eu/" target="_blank"><img src="img/logo.png" width="200" /></a>
+				<a class="navbar-brand" href="http://www.sensorfactory.eu/" target="_blank"><img src='img/logo.png' srcset="img/logo.png 1x, img/logo@2x.png 2x" width="200"/></a>
 				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
@@ -116,10 +116,10 @@
 			<div class="collapse navbar-collapse navbar-1">
 				<ul class="site-navigation nav navbar-nav">
 					<li>
-						<a href="http://www.sensorfactory.eu/" target="_blank">› sensorfactory.eu</a>
+						<a href="http://www.hibouvision.com" target="_blank">› hibouvision.com</a>
 					</li>
 					<li>
-						<a href="http://www.hibouvision.com" target="_blank">› hibouvision.com</a>
+						<a href="http://www.sensorfactory.eu/" target="_blank">› sensorfactory.eu</a>
 					</li>
 				</ul>
 			</div>
@@ -178,7 +178,7 @@
                             <input id="tel" class="form-control" type="tel" name='tel' style="width:180px" required value='<?php echo $tel; ?>' />
                         </div>
 						<button class="bloc-button btn pull-left btn-lg wire-btn-paynes-grey " name='submit' type="submit" id="cta">
-							› Téléchargez le livre
+							Téléchargez le livre
 						</button>
 					</form>
 				<?php } else{ ?>
@@ -196,42 +196,22 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<h3 class="mg-md">
-					À propos de Sensor Factory
+					À propos de Hibouvision
 				</h3>
 				<p>
-					Fondée par des experts de la production informatique, SENSOR FACTORY™ est fournisseur de données sur l&rsquo;état de santé du système d&rsquo;information.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sapien eros. Donec convallis finibus turpis vitae ullamcorper. Nam viverra tellus vel diam sodales tristique.
 				</p>
 				<p>
-					Nous accompagnons nos clients dans l&rsquo;exploitation au quotidien de leurs outils de supervision ainsi que dans le maintien en condition opérationnelle de ceux-ci.C&rsquo;est ce que nous appelons l&rsquo;Intégration continue.
-				</p> <a href="index.html" class="btn   btn-wire wire-btn-paynes-grey">› Visitez Sensorfactory.eu</a>
+					Integer dictum sapien et dui sollicitudin congue. Pellentesque sagittis enim feugiat ex tincidunt, eget interdum massa pharetra. Nullam luctus, mi et pellentesque rutrum, lacus libero vestibulum lacus, vitae dapibus tellus tortor vel ante.
+				</p> <a href="http://hibouvision.com" class="btn   btn-wire wire-btn-paynes-grey">Visitez Hibouvision.com</a>
 			</div>
 			<div class="col-sm-6">
-				<img class="img-responsive" src="img/salon.jpg" />
+				<img class="img-responsive center-block vertical-align-middle" src="img/logo-transparent-2.png" />
 			</div>
 		</div>
 	</div>
 </div>
 <!-- Footer - bloc-2 END -->
-
-<!-- Footer - bloc-3 -->
-<div class="bloc bgc-amber tc-paynes-grey" id="bloc-3">
-	<div class="container bloc-sm">
-		<div class="row">
-			<div class="col-sm-6">
-				<img class="mg-lg img-rd center-block" src="img/logohibou.png" height="200" />
-			</div>
-			<div class="col-sm-6">
-				<h3 class="mg-lg tc-paynes-grey">
-					Sensor Factory opère également Hibouvision
-				</h3>
-				<p>
-					Une solution de monitoring en cloud à haute résilience. Nous sommes basés à Nantes et intervenons partout où nos clients ont besoin de nous.
-				</p><a href="http://www.hibouvision.com" class="btn   btn-wire pull-left wire-btn-paynes-grey">› Découvrir</a>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Footer - bloc-3 END -->
 
 <!-- Footer - bloc-4 -->
 <div class="bloc l-bloc bgc-platinum" id="bloc-4">
@@ -239,7 +219,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<p class="text-center paddingBot">
-					<b>SENSOR FACTORY</b><br />3, chemin du Pressoir Chênaie, 44100 Nantes - <span class="fa fa-mobile-phone"></span>&nbsp; 02&nbsp;57&nbsp;48&nbsp;00&nbsp;13
+					<b>HIBOUVISION</b><br />3, chemin du Pressoir Chênaie, 44100 Nantes - <span class="fa fa-mobile-phone"></span>&nbsp; 02&nbsp;57&nbsp;48&nbsp;00&nbsp;13
 				</p>
 			</div>
 		</div>
