@@ -320,7 +320,602 @@ if(isset($_POST['submit'])){
 				<div class="container-small">
 					<div class="chapeau">Formules</div>
 					<h3>À chacun son Hibouvision</h3>
-					<ul id="offre">
+					<div id="pricer-mobile">
+						<div class="offre-mobile offre-scops">
+							<ul>
+								<li class="masquotte-scops"></li>
+								<li class="title-offre"><p>Scops</p>
+								<p class="title-price">40€HT/mois</p></li>
+								<li><button type="button">›</button></li>
+							</ul>
+						</div>
+					</div>
+					<div id="pricer">
+						<table class="title-table-pricing">
+							<tr>
+								<td class="title-line"></td>
+							<tr>
+								<td class="title-line"></td>
+								<td class="title-scops">
+									<p class="surmesure"> </p>
+									<p class="title-offre">Scops</p>
+									<p class="title-price">40€HT/mois</p>
+									<div class="masquotte-scops"></div>
+								</td>
+								<td class="title-asio">
+								<p class="surmesure"> </p>
+									<p class="title-offre">Asio</p>
+									<p class="title-price">180€HT/mois</p>
+									<div class="masquotte-asio"></div>
+								</td>
+								<td class="title-bubo">
+									<p class="surmesure"> </p>
+									<p class="title-offre">Bubo</p>
+									<p class="title-price">290€HT/mois</p>
+									<div class="masquotte-bubo"></div>
+								</td>
+								<td class="title-mighty">
+									<p class="surmesure">sur mesure</p>
+									<p class="title-offre">Mighty</p>
+									<p class="title-price">À partir de 340€HT/mois</p>
+									<div class="masquotte-mighty"></div>
+								</td>
+							</tr>
+						</table>
+						<div class="categorie">
+							<p>Basics</p>
+							<button type="button">-</button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											Nombre de capteurs
+										</td>
+										<td class="scops-td">
+											100*
+										</td>
+										<td class="asio-td">
+											500**
+										</td>
+										<td class="bubo-td">
+											1000***
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 5000****
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Fréquence
+										</td>
+										<td class="scops-td">
+											5 minutes
+										</td>
+										<td class="asio-td">
+											5 minutes
+										</td>
+										<td class="bubo-td">
+											5 minutes
+										</td>
+										<td class="mighty-td">
+											1 minute
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Nombre d'utilisateurs
+										</td>
+										<td class="scops-td">
+											1
+										</td>
+										<td class="asio-td">
+											3
+										</td>
+										<td class="bubo-td">
+											5
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 30
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Auto découverte d'équipements
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											24/7/365
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Historique
+										</td>
+										<td class="scops-td">
+											12 mois
+										</td>
+										<td class="asio-td">
+											12 mois
+										</td>
+										<td class="bubo-td">
+											12 mois
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 24 mois
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="categorie">
+							<p>Capteurs</p>
+							<button type="button">-</button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											Nombre de capteurs
+										</td>
+										<td class="scops-td">
+											100*
+										</td>
+										<td class="asio-td">
+											500**
+										</td>
+										<td class="bubo-td">
+											1000***
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 5000****
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Fréquence
+										</td>
+										<td class="scops-td">
+											5 minutes
+										</td>
+										<td class="asio-td">
+											5 minutes
+										</td>
+										<td class="bubo-td">
+											5 minutes
+										</td>
+										<td class="mighty-td">
+											1 minute
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Nombre d'utilisateurs
+										</td>
+										<td class="scops-td">
+											1
+										</td>
+										<td class="asio-td">
+											3
+										</td>
+										<td class="bubo-td">
+											5
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 30
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Auto découverte d'équipements
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Plate-forme disponible 24/7/365
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Historique
+										</td>
+										<td class="scops-td">
+											12 mois
+										</td>
+										<td class="asio-td">
+											12 mois
+										</td>
+										<td class="bubo-td">
+											12 mois
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 24 mois
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="categorie">
+							<p>Notifications</p>
+							<button type="button">-</button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											Nombre de capteurs
+										</td>
+										<td class="scops-td">
+											100*
+										</td>
+										<td class="asio-td">
+											500**
+										</td>
+										<td class="bubo-td">
+											1000***
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 5000****
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Fréquence
+										</td>
+										<td class="scops-td">
+											5 minutes
+										</td>
+										<td class="asio-td">
+											5 minutes
+										</td>
+										<td class="bubo-td">
+											5 minutes
+										</td>
+										<td class="mighty-td">
+											1 minute
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Nombre d'utilisateurs
+										</td>
+										<td class="scops-td">
+											1
+										</td>
+										<td class="asio-td">
+											3
+										</td>
+										<td class="bubo-td">
+											5
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 30
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Auto découverte d'équipements
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Plate-forme disponible 24/7/365
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Historique
+										</td>
+										<td class="scops-td">
+											12 mois
+										</td>
+										<td class="asio-td">
+											12 mois
+										</td>
+										<td class="bubo-td">
+											12 mois
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 24 mois
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="categorie">
+							<p>Avancées</p>
+							<button type="button">-</button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											Nombre de capteurs
+										</td>
+										<td class="scops-td">
+											100*
+										</td>
+										<td class="asio-td">
+											500**
+										</td>
+										<td class="bubo-td">
+											1000***
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 5000****
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Fréquence
+										</td>
+										<td class="scops-td">
+											5 minutes
+										</td>
+										<td class="asio-td">
+											5 minutes
+										</td>
+										<td class="bubo-td">
+											5 minutes
+										</td>
+										<td class="mighty-td">
+											1 minute
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Nombre d'utilisateurs
+										</td>
+										<td class="scops-td">
+											1
+										</td>
+										<td class="asio-td">
+											3
+										</td>
+										<td class="bubo-td">
+											5
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 30
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Auto découverte d'équipements
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Plate-forme disponible 24/7/365
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Historique
+										</td>
+										<td class="scops-td">
+											12 mois
+										</td>
+										<td class="asio-td">
+											12 mois
+										</td>
+										<td class="bubo-td">
+											12 mois
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 24 mois
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="categorie">
+							<p>Support</p>
+							<button type="button">-</button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											Nombre de capteurs
+										</td>
+										<td class="scops-td">
+											100*
+										</td>
+										<td class="asio-td">
+											500**
+										</td>
+										<td class="bubo-td">
+											1000***
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 5000****
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Fréquence
+										</td>
+										<td class="scops-td">
+											5 minutes
+										</td>
+										<td class="asio-td">
+											5 minutes
+										</td>
+										<td class="bubo-td">
+											5 minutes
+										</td>
+										<td class="mighty-td">
+											1 minute
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Nombre d'utilisateurs
+										</td>
+										<td class="scops-td">
+											1
+										</td>
+										<td class="asio-td">
+											3
+										</td>
+										<td class="bubo-td">
+											5
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 30
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Auto découverte d'équipements
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Plate-forme disponible 24/7/365
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Historique
+										</td>
+										<td class="scops-td">
+											12 mois
+										</td>
+										<td class="asio-td">
+											12 mois
+										</td>
+										<td class="bubo-td">
+											12 mois
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 24 mois
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					
+
+					<!-- <ul id="offre">
 						<li id="scop">
 							<div class="container-img">
 								<img src="layoutImg/scop.jpg" alt="">
@@ -332,8 +927,8 @@ if(isset($_POST['submit'])){
 								<li class="gris">Aide à la configuration initiale</li>
 								<li>plate-forme disponible 24/7/365</li>
 							</ul>
-						</li><!--
-						--><li id="asio">
+						</li>
+						<li id="asio">
 							<div class="container-img">
 								<img src="layoutImg/asio.jpg" alt="">
 							</div>
@@ -344,8 +939,8 @@ if(isset($_POST['submit'])){
 								<li class="gris">Aide à la configuration initiale</li>
 								<li>plate-forme disponible 24/7/365</li>
 							</ul>
-						</li><!--
-						--><li id="bubo">
+						</li>
+						<li id="bubo">
 						<div class="container-img">
 								<img src="layoutImg/bubo.jpg" alt="">
 							</div>
@@ -357,29 +952,8 @@ if(isset($_POST['submit'])){
 								<li>plate-forme disponible 24/7/365</li>
 							</ul>
 						</li>
-					</ul>
-					<div id="option">
-						<h4>Options</h4>
-						<ul id="option-2">
-							<li>Heures de travaux
-								<span class="tooltip" title="
-											Faites appel à nous quand vous le souhaitez pour faire évoluer votre supervision :
-											<ul>
-											<br>
-											<li>Déploiement de probe (applicatif PRTG)</li>
-											<li>Ajout d'équipement</li>
-											<li>Ajout de capteur</li>
-											<li>Optimisation des capteurs existants</li>
-											<li>Construction de carte</li>
-											<li>Construction de rapport</li>
-											<li>Gestion des notifications</li>
-											<li>etc.</li>
-										</ul>">?</span>
-							</li>
-							<li class="gris">Marque blanche : Hibouvision à vos couleurs&nbsp;&nbsp;!</li>
-						</ul>
-					</div>
-					<div id="btn"><a href="#contact" class="bouton btnScroll ga-tracking" title="Demander tarifs">Demander les tarifs des formules</a></div>
+					</ul> -->
+					<div id="btn"><a href="#contact" class="bouton btnScroll ga-tracking" title="découvrir les fonctionnalités">Découvrir toutes les fonctionnalités</a></div>
 				</div>
 			</div>
 			<div id="contact">
@@ -404,9 +978,9 @@ if(isset($_POST['submit'])){
 				<div class="bg-grey">
 					<div class="container-small clearfix">
 						<div class="text">
-							<div class="chapeau">Contact</div>
-							<h3>Nous vous répondons avec plaisir !</h3>
-							<p>Envie d’en savoir plus, d’avoir une démo ou de connaître l’ensemble des fonctionnalités ? Nous sommes là pour vous aider&nbsp;!
+							<div class="chapeau">Démo</div>
+							<h3>Testez Hibouvision</h3>
+							<p>Testez notre offre Bubo (limitée à 100 capteurs) pendant 15 jours. Pour toute autre information, <a href="#">contactez-nous</a>.
 						</div>
 						<div id="formulaire">
 							<?php if($status == 'succes'){ ?>
@@ -464,14 +1038,17 @@ if(isset($_POST['submit'])){
 				</div>
 			</div>
 			<footer>
-				<div class="container-small">
+				<div class="container">
 					<ul>
 						<li>©2016</li>
 						<li><a href="http://www.hibouvision.com/mentions-legales">Mentions Légales</a></li>
 						<li><a href="http://stereosuper.fr" target='_blank'>Crédit</a></li>
+						<li><a href="#">Comment ça marche</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Charte d'utilisation des données prsonnelles</a></li>
 					</ul>
 					<ul id="sensor">
-						<li>Hibouvision est un service proposé par </li>
+						<li>Service proposé par </li>
 						<li class="sf"><img src="layoutImg/sensor-factory1.png" alt="Sensor Factory"></li>
 						<li class="sf"><a href="http://www.sensorfactory.eu/" target='_blank'><img src="layoutImg/SF.png" alt=""></a></li>
 					</ul>

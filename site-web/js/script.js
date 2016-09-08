@@ -125,5 +125,17 @@ $(document).ready(function() {
 		}
 	});
 
-	 $(window).on('beforeunload', function() { $("video").hide(); });
+	$(window).on('beforeunload', function() { $("video").hide(); });
+
+	if($("body").hasClass("has-sidebar")){
+		if(myScroll>=$(".wrapper-nav-left").offset().top+$(".content-with-navbar").outerHeight()-$(".wrapper-nav-left ul").outerHeight()){
+			TweenMax.set($(".wrapper-nav-left > ul"), {position: "absolute", top: $(".content-with-navbar").outerHeight()-$(".wrapper-nav-left ul").outerHeight()+$(".header").outerHeight()+"px"});
+		}else{
+			TweenMax.set($(".wrapper-nav-left > ul"), {position: "absolute", top: "0"});
+		}
+	}
+	$( "button" ).click(function() {
+	  //$( ".table-slide-toggle" ).slideToggle( "slow" );
+	  $(this).siblings('.table-slide-toggle').slideToggle( "slow" );
+	});
 });

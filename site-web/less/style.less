@@ -4,6 +4,12 @@
 
 @yellow: #ffb400;
 @grey: #3e3c43;
+@scops-yellow: #ffb400;
+@scops-yellow-light: #f6c95d;
+@asio-red: #ce4d25;
+@bubo-blue: #027a87;
+@mighty-grey: #3e3c43;
+@title-grey: #dee8ed;
 /*end*/
 
 
@@ -165,6 +171,17 @@ a{
     float: right;
     padding-left: 33px;
     border-left: 1px solid #FFF;
+}
+
+.wrapper-alignment{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.content-align-top{
+    display: table-cell;
+    vertical-align: top;
 }
 
 .padTopBot{
@@ -569,6 +586,337 @@ header {
         }
     }
 }
+#pricer{
+    margin: 150px auto 50px;
+}
+.categorie{
+    display: block;
+    width: 100%;
+    margin:4px auto;
+    position: relative;
+    p{
+        font-family: NeutonBold;
+        font-size: 22px;
+        line-height: 60px;
+        padding-left:30px;
+        width: 100%;
+        height: 60px;
+        margin:4px auto 4px;
+        box-shadow: 0 0 20px fade(#000, 15%);
+    }
+    button{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50px;
+        background-color: #3e3c43;
+        right:17px;
+        top:17px;
+        font-size:25px;
+        text-align: center;
+        color:#fff;
+        line-height: 25px;
+    }
+}
+.title-table-pricing{
+    margin: auto;
+    text-align: center;
+    width: 95%;
+    border-spacing: 4px 0;
+    border-collapse: separate;
+    tr{
+        td{
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            width: 21%;
+            position: relative;
+            &.title-line{
+                width: 16%;
+            }
+            p{
+                color:#fff;
+            }
+            .title-offre{
+                font-family: NeutonBold;
+                font-size: 28px;
+                line-height:0px;
+            }
+            .title-price{
+                font-family: LatoBold;
+                font-size: 12px;
+            }
+            .surmesure{
+                color:@scops-yellow;
+                text-transform: uppercase;
+                font-family: latoBold;
+                font-size: 12px;
+                height:10px;
+                margin: 10px auto -5px;
+            }
+        }
+        .masquotte-scops{
+            //background-color: #fff;
+            border-radius:50%;
+            display: block;
+            margin: auto;
+            width:80%;
+            height: auto;
+            border: 6px solid @yellow;
+            position: absolute;
+            top:-100%;
+            left: 50%;
+            margin-left: -40%;
+            z-index: -10;
+            overflow: hidden;
+            background: url('../layoutImg/scop.jpg') no-repeat 30% 10%;
+            background-size: 100% auto;
+            background-size: cover;
+            transition: .3s ease-in-out;
+            box-shadow: 0 0 20px fade(#000, 15%);
+            &:before{
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+            img{
+                position: absolute;
+                top:-50%;
+            }
+        }
+        .masquotte-asio{
+            //background-color: #fff;
+            background-color: red;
+            border-radius:50%;
+            display: block;
+            margin: auto;
+            width:80%;
+            height: auto;
+            border: 6px solid @asio-red;
+            position: absolute;
+            top:-100%;
+            left: 50%;
+            margin-left: -40%;
+            z-index: -10;
+            overflow: hidden;
+            background: url('../layoutImg/asio.jpg') no-repeat 40% 10%;
+            background-size: 100% auto;
+            background-size: cover;
+            transition: .3s ease-in-out;
+            box-shadow: 0 0 20px fade(#000, 15%);
+            &:before{
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+            img{
+                position: absolute;
+                top:-50%;
+            }
+        }
+        .masquotte-bubo{
+            background-color: #fff;
+            border-radius:50%;
+            display: block;
+            margin: auto;
+            width:80%;
+            height: auto;
+            border: 6px solid @bubo-blue;
+            position: absolute;
+            top:-100%;
+            left: 50%;
+            margin-left: -40%;
+            z-index: -10;
+            overflow: hidden;
+            background: url('../layoutImg/bubo.jpg') no-repeat 40% 10%;
+            background-size: 100% auto;
+            background-size: cover;
+            transition: .3s ease-in-out;
+            box-shadow: 0 0 20px fade(#000, 15%);
+            &:before{
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+            img{
+                position: absolute;
+                top:-50%;
+            }
+        }
+        .masquotte-mighty{
+            //background-color: red;
+            border-radius:50%;
+            display: block;
+            margin: auto;
+            width:80%;
+            height: auto;
+            position: absolute;
+            top:-100%;
+            left: 50%;
+            margin-left: -40%;
+            z-index: -10;
+            overflow: hidden;
+            background: url('../layoutImg/mighty.png') no-repeat 40% 10%;
+            background-color: @mighty-grey;
+            background-size: 100% auto;
+            background-size: cover;
+            transition: .3s ease-in-out;
+            box-shadow: 0 0 20px fade(#000, 15%);
+            &:before{
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+            img{
+                position: absolute;
+                top:-50%;
+            }
+        }
+        .title-scops{
+            background-color:@scops-yellow;
+            &:hover{
+                .masquotte-scops{
+                    top:-115%;
+                }
+            }
+        }
+        .title-asio{
+            background-color:@asio-red;
+            &:hover{
+                .masquotte-asio{
+                    top:-115%;
+                }
+            }
+        }
+        .title-bubo{
+            background-color:@bubo-blue;
+            &:hover{
+                .masquotte-bubo{
+                    top:-115%;
+                }
+            }
+        }
+        .title-mighty{
+            background-color:@mighty-grey;
+            position: relative;
+            &:hover{
+                .masquotte-mighty{
+                    top:-115%;
+                }
+            }
+        }
+    }
+}
+.table-pricing{
+    box-shadow: 0 0 51px fade(#000, 15%);
+    width: 95%;
+    table-layout: fixed;
+    color:#232126;
+    border-spacing: 4px 0;
+    background-color: #ededed;
+    border-collapse: separate;
+    margin:0 auto;
+    tr{
+        td{
+            text-align: center;
+            width: 21%;
+            font-size: 16px;
+            &.title-line{
+                width: 16%;
+                padding: 10px;
+                text-align: left;
+                line-height: 20px;
+                background: fade(@title-grey, 60%);
+            }
+            &.scops-td{
+                background: fade(@scops-yellow, 50%);
+            }
+            &.asio-td{
+                background: fade(@asio-red, 60%);
+            }
+            &.bubo-td{
+                background: fade(@bubo-blue, 50%);
+            }
+            &.mighty-td{
+                background: fade(@mighty-grey, 90%);
+                color:#fff;
+            }
+        }
+        &:nth-child(even){
+            td{
+                &.scops-td{
+                    background: fade(@scops-yellow-light, 50%);
+                }
+                &.asio-td{
+                    background: fade(@asio-red, 50%);
+                }
+                &.bubo-td{
+                    background: fade(@bubo-blue, 40%);
+                }
+                &.mighty-td{
+                    background: fade(@mighty-grey, 40%);
+                }
+                &.title-line{
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+#pricer-mobile{
+    display: block;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    .offre-mobile{
+        display: block;
+        width:100%;
+        height:80px;
+        padding-top:8px;
+        ul{
+            width: 100%;
+            display: table;
+            li{
+                list-style: none;
+                vertical-align: top;
+                display:table-cell;
+                button{
+                    width: 20px;
+                    height:20px;
+                }
+                &:last-child{
+                    width: 40px;
+                }
+            }
+            .masquotte-scops{
+                width:130px;
+                height:130px;
+                margin-left:100px;
+                background: url('../layoutImg/scop.jpg') no-repeat 30% 100%;
+                background-size: cover;
+                border-radius: 50%;
+            }
+            .title-offre{
+            
+                text-align: center;
+                p{
+                    font-family: NeutonBold;
+                    font-size:28px;
+                    line-height: 0px;
+                    color:#fff;
+                }
+                .title-price{
+                    font-family: latoBold;
+                    font-size:12px;
+                    line-height: 14px;
+                    color:#fff;
+                }
+            }
+        }
+    }
+    .offre-scops{
+        background-color: @scops-yellow;
+    }
+}
 #option{
     h4{
         text-align:  center;
@@ -623,9 +971,11 @@ header {
 #scop{
     .container-img{
         border: 6px solid @yellow;
+        top:-80px;
+        left:50%;
         img{
             bottom: 20px;
-            right: 7px;
+            right: 124px;
         }
     }
     h4{
@@ -670,14 +1020,17 @@ header {
         margin: 0;
     }
     .text{
-        width: 40%;
+        width: 36%;
         float: left;
         h3, p{
             color: #FFF;
         }
+        a{
+            color: #ffb400;
+            text-decoration : underline;
+        }
     }
 }
-
 #formulaire{
     color: #FFF;
     width: 58%;
@@ -845,6 +1198,15 @@ fieldset{
         bottom: 0;
     }
 }
+.captcha{    
+    margin-left: 16%;
+    margin-top: 30px;
+    label{
+        display: block;
+        width: auto;
+        text-align: left;
+    }
+}
 .label-radio{
     text-align: left;
     width: auto;
@@ -913,6 +1275,78 @@ fieldset{
     }
 }
 
+#main{
+    .wrapper-nav-left{
+        width: 240px;
+        padding: 0 20px 0 0;
+    }
+    #nav-left-fixed{
+        width: 200px;
+        position: fixed;
+        ul{
+            list-style: none;
+            padding-left:20px;
+            line-height: 18px;
+            li{
+                padding-bottom:15px;
+                &:before{
+                    color:#027a87;
+                }
+                &:hover{
+                    &:before{
+                        margin-left: -10px;
+                    }
+                }
+                a:hover{
+                    text-decoration : underline;
+                }
+            }
+        }
+    }
+    .bloc-content{
+        padding-top: 120px;
+        padding-bottom: 50px;
+        ul{
+            padding-left: 70px;
+            list-style: none;
+            font-size:16px;
+            line-height: 22px;
+            li:before{
+                content:"›";
+                position: absolute;
+                margin-left: -15px;
+                transition-duration: 0.3s;
+            }
+        }
+        img{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .img-full-width{
+            width: 100%;
+            height: auto;
+        }
+        .img-half-width{
+            width: 50%;
+            height: auto;
+        }
+        .align-center{
+            display: block;
+            margin: 30px auto;
+        }
+        .align-right{
+            float:right;
+            display: block;
+            margin-left: 30px;
+        }
+        .align-left{
+            float:left;
+            display: block;
+            margin-right: 30px;
+        }
+    }
+}
+
 
 
 
@@ -962,7 +1396,27 @@ fieldset{
 /* ==|== media queries ======================================================
 ========================================================================== */
 
+/******* BACKGROUND RETINA *******/
 
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
+    .masquotte-scops{
+        background-image: url(../layoutImg/scop@2x.jpg);
+        background-position: 30% 10%;
+     }
+     .masquotte-asio{
+        background-image: url(../layoutImg/asio@2x.jpg);
+       background-position: 40% 10%;
+     }
+     .masquotte-bubo{
+        background-image: url(../layoutImg/bubo@2x.jpg);
+        background-position: 40% 10%;
+     }
+     .masquotte-mighty{
+        background-image: url(../layoutImg/mighty@2x.png);
+        background-position: 40% 10%;
+     }
+}
 
 /******* RESPONSIVE HORIZONTAL *******/
 
@@ -1134,6 +1588,21 @@ fieldset{
     #main-404 h2{
         padding-top: 10vh;
     }
+    #main{
+        .bloc-content{
+            padding-top:60px;
+        }
+    }
+}
+
+@media (max-width: 900px){
+    #pricer{
+        tr{
+            td{
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 @media (max-width: 767px){
@@ -1189,10 +1658,43 @@ fieldset{
             width: 100%;
         }
     }
+    .captcha{    
+        margin-left: 0;
+    }
 
     #main-404{
         h2{
             font-size: 5em;
+        }
+    }
+    .content-align-top{
+        display: block;
+    }
+    #main{
+        .bloc-content{
+            position: relative;
+            .img-half-width{
+                width: 100%;
+            }
+        }
+        .wrapper-nav-left{
+            display: block;
+            width: 100%;
+            margin-bottom:30px;
+        }
+        #nav-left-fixed{
+            display: block;
+            position: relative;
+            width: 100%;
+            background-color: white;
+            border-bottom: 1px solid #feb506;
+            ul{
+                text-align: center;
+               li{
+                    display: inline-block;
+                    margin-right: 60px;
+                } 
+            }
         }
     }
 }
@@ -1228,6 +1730,14 @@ fieldset{
         padding-left: 18px;
         padding-right: 18px;
     }
+    #main{
+        .bloc-content{
+            ul{
+                padding-left: 40px;
+            }
+        }
+    }
+
 }
 
 /******* RESPONSIVE VERTICAL *******/
