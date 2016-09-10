@@ -155,6 +155,11 @@ if(isset($_POST['submit'])){
 	</head>
 
 	<body class="home">
+		<div id="clone-container">
+			<div class="container-small">
+				<div id="clone-offre"></div>
+			</div>
+		</div>
 		<header>
 			<div class="container clearfix">
 				<h1 id="logo"><a href='./'>Hibouvision</a></h1>
@@ -321,16 +326,725 @@ if(isset($_POST['submit'])){
 					<div class="chapeau">Formules</div>
 					<h3>À chacun son Hibouvision</h3>
 					<div id="pricer-mobile">
-						<div class="offre-mobile offre-scops">
-							<ul>
-								<li class="masquotte-scops"></li>
-								<li class="title-offre"><p>Scops</p>
-								<p class="title-price">40€HT/mois</p></li>
-								<li><button type="button">›</button></li>
-							</ul>
+						<div class="offre-scops">
+							<button class="offre-btn">
+								<div class="offre-mobile offre-scops">
+									<ul>
+										<li class="masquotte-scops"></li>
+										<li class="title-offre"><p>Scops</p>
+										<p class="title-price">40€HT/mois</p></li>
+										<li><p class="arrow-offre">›</p></li>
+									</ul>
+								</div>
+							</button>
+							<div class="mobile-toggle visible-infos">
+								<div class="categorie active">
+									<button>
+										<p class="title-categorie">Basics</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">Nombre de capteurs</td>
+												<td class="scops-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">Fréquence</td>
+												<td class="scops-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Nombre d'utilisateurs</td>
+												<td class="scops-td">1</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Auto découverte d'équipements</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">24/7/365</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Historisque</td>
+												<td class="scops-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Capteurs</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">Nombre de capteurs</td>
+												<td class="scops-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">Fréquence</td>
+												<td class="scops-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Nombre d'utilisateurs</td>
+												<td class="scops-td">1</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Auto découverte d'équipements</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">24/7/365</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Historisque</td>
+												<td class="scops-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Notifications</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">Nombre de capteurs</td>
+												<td class="scops-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">Fréquence</td>
+												<td class="scops-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Nombre d'utilisateurs</td>
+												<td class="scops-td">1</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Auto découverte d'équipements</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">24/7/365</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Historisque</td>
+												<td class="scops-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Avancées</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">Nombre de capteurs</td>
+												<td class="scops-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">Fréquence</td>
+												<td class="scops-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Nombre d'utilisateurs</td>
+												<td class="scops-td">1</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Auto découverte d'équipements</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">24/7/365</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Historisque</td>
+												<td class="scops-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Support</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">Nombre de capteurs</td>
+												<td class="scops-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">Fréquence</td>
+												<td class="scops-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Nombre d'utilisateurs</td>
+												<td class="scops-td">1</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Auto découverte d'équipements</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">24/7/365</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Historisque</td>
+												<td class="scops-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="offre-asio">
+							<button class="offre-btn">
+								<div class="offre-mobile offre-asio">
+									<ul>
+										<li class="masquotte-asio"></li>
+										<li class="title-offre"><p>Asio</p>
+										<p class="title-price">180€HT/mois</p></li>
+										<li><p class="arrow-offre">›</p></li>
+									</ul>
+								</div>
+							</button>
+							<div class="mobile-toggle
+							">
+								<div class="categorie active">
+									<button>
+										<p class="title-categorie">Basics</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">Nombre de capteurs</td>
+												<td class="asio-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">Fréquence</td>
+												<td class="asio-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Nombre d'utilisateurs</td>
+												<td class="asio-td">1</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Auto découverte d'équipements</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">24/7/365</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Historisque</td>
+												<td class="asio-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Capteurs</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">Nombre de capteurs</td>
+												<td class="asio-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">Fréquence</td>
+												<td class="asio-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Nombre d'utilisateurs</td>
+												<td class="asio-td">1</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Auto découverte d'équipements</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">24/7/365</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Historisque</td>
+												<td class="asio-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Notifications</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">Nombre de capteurs</td>
+												<td class="asio-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">Fréquence</td>
+												<td class="asio-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Nombre d'utilisateurs</td>
+												<td class="asio-td">1</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Auto découverte d'équipements</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">24/7/365</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Historisque</td>
+												<td class="asio-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Avancées</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">Nombre de capteurs</td>
+												<td class="asio-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">Fréquence</td>
+												<td class="asio-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Nombre d'utilisateurs</td>
+												<td class="asio-td">1</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Auto découverte d'équipements</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">24/7/365</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Historisque</td>
+												<td class="asio-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Support</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">Nombre de capteurs</td>
+												<td class="asio-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">Fréquence</td>
+												<td class="asio-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Nombre d'utilisateurs</td>
+												<td class="asio-td">1</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Auto découverte d'équipements</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">24/7/365</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Historisque</td>
+												<td class="asio-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="offre-bubo">
+							<button class="offre-btn">
+								<div class="offre-mobile offre-bubo">
+									<ul>
+										<li class="masquotte-bubo"></li>
+										<li class="title-offre"><p>Bubo</p>
+										<p class="title-price">290€HT/mois</p></li>
+										<li><p class="arrow-offre">›</p></li>
+									</ul>
+								</div>
+							</button>
+							<div class="mobile-toggle">
+								<div class="categorie active">
+									<button>
+										<p class="title-categorie">Basics</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">Nombre de capteurs</td>
+												<td class="bubo-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Fréquence</td>
+												<td class="bubo-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Nombre d'utilisateurs</td>
+												<td class="bubo-td">1</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Auto découverte d'équipements</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">24/7/365</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Historisque</td>
+												<td class="bubo-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Capteurs</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">Nombre de capteurs</td>
+												<td class="bubo-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Fréquence</td>
+												<td class="bubo-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Nombre d'utilisateurs</td>
+												<td class="bubo-td">1</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Auto découverte d'équipements</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">24/7/365</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Historisque</td>
+												<td class="bubo-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Notifications</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">Nombre de capteurs</td>
+												<td class="bubo-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Fréquence</td>
+												<td class="bubo-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Nombre d'utilisateurs</td>
+												<td class="bubo-td">1</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Auto découverte d'équipements</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">24/7/365</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Historisque</td>
+												<td class="bubo-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Avancées</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">Nombre de capteurs</td>
+												<td class="bubo-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Fréquence</td>
+												<td class="bubo-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Nombre d'utilisateurs</td>
+												<td class="bubo-td">1</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Auto découverte d'équipements</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">24/7/365</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Historisque</td>
+												<td class="bubo-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Support</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">Nombre de capteurs</td>
+												<td class="bubo-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Fréquence</td>
+												<td class="bubo-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Nombre d'utilisateurs</td>
+												<td class="bubo-td">1</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Auto découverte d'équipements</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">24/7/365</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Historisque</td>
+												<td class="bubo-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="offre-mighty">
+							<button class="offre-btn">
+								<div class="offre-mobile offre-mighty">
+									<ul>
+										<li class="masquotte-mighty"></li>
+										<li class="title-offre"><p>Mighty Owl</p>
+										<p class="title-price">À partir de 340€HT/mois</p></li>
+										<li><p class="arrow-offre">›</p></li>
+									</ul>
+								</div>
+							</button>
+							<div class="mobile-toggle">
+								<div class="categorie active">
+									<button>
+										<p class="title-categorie">Basics</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">Nombre de capteurs</td>
+												<td class="mighty-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Fréquence</td>
+												<td class="mighty-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Nombre d'utilisateurs</td>
+												<td class="mighty-td">1</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">24/7/365</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Historisque</td>
+												<td class="mighty-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Capteurs</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">Nombre de capteurs</td>
+												<td class="mighty-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Fréquence</td>
+												<td class="mighty-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Nombre d'utilisateurs</td>
+												<td class="mighty-td">1</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">24/7/365</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Historisque</td>
+												<td class="mighty-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Notifications</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">Nombre de capteurs</td>
+												<td class="mighty-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Fréquence</td>
+												<td class="mighty-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Nombre d'utilisateurs</td>
+												<td class="mighty-td">1</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">24/7/365</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Historisque</td>
+												<td class="mighty-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Avancées</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">Nombre de capteurs</td>
+												<td class="mighty-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Fréquence</td>
+												<td class="mighty-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Nombre d'utilisateurs</td>
+												<td class="mighty-td">1</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">24/7/365</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Historisque</td>
+												<td class="mighty-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Support</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">Nombre de capteurs</td>
+												<td class="mighty-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Fréquence</td>
+												<td class="mighty-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Nombre d'utilisateurs</td>
+												<td class="mighty-td">1</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">24/7/365</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Historisque</td>
+												<td class="mighty-td">12 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div id="pricer">
+					<div id="pricer" class="visible">
 						<table class="title-table-pricing">
 							<tr>
 								<td class="title-line"></td>
@@ -356,15 +1070,14 @@ if(isset($_POST['submit'])){
 								</td>
 								<td class="title-mighty">
 									<p class="surmesure">sur mesure</p>
-									<p class="title-offre">Mighty</p>
+									<p class="title-offre">Mighty Owl</p>
 									<p class="title-price">À partir de 340€HT/mois</p>
 									<div class="masquotte-mighty"></div>
 								</td>
 							</tr>
 						</table>
-						<div class="categorie">
-							<p>Basics</p>
-							<button type="button">-</button>
+						<div id="basics" class="categorie">
+							<button type="button" onclick="window.location.href='#basics'"><p>Basics</p><span class="btn-categorie"></button>
 							<div class="table-slide-toggle">
 								<table class="table-pricing">
 									<tr>
@@ -472,9 +1185,8 @@ if(isset($_POST['submit'])){
 								</table>
 							</div>
 						</div>
-						<div class="categorie">
-							<p>Capteurs</p>
-							<button type="button">-</button>
+						<div id="capteurs" class="categorie">
+							<button type="button" onclick="setTimeout(function(){ window.location.href='#capteurs' }, 100);"><p>Capteurs</p><span class="btn-categorie"></button>
 							<div class="table-slide-toggle">
 								<table class="table-pricing">
 									<tr>
@@ -583,8 +1295,7 @@ if(isset($_POST['submit'])){
 							</div>
 						</div>
 						<div class="categorie">
-							<p>Notifications</p>
-							<button type="button">-</button>
+							<button type="button"><p>Notifications</p><span class="btn-categorie"></button>
 							<div class="table-slide-toggle">
 								<table class="table-pricing">
 									<tr>
@@ -693,8 +1404,7 @@ if(isset($_POST['submit'])){
 							</div>
 						</div>
 						<div class="categorie">
-							<p>Avancées</p>
-							<button type="button">-</button>
+							<button type="button"><p>Avancées</p><span class="btn-categorie"></button>
 							<div class="table-slide-toggle">
 								<table class="table-pricing">
 									<tr>
@@ -803,8 +1513,7 @@ if(isset($_POST['submit'])){
 							</div>
 						</div>
 						<div class="categorie">
-							<p>Support</p>
-							<button type="button">-</button>
+							<button type="button"><p>Support</p><span class="btn-categorie"></button>
 							<div class="table-slide-toggle">
 								<table class="table-pricing">
 									<tr>

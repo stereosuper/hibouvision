@@ -737,31 +737,100 @@ header .btn.active a {
 .categorie {
   display: block;
   width: 100%;
-  margin: 4px auto;
   position: relative;
 }
-.categorie p {
+.categorie button {
+  display: block;
+  width: 100%;
+  font-size: 25px;
+  text-align: left;
+  color: #fff;
+}
+.categorie button .btn-categorie {
+  position: absolute;
+  display: block;
+  top: 20px;
+  right: 17px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50px;
+  background-color: #3e3c43;
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  line-height: 25px;
+}
+.categorie button .btn-categorie:before {
+  content: '+';
+  color: #fff;
+}
+.categorie button p {
   font-family: NeutonBold;
   font-size: 22px;
   line-height: 60px;
   padding-left: 30px;
   width: 100%;
   height: 60px;
-  margin: 4px auto 4px;
+  margin: 2px auto 2px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.categorie button {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 50px;
-  background-color: #3e3c43;
-  right: 17px;
-  top: 17px;
-  font-size: 25px;
-  text-align: center;
+.categorie.active .table-pricing {
+  display: block;
+}
+.categorie.active .btn-categorie:before {
+  content: '-';
   color: #fff;
-  line-height: 25px;
+}
+.categorie .table-pricing {
+  box-shadow: 0 0 51px rgba(0, 0, 0, 0.15);
+  width: 95%;
+  table-layout: fixed;
+  color: #232126;
+  border-spacing: 4px 0;
+  background-color: #ededed;
+  border-collapse: separate;
+  margin: 2px auto;
+  display: none;
+}
+.categorie .table-pricing tr td {
+  text-align: center;
+  width: 21%;
+  font-size: 16px;
+}
+.categorie .table-pricing tr td.title-line {
+  width: 16%;
+  padding: 10px;
+  text-align: left;
+  line-height: 20px;
+  background: rgba(222, 232, 237, 0.6);
+}
+.categorie .table-pricing tr td.scops-td {
+  background: rgba(255, 180, 0, 0.5);
+}
+.categorie .table-pricing tr td.asio-td {
+  background: rgba(206, 77, 37, 0.6);
+}
+.categorie .table-pricing tr td.bubo-td {
+  background: rgba(2, 122, 135, 0.5);
+}
+.categorie .table-pricing tr td.mighty-td {
+  background: rgba(62, 60, 67, 0.9);
+  color: #fff;
+}
+.categorie .table-pricing tr:nth-child(even) td.scops-td {
+  background: rgba(246, 201, 93, 0.5);
+}
+.categorie .table-pricing tr:nth-child(even) td.asio-td {
+  background: rgba(206, 77, 37, 0.5);
+}
+.categorie .table-pricing tr:nth-child(even) td.bubo-td {
+  background: rgba(2, 122, 135, 0.4);
+}
+.categorie .table-pricing tr:nth-child(even) td.mighty-td {
+  background: rgba(62, 60, 67, 0.4);
+}
+.categorie .table-pricing tr:nth-child(even) td.title-line {
+  background-color: #fff;
 }
 .title-table-pricing {
   margin: auto;
@@ -769,6 +838,9 @@ header .btn.active a {
   width: 95%;
   border-spacing: 4px 0;
   border-collapse: separate;
+}
+.title-table-pricing.hiddden {
+  opacity: 0;
 }
 .title-table-pricing tr td {
   border-top-left-radius: 8px;
@@ -828,7 +900,6 @@ header .btn.active a {
   top: -50%;
 }
 .title-table-pricing tr .masquotte-asio {
-  background-color: red;
   border-radius: 50%;
   display: block;
   margin: auto;
@@ -938,67 +1009,71 @@ header .btn.active a {
 .title-table-pricing tr .title-mighty:hover .masquotte-mighty {
   top: -115%;
 }
-.table-pricing {
-  box-shadow: 0 0 51px rgba(0, 0, 0, 0.15);
-  width: 95%;
-  table-layout: fixed;
-  color: #232126;
-  border-spacing: 4px 0;
-  background-color: #ededed;
-  border-collapse: separate;
-  margin: 0 auto;
+#clone-container {
+  z-index: 1000;
+  display: none;
+  width: 100%;
+  position: fixed;
 }
-.table-pricing tr td {
+#clone-container.active {
+  display: block;
+}
+#clone-container .container-small {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
   text-align: center;
-  width: 21%;
-  font-size: 16px;
 }
-.table-pricing tr td.title-line {
-  width: 16%;
-  padding: 10px;
-  text-align: left;
-  line-height: 20px;
-  background: rgba(222, 232, 237, 0.6);
+#clone-container .container-small .title-table-pricing tr .masquotte-scops,
+#clone-container .container-small .title-table-pricing tr .masquotte-asio,
+#clone-container .container-small .title-table-pricing tr .masquotte-bubo,
+#clone-container .container-small .title-table-pricing tr .masquotte-mighty {
+  display: none;
 }
-.table-pricing tr td.scops-td {
-  background: rgba(255, 180, 0, 0.5);
-}
-.table-pricing tr td.asio-td {
-  background: rgba(206, 77, 37, 0.6);
-}
-.table-pricing tr td.bubo-td {
-  background: rgba(2, 122, 135, 0.5);
-}
-.table-pricing tr td.mighty-td {
-  background: rgba(62, 60, 67, 0.9);
-  color: #fff;
-}
-.table-pricing tr:nth-child(even) td.scops-td {
-  background: rgba(246, 201, 93, 0.5);
-}
-.table-pricing tr:nth-child(even) td.asio-td {
-  background: rgba(206, 77, 37, 0.5);
-}
-.table-pricing tr:nth-child(even) td.bubo-td {
-  background: rgba(2, 122, 135, 0.4);
-}
-.table-pricing tr:nth-child(even) td.mighty-td {
-  background: rgba(62, 60, 67, 0.4);
-}
-.table-pricing tr:nth-child(even) td.title-line {
-  background-color: #fff;
+#clone-container .container-small .title-table-pricing tr td {
+  border-radius: 10px;
 }
 #pricer-mobile {
-  display: block;
+  display: none;
   width: 100%;
   margin: auto;
+  position: relative;
+}
+#pricer-mobile .offre-scops .mobile-toggle,
+#pricer-mobile .offre-asio .mobile-toggle,
+#pricer-mobile .offre-bubo .mobile-toggle,
+#pricer-mobile .offre-mighty .mobile-toggle {
+  display: none;
+}
+#pricer-mobile .offre-scops .mobile-toggle.visible-infos,
+#pricer-mobile .offre-asio .mobile-toggle.visible-infos,
+#pricer-mobile .offre-bubo .mobile-toggle.visible-infos,
+#pricer-mobile .offre-mighty .mobile-toggle.visible-infos {
+  display: block;
+}
+#pricer-mobile .offre-btn {
+  width: 100%;
   overflow: hidden;
+}
+#pricer-mobile .offre-btn .offre-scops {
+  background: #ffb400;
+}
+#pricer-mobile .offre-btn .offre-asio {
+  background: #ce4d25;
+}
+#pricer-mobile .offre-btn .offre-bubo {
+  background: #027a87;
+}
+#pricer-mobile .offre-btn .offre-mighty {
+  background: #3e3c43;
 }
 #pricer-mobile .offre-mobile {
   display: block;
   width: 100%;
   height: 80px;
-  padding-top: 8px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 #pricer-mobile .offre-mobile ul {
   width: 100%;
@@ -1009,22 +1084,50 @@ header .btn.active a {
   vertical-align: top;
   display: table-cell;
 }
-#pricer-mobile .offre-mobile ul li button {
-  width: 20px;
-  height: 20px;
+#pricer-mobile .offre-mobile ul li .arrow-offre {
+  font-size: 40px;
+  color: #fff;
+  font-family: latoBold;
+  line-height: 22px;
 }
 #pricer-mobile .offre-mobile ul li:last-child {
   width: 40px;
 }
 #pricer-mobile .offre-mobile ul .masquotte-scops {
-  width: 130px;
-  height: 130px;
-  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
   background: url('../layoutImg/scop.jpg') no-repeat 30% 100%;
   background-size: cover;
   border-radius: 50%;
 }
+#pricer-mobile .offre-mobile ul .masquotte-asio {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  background: url('../layoutImg/asio.jpg') no-repeat 30% 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+#pricer-mobile .offre-mobile ul .masquotte-bubo {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  background: url('../layoutImg/bubo.jpg') no-repeat 30% 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+#pricer-mobile .offre-mobile ul .masquotte-mighty {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  background: url('../layoutImg/mighty.png') no-repeat 30% 100%;
+  background-color: #fff;
+  background-size: cover;
+  border-radius: 50%;
+}
 #pricer-mobile .offre-mobile ul .title-offre {
+  padding-left: 10px;
   text-align: center;
 }
 #pricer-mobile .offre-mobile ul .title-offre p {
@@ -1039,8 +1142,108 @@ header .btn.active a {
   line-height: 14px;
   color: #fff;
 }
-#pricer-mobile .offre-scops {
-  background-color: #ffb400;
+#pricer-mobile .categorie {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  margin-bottom: 10px;
+}
+#pricer-mobile .categorie .title-categorie {
+  line-height: 60px;
+  font-family: NeutonBold;
+  font-size: 22px;
+  position: relative;
+}
+#pricer-mobile .categorie .title-categorie:after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  background-color: #3e3c43;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 25px;
+  font-family: Lato;
+  padding-left: 8px;
+  top: 16px;
+}
+#pricer-mobile .categorie p {
+  margin: 0;
+}
+#pricer-mobile .categorie.active table {
+  display: block;
+}
+#pricer-mobile .active .title-categorie:after {
+  content: "-";
+  position: absolute;
+  right: 20px;
+  background-color: #3e3c43;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 25px;
+  font-family: Lato;
+  padding-left: 11px;
+  top: 16px;
+}
+#pricer-mobile .table-slide-toggle {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+#pricer-mobile .table-slide-toggle tbody {
+  width: 100%;
+  display: table;
+}
+#pricer-mobile .table-slide-toggle table {
+  width: 100%;
+  display: none;
+}
+#pricer-mobile .table-slide-toggle table tr {
+  width: 100%;
+  display: table;
+}
+#pricer-mobile .table-slide-toggle table tr td {
+  width: 50%;
+  display: table-cell;
+  padding: 15px;
+  font-size: 14px;
+}
+#pricer-mobile .table-slide-toggle table tr td.scops-td {
+  background: rgba(255, 180, 0, 0.5);
+}
+#pricer-mobile .table-slide-toggle table tr td.asio-td {
+  background: rgba(206, 77, 37, 0.6);
+}
+#pricer-mobile .table-slide-toggle table tr td.bubo-td {
+  background: rgba(2, 122, 135, 0.5);
+}
+#pricer-mobile .table-slide-toggle table tr td.mighty-td {
+  background: rgba(62, 60, 67, 0.9);
+  color: #fff;
+}
+#pricer-mobile .table-slide-toggle table tr td:nth-child(2) {
+  text-align: center;
+}
+#pricer-mobile .table-slide-toggle table tr:nth-child(even) td.scops-td {
+  background: rgba(246, 201, 93, 0.5);
+}
+#pricer-mobile .table-slide-toggle table tr:nth-child(even) td.asio-td {
+  background: rgba(206, 77, 37, 0.5);
+}
+#pricer-mobile .table-slide-toggle table tr:nth-child(even) td.bubo-td {
+  background: rgba(2, 122, 135, 0.4);
+}
+#pricer-mobile .table-slide-toggle table tr:nth-child(even) td.mighty-td {
+  background: rgba(62, 60, 67, 0.4);
+}
+#pricer-mobile .table-slide-toggle table tr:nth-child(even) td.title-line {
+  background-color: #fff;
 }
 #option h4 {
   text-align: center;
@@ -1687,6 +1890,13 @@ fieldset.big-margin {
   }
 }
 @media (max-width: 767px) {
+  #pricer-mobile {
+    display: block;
+    margin: 60px auto 60px;
+  }
+  #pricer {
+    display: none;
+  }
   #part1 h2 {
     font-size: 5em;
   }

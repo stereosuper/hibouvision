@@ -40,7 +40,7 @@
 
 		if(empty($status)){
 			// Create email
-			$subject = utf8_decode("Téléchargement de SensorFactory - Livre Blanc");
+			$subject = utf8_decode("Téléchargement de Hibouvision - Livre Blanc");
 			$content = "Une personne a téléchargé le livre blanc. \n\n".
 					   'Nom: ' . $nom . "\r\n" .
 					   'Adresse e-mail: ' . $mail . "\r\n" .
@@ -50,7 +50,7 @@
 					   'Reply-To: ' . $mail . "\r\n";
 
 
-			$subject2 = utf8_decode("SensorFactory - Votre Livre Blanc");
+			$subject2 = utf8_decode("Hibouvision - Votre Livre Blanc");
 			$content2 = "Merci <strong>".$nom."</strong> !<br><br>Peu de domaine dans l'informatique sont aussi complexes à maîtriser que la supervision d’un système d’information.<br>Transversalité des compétences, temps à y consacrer, budgets à défendre sont autant de challenges qu’il faut remporter pour arriver à mettre en œuvre et surtout maintenir dans le temps une plate-forme de supervision.<br><br>Les solutions techniques sont multiples, ne permettent jamais de couvrir toutes les facettes du système d’information ce qui vient ajouter à la difficulté de construire et maintenir une supervision efficace.<br><br>" . "\r\n" .
 				"Comment conduire sa voiture avec un pare-brise opaque ? Cette image est pourtant celle qui s’impose à bon nombre de professionnels de l’IT. Parce que les projets métiers ont toujours la priorité, parce que le maintien en condition opérationnelle de votre infrastructure accapare toutes vos ressources, vous ne parvenez pas à tirer la quintessence de vos outils de monitoring.<br><br>C'est pourquoi nous vous mettons à disposition ce livre blanc pour vous permettre de démarrer votre projet de déploiement de supervision en vous posant les bonnes questions. Cette démarche est nécessaire pour obtenir au final une plate-forme de supervision qui soutienne efficacement vos processus et services IT." . "\r\n" .
 				"Toute l’équipe Sensor Factory s’associe à moi pour vous remercier de l'attention que vous portez à ce livre blanc. Nous sommes à votre entière disposition pour répondre à vos questions et vous accompagner dans cette démarche.<br><br><a href='http://www.sensorfactory.eu/livreblanc/livreblanc.pdf'>Télécharger le livre blanc</a><br><br>" . "\r\n" .
@@ -77,9 +77,9 @@
 <html lang='fr-FR' class='no-js'>
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="La gestion des notifications en supervision IT - Livre blanc, septembre 2016, par Sensor Factory">
+    <meta name="description" content="La gestion des notifications en supervision IT - Livre blanc, septembre 2016, par Hibouvision">
     <meta name='viewport' content='width=device-width,initial-scale=1'>
-    <title>Sensor Factory</title>
+    <title>Hibouvision</title>
 
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
 
