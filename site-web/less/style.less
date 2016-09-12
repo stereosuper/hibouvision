@@ -661,20 +661,20 @@ header {
                 width: 21%;
                 font-size: 16px;
                 &.title-line{
-                    width: 16%;
+                    width: 200px;
                     padding: 10px;
                     text-align: left;
                     line-height: 20px;
                     background: fade(@title-grey, 60%);
                 }
                 &.scops-td{
-                    background: fade(@scops-yellow, 50%);
+                    background: fade(@scops-yellow, 70%);
                 }
                 &.asio-td{
-                    background: fade(@asio-red, 60%);
+                    background: fade(@asio-red, 70%);
                 }
                 &.bubo-td{
-                    background: fade(@bubo-blue, 50%);
+                    background: fade(@bubo-blue, 70%);
                 }
                 &.mighty-td{
                     background: fade(@mighty-grey, 90%);
@@ -684,16 +684,16 @@ header {
             &:nth-child(even){
                 td{
                     &.scops-td{
-                        background: fade(@scops-yellow-light, 50%);
+                        background: fade(@scops-yellow, 50%);
                     }
                     &.asio-td{
-                        background: fade(@asio-red, 50%);
+                        background: fade(@asio-red, 55%);
                     }
                     &.bubo-td{
-                        background: fade(@bubo-blue, 40%);
+                        background: fade(@bubo-blue, 50%);
                     }
                     &.mighty-td{
-                        background: fade(@mighty-grey, 40%);
+                        background: fade(@mighty-grey, 60%);
                     }
                     &.title-line{
                         background-color: #fff;
@@ -857,6 +857,9 @@ header {
                 top:-50%;
             }
         }
+        .title-empty{
+            width: 200px;
+        }
         .title-scops{
             background-color:@scops-yellow;
             &:hover{
@@ -923,17 +926,73 @@ header {
     width: 100%;
     margin: auto;
     position: relative;
-    .offre-scops, .offre-asio, .offre-bubo, .offre-mighty{
+    .offre{
+
         .mobile-toggle{
-            display: none;
-            &.visible-infos{
-                 display: block;
-             }
+            display:none;
+            .categorie{
+                &.active{
+                    table{
+                        display:block;
+                    }
+                }
+                .title-categorie{
+                    line-height: 60px;
+                    font-family: NeutonBold;
+                    font-size: 22px;
+                    position: relative;
+                    &:after{
+                        content:"+";
+                        position: absolute;
+                        right:20px;
+                        background-color: @mighty-grey;
+                        color:#fff;
+                        width: 30px;
+                        height: 30px;
+                        display: block;
+                        border-radius: 50%;
+                        line-height: 30px;
+                        font-size: 25px;
+                        font-family: Lato;
+                        padding-left:8px;
+                        top:16px;
+                    }
+                }
+                &.active{
+                    &:after{
+                        content:"-";
+                        position: absolute;
+                        right:20px;
+                        background-color: @mighty-grey;
+                        color:#fff;
+                        width: 30px;
+                        height: 30px;
+                        display: block;
+                        border-radius: 50%;
+                        line-height: 30px;
+                        font-size: 25px;
+                        font-family: Lato;
+                        padding-left:11px;
+                        top:16px;
+                    }
+                }
+            }
         }
+        &.active{
+            .mobile-toggle{
+                display:block;
+            } 
+             .arrow-offre{
+                transform : rotate(90deg);
+            }
+        }
+        
     }
+
     .offre-btn{
         width: 100%;
         overflow: hidden;
+        margin-bottom: 10px;
         .offre-scops{
             background: @scops-yellow;
         }
@@ -953,6 +1012,7 @@ header {
         height:80px;
         padding-left: 20px;
         padding-top: 10px;
+     
         ul{
             width: 100%;
             display: table;
@@ -965,6 +1025,7 @@ header {
                     color:#fff;
                     font-family: latoBold;
                     line-height: 22px;
+                    transition: .3s ease-in-out;
                 }
                 &:last-child{
                     width: 40px;
@@ -1021,61 +1082,7 @@ header {
             }
         }
     }
-    .categorie{
-        box-shadow: 0 0 10px fade(#000, 15%);
-        text-align: left;
-        margin-bottom: 10px;
-        .title-categorie{
-            line-height: 60px;
-            font-family: NeutonBold;
-            font-size: 22px;
-            position: relative;
-            &:after{
-                content:"+";
-                position: absolute;
-                right:20px;
-                background-color: @mighty-grey;
-                color:#fff;
-                width: 30px;
-                height: 30px;
-                display: block;
-                border-radius: 50%;
-                line-height: 30px;
-                font-size: 25px;
-                font-family: Lato;
-                padding-left:8px;
-                top:16px;
-            }
-        }
-        p{
-            margin:0;
-        }
-        &.active{
-         table{
-                display:block;
-            }
-        }
-    }
-    .active{
-        .title-categorie{
-            &:after{
-                content:"-";
-                position: absolute;
-                right:20px;
-                background-color: @mighty-grey;
-                color:#fff;
-                width: 30px;
-                height: 30px;
-                display: block;
-                border-radius: 50%;
-                line-height: 30px;
-                font-size: 25px;
-                font-family: Lato;
-                padding-left:11px;
-                top:16px;
-            }
-        }
-    }
+    
     .table-slide-toggle{
         display: block;
         position: relative;
@@ -1815,6 +1822,12 @@ fieldset{
 
 @media (max-width: 900px){
     #pricer{
+        .title-offre{
+            font-size: 24px;
+        }
+        .title-price{
+            font-size: 12px;
+        }
         tr{
             td{
                 font-size: 14px;
@@ -1963,7 +1976,28 @@ fieldset{
         }
     }
 
+   
+
 }
+
+
+@media (max-width: 370px){
+    #pricer-mobile{
+        .offre-mobile{
+            padding-left:10px;
+            ul{
+                .title-offre
+                    p{
+                        font-size: 20px;
+                        margin: 15px 0;
+                    }
+                }
+            }
+        .title-price{
+            font-size: 12px;
+        }
+    }
+    }
 
 /******* RESPONSIVE VERTICAL *******/
 

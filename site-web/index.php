@@ -142,6 +142,7 @@ if(isset($_POST['submit'])){
 	  	<link rel="stylesheet" type="text/css" href="css/tooltipster.css">
 	  	<link rel="stylesheet" href="css/style.css">
 	  	<script src="js/libs/modernizr-2.6.1.min.js" type="text/javascript"></script>
+	  	<script src="js/isMobile.min.js" type="text/javascript"></script>
 	  	<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -197,8 +198,9 @@ if(isset($_POST['submit'])){
 							<div id="hibou1" class="hg">
 								<img src="layoutImg/hibou-nuage.png" srcset="layoutImg/hibou-nuage.png 1x, layoutImg/hibou-nuage2x.png 2x" alt="">
 							</div>
-							<h4>Saas &amp; sécurisé</h4>
-							<p>Tous les avantages d’une solution  Saas, avec une sécurité optimale garantie.</p>
+							<h4>Saas &amp; Sécurisé</h4>
+							<p>Tous les avantages d’une solution  Saas, avec une sécurité optimale garantie.<br />
+							<a href="#" class="underline" title="En savoir plus">En savoir plus</a></p>
 						</div>
 						<div class="right">
 							<div id="hibou2" class="hd">
@@ -216,7 +218,7 @@ if(isset($_POST['submit'])){
 						<div class="chapeau">100% Simple</div>
 						<h3>L'interface<br> dont vous rêviez</h3>
 						<p>Hibouvision est un outil facile à utiliser, rapide, élégant et personnalisable : cartographie intégrée, arborescence, graphique… Disponible aussi sur mobile !</p>
-						<a href="#contact" class="bouton btnScroll ga-tracking" title="Demander une demo">Demander une démo</a>
+						<a href="#contact" class="bouton btnScroll ga-tracking" title="Demander une demo">Testez Hibouvision</a>
 					</div><div class="img ">
 						<!--<img src="layoutImg/tel.png" alt="" id="img-tel" class="foo">-->
 						<img src="layoutImg/tel.png" srcset="layoutImg/tel.png 1x, layoutImg/tel@2x.png 2x" alt="" id="img-tel" class="foo">
@@ -250,7 +252,7 @@ if(isset($_POST['submit'])){
 						<h3>Une vision claire et globale</h3>
 						<p>Visualisez en un coup d’œil l’ensemble des états  et alertes de vos équipements.</p>
 						<p>Identifiez en un clic la source de vos incidents.</p>
-						<a href="#contact" class="bouton btnScroll ga-tracking" title="Demander une demo 2">Demander une démo</a>
+						<a href="#contact" class="bouton btnScroll ga-tracking" title="Demander une demo 2">Testez Hibouvision</a>
 					</div>
 					<div class="img">
 						<!-- <img class="bar" src="layoutImg/screenshot2.png" alt="" id="screen2" > -->
@@ -282,10 +284,10 @@ if(isset($_POST['submit'])){
 				<div class="container-small">
 					<div id="gauche" class='col'>
 						<div class="chapeau">Spécifications</div >
-						<h3>Pas de service<br> à tiroirs !</h3>
-						<p>Tout est inclus par défaut dans l’unique version de Hibouvision : aucun add-on, aucun frais supplémentaire.</p>
+						<h3>Une solution tout-terrain !</h3>
+						<p>Profiter d'une bibliothèque de capteurs parmi les plus complètes du marché et continuellement enrichie.</p>
 						<p>Pour votre sécurité, le monitoring est réalisé à partir de sondes installées au cœur de votre SI.</p>
-						<a href="#contact" class="bouton btnScroll ga-tracking" title="Demander la liste">Demander la liste complète</a>
+						<a href="https://dash01.hibouvision.com/help/available_sensor_types.htm" class="bouton ga-tracking" title="Voir la liste complete">Voir la liste complète</a>
 					</div><ul id="centre" class='col'>
 						<li>Supervision sans agent de la bande passante, de l’utilisation des ressources, de l’activité et des SLA</li>
 						<li>Compatible avec les réseaux de toutes tailles</li>
@@ -317,8 +319,9 @@ if(isset($_POST['submit'])){
 							<div id="hibou8" class="hd">
 								<img src="layoutImg/sensor-factory.png" srcset="layoutImg/sensor-factory.png 1x, layoutImg/sensor-factory2x.png 2x" alt="">
 							</div>
-							<h4>Avec SensorFactory</h4>
-							<p>Hibouvision est supporté 24/7/365 par des spécialistes de la supervision.</p>
+							<h4>Avec Sensor Factory</h4>
+							<p>Hibouvision est supporté 24/7/365 par des spécialistes de la supervision.<br />
+							<a href="http://www.sensorfactory.eu/" class="underline">Sensor Factory</a></p>
 						</div>
 					</div>
 				</div>
@@ -326,7 +329,7 @@ if(isset($_POST['submit'])){
 					<div class="chapeau">Formules</div>
 					<h3>À chacun son Hibouvision</h3>
 					<div id="pricer-mobile">
-						<div class="offre-scops">
+						<div class="offre offre-scops">
 							<button class="offre-btn">
 								<div class="offre-mobile offre-scops">
 									<ul>
@@ -337,8 +340,8 @@ if(isset($_POST['submit'])){
 									</ul>
 								</div>
 							</button>
-							<div class="mobile-toggle visible-infos">
-								<div class="categorie active">
+							<div class="mobile-toggle ">
+								<div class="categorie">
 									<button>
 										<p class="title-categorie">Basics</p>
 									</button>
@@ -378,28 +381,48 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="scops-td">Nombre de capteurs</td>
-												<td class="scops-td">100*</td>
+												<td class="scops-td">SNMP & WMI</td>
+												<td class="scops-td">Oui</td>
 											</tr>	
 											<tr>
-												<td class="scops-td">Fréquence</td>
-												<td class="scops-td">5 minutes</td>
-											</tr>
-											<tr>
-												<td class="scops-td">Nombre d'utilisateurs</td>
-												<td class="scops-td">1</td>
-											</tr>
-											<tr>
-												<td class="scops-td">Auto découverte d'équipements</td>
+												<td class="scops-td">Sites Web</td>
 												<td class="scops-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="scops-td">24/7/365</td>
+												<td class="scops-td">Cloud</td>
 												<td class="scops-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="scops-td">Historisque</td>
-												<td class="scops-td">12 mois</td>
+												<td class="scops-td">AD & Microsoft productivity</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Base de données</td>
+												<td class="scops-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Virtualisation</td>
+												<td class="scops-td">Non</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Stockage</td>
+												<td class="scops-td">Non</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Réseau avancé</td>
+												<td class="scops-td">Non</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Business Process</td>
+												<td class="scops-td">Non</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Custom scripts</td>
+												<td class="scops-td">Non</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Capteur Bêta</td>
+												<td class="scops-td">Non</td>
 											</tr>
 										</table>
 									</div>
@@ -411,28 +434,28 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="scops-td">Nombre de capteurs</td>
-												<td class="scops-td">100*</td>
+												<td class="scops-td">Notification Mail</td>
+												<td class="scops-td">Illimité</td>
 											</tr>	
 											<tr>
-												<td class="scops-td">Fréquence</td>
-												<td class="scops-td">5 minutes</td>
+												<td class="scops-td">Notification SMS</td>
+												<td class="scops-td">Non</td>
 											</tr>
 											<tr>
-												<td class="scops-td">Nombre d'utilisateurs</td>
-												<td class="scops-td">1</td>
+												<td class="scops-td">Notification SMS Vocal</td>
+												<td class="scops-td">Non</td>
 											</tr>
 											<tr>
-												<td class="scops-td">Auto découverte d'équipements</td>
-												<td class="scops-td">Oui</td>
+												<td class="scops-td">Prix SMS</td>
+												<td class="scops-td">-</td>
 											</tr>
 											<tr>
-												<td class="scops-td">24/7/365</td>
-												<td class="scops-td">Oui</td>
+												<td class="scops-td">Prix SMS Vocal</td>
+												<td class="scops-td">-</td>
 											</tr>
 											<tr>
-												<td class="scops-td">Historisque</td>
-												<td class="scops-td">12 mois</td>
+												<td class="scops-td">Notification spécifique</td>
+												<td class="scops-td">Non</td>
 											</tr>
 										</table>
 									</div>
@@ -444,28 +467,16 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="scops-td">Nombre de capteurs</td>
-												<td class="scops-td">100*</td>
+												<td class="scops-td">Comportement inhabituel</td>
+												<td class="scops-td">Non</td>
 											</tr>	
 											<tr>
-												<td class="scops-td">Fréquence</td>
-												<td class="scops-td">5 minutes</td>
+												<td class="scops-td">Personnalisation de l'interface</td>
+												<td class="scops-td">Non</td>
 											</tr>
 											<tr>
-												<td class="scops-td">Nombre d'utilisateurs</td>
-												<td class="scops-td">1</td>
-											</tr>
-											<tr>
-												<td class="scops-td">Auto découverte d'équipements</td>
-												<td class="scops-td">Oui</td>
-											</tr>
-											<tr>
-												<td class="scops-td">24/7/365</td>
-												<td class="scops-td">Oui</td>
-											</tr>
-											<tr>
-												<td class="scops-td">Historisque</td>
-												<td class="scops-td">12 mois</td>
+												<td class="scops-td">Multi tenant</td>
+												<td class="scops-td">Non</td>
 											</tr>
 										</table>
 									</div>
@@ -477,35 +488,27 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="scops-td">Nombre de capteurs</td>
-												<td class="scops-td">100*</td>
+												<td class="scops-td">Mail</td>
+												<td class="scops-td">Oui</td>
 											</tr>	
 											<tr>
-												<td class="scops-td">Fréquence</td>
-												<td class="scops-td">5 minutes</td>
-											</tr>
-											<tr>
-												<td class="scops-td">Nombre d'utilisateurs</td>
-												<td class="scops-td">1</td>
-											</tr>
-											<tr>
-												<td class="scops-td">Auto découverte d'équipements</td>
+												<td class="scops-td">Portail</td>
 												<td class="scops-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="scops-td">24/7/365</td>
+												<td class="scops-td">Chat</td>
 												<td class="scops-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="scops-td">Historisque</td>
-												<td class="scops-td">12 mois</td>
+												<td class="scops-td">Tel</td>
+												<td class="scops-td">Non</td>
 											</tr>
 										</table>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="offre-asio">
+						<div class="offre offre-asio">
 							<button class="offre-btn">
 								<div class="offre-mobile offre-asio">
 									<ul>
@@ -518,7 +521,7 @@ if(isset($_POST['submit'])){
 							</button>
 							<div class="mobile-toggle
 							">
-								<div class="categorie active">
+								<div class="categorie">
 									<button>
 										<p class="title-categorie">Basics</p>
 									</button>
@@ -526,7 +529,7 @@ if(isset($_POST['submit'])){
 										<table>
 											<tr>
 												<td class="asio-td">Nombre de capteurs</td>
-												<td class="asio-td">100*</td>
+												<td class="asio-td">500**</td>
 											</tr>	
 											<tr>
 												<td class="asio-td">Fréquence</td>
@@ -534,7 +537,7 @@ if(isset($_POST['submit'])){
 											</tr>
 											<tr>
 												<td class="asio-td">Nombre d'utilisateurs</td>
-												<td class="asio-td">1</td>
+												<td class="asio-td">3</td>
 											</tr>
 											<tr>
 												<td class="asio-td">Auto découverte d'équipements</td>
@@ -558,28 +561,52 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="asio-td">Nombre de capteurs</td>
-												<td class="asio-td">100*</td>
+												<td class="asio-td">SNMP & WMI</td>
+												<td class="asio-td">Oui</td>
 											</tr>	
 											<tr>
-												<td class="asio-td">Fréquence</td>
-												<td class="asio-td">5 minutes</td>
-											</tr>
-											<tr>
-												<td class="asio-td">Nombre d'utilisateurs</td>
-												<td class="asio-td">1</td>
-											</tr>
-											<tr>
-												<td class="asio-td">Auto découverte d'équipements</td>
+												<td class="asio-td">Sites Web</td>
 												<td class="asio-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="asio-td">24/7/365</td>
+												<td class="asio-td">Cloud</td>
 												<td class="asio-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="asio-td">Historisque</td>
-												<td class="asio-td">12 mois</td>
+												<td class="asio-td">AD & Microsoft productivity</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Base de données</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Virtualisation</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Stockage</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Réseau avancé</td>
+												<td class="asio-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Business Process</td>
+												<td class="asio-td">Non</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Virtualisation</td>
+												<td class="asio-td">Non</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Custom scripts</td>
+												<td class="asio-td">Non</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Capteur Bêta</td>
+												<td class="asio-td">Non</td>
 											</tr>
 										</table>
 									</div>
@@ -591,28 +618,28 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="asio-td">Nombre de capteurs</td>
-												<td class="asio-td">100*</td>
+												<td class="asio-td">Notification Mail</td>
+												<td class="asio-td">Illimité</td>
 											</tr>	
 											<tr>
-												<td class="asio-td">Fréquence</td>
-												<td class="asio-td">5 minutes</td>
+												<td class="asio-td">Notification SMS</td>
+												<td class="asio-td">10 offerts/mois</td>
 											</tr>
 											<tr>
-												<td class="asio-td">Nombre d'utilisateurs</td>
-												<td class="asio-td">1</td>
+												<td class="asio-td">Notification SMS Vocal</td>
+												<td class="asio-td">Non</td>
 											</tr>
 											<tr>
-												<td class="asio-td">Auto découverte d'équipements</td>
-												<td class="asio-td">Oui</td>
+												<td class="asio-td">Prix SMS</td>
+												<td class="asio-td">0,20€</td>
 											</tr>
 											<tr>
-												<td class="asio-td">24/7/365</td>
-												<td class="asio-td">Oui</td>
+												<td class="asio-td">Prix SMS Vocal</td>
+												<td class="asio-td">-</td>
 											</tr>
 											<tr>
-												<td class="asio-td">Historisque</td>
-												<td class="asio-td">12 mois</td>
+												<td class="asio-td">Notification spécifique</td>
+												<td class="asio-td">Non</td>
 											</tr>
 										</table>
 									</div>
@@ -624,28 +651,16 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="asio-td">Nombre de capteurs</td>
-												<td class="asio-td">100*</td>
+												<td class="asio-td">Comportement inhabituel</td>
+												<td class="asio-td">Non</td>
 											</tr>	
 											<tr>
-												<td class="asio-td">Fréquence</td>
-												<td class="asio-td">5 minutes</td>
+												<td class="asio-td">Personnalisation de l'interface</td>
+												<td class="asio-td">Non</td>
 											</tr>
 											<tr>
-												<td class="asio-td">Nombre d'utilisateurs</td>
-												<td class="asio-td">1</td>
-											</tr>
-											<tr>
-												<td class="asio-td">Auto découverte d'équipements</td>
-												<td class="asio-td">Oui</td>
-											</tr>
-											<tr>
-												<td class="asio-td">24/7/365</td>
-												<td class="asio-td">Oui</td>
-											</tr>
-											<tr>
-												<td class="asio-td">Historisque</td>
-												<td class="asio-td">12 mois</td>
+												<td class="asio-td">Multi tenant</td>
+												<td class="asio-td">Non</td>
 											</tr>
 										</table>
 									</div>
@@ -657,35 +672,27 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="asio-td">Nombre de capteurs</td>
-												<td class="asio-td">100*</td>
+												<td class="asio-td">Mail</td>
+												<td class="asio-td">Oui</td>
 											</tr>	
 											<tr>
-												<td class="asio-td">Fréquence</td>
-												<td class="asio-td">5 minutes</td>
-											</tr>
-											<tr>
-												<td class="asio-td">Nombre d'utilisateurs</td>
-												<td class="asio-td">1</td>
-											</tr>
-											<tr>
-												<td class="asio-td">Auto découverte d'équipements</td>
+												<td class="asio-td">Portail</td>
 												<td class="asio-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="asio-td">24/7/365</td>
+												<td class="asio-td">Chat</td>
 												<td class="asio-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="asio-td">Historisque</td>
-												<td class="asio-td">12 mois</td>
+												<td class="asio-td">Tel</td>
+												<td class="asio-td">Non</td>
 											</tr>
 										</table>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="offre-bubo">
+						<div class="offre offre-bubo">
 							<button class="offre-btn">
 								<div class="offre-mobile offre-bubo">
 									<ul>
@@ -697,7 +704,7 @@ if(isset($_POST['submit'])){
 								</div>
 							</button>
 							<div class="mobile-toggle">
-								<div class="categorie active">
+								<div class="categorie ">
 									<button>
 										<p class="title-categorie">Basics</p>
 									</button>
@@ -705,7 +712,7 @@ if(isset($_POST['submit'])){
 										<table>
 											<tr>
 												<td class="bubo-td">Nombre de capteurs</td>
-												<td class="bubo-td">100*</td>
+												<td class="bubo-td">1000***</td>
 											</tr>	
 											<tr>
 												<td class="bubo-td">Fréquence</td>
@@ -713,7 +720,7 @@ if(isset($_POST['submit'])){
 											</tr>
 											<tr>
 												<td class="bubo-td">Nombre d'utilisateurs</td>
-												<td class="bubo-td">1</td>
+												<td class="bubo-td">5</td>
 											</tr>
 											<tr>
 												<td class="bubo-td">Auto découverte d'équipements</td>
@@ -725,7 +732,7 @@ if(isset($_POST['submit'])){
 											</tr>
 											<tr>
 												<td class="bubo-td">Historisque</td>
-												<td class="bubo-td">12 mois</td>
+												<td class="bubo-td">Jusqu'à 24 mois</td>
 											</tr>
 										</table>
 									</div>
@@ -737,28 +744,48 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="bubo-td">Nombre de capteurs</td>
-												<td class="bubo-td">100*</td>
+												<td class="bubo-td">SNMP & WMI</td>
+												<td class="bubo-td">Oui</td>
 											</tr>	
 											<tr>
-												<td class="bubo-td">Fréquence</td>
-												<td class="bubo-td">5 minutes</td>
-											</tr>
-											<tr>
-												<td class="bubo-td">Nombre d'utilisateurs</td>
-												<td class="bubo-td">1</td>
-											</tr>
-											<tr>
-												<td class="bubo-td">Auto découverte d'équipements</td>
+												<td class="bubo-td">Sites Web</td>
 												<td class="bubo-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">24/7/365</td>
+												<td class="bubo-td">Cloud</td>
 												<td class="bubo-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">Historisque</td>
-												<td class="bubo-td">12 mois</td>
+												<td class="bubo-td">AD & Microsoft productivity</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Base de données</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Virtualisation</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Stockage</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Réseau avancé</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Business Process</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Custom scripts</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Capteur Bêta</td>
+												<td class="bubo-td">Oui</td>
 											</tr>
 										</table>
 									</div>
@@ -770,28 +797,28 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="bubo-td">Nombre de capteurs</td>
-												<td class="bubo-td">100*</td>
+												<td class="bubo-td">Notification Mail</td>
+												<td class="bubo-td">Illimité</td>
 											</tr>	
 											<tr>
-												<td class="bubo-td">Fréquence</td>
-												<td class="bubo-td">5 minutes</td>
+												<td class="bubo-td">Notification SMS</td>
+												<td class="bubo-td">15 offerts/mois</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">Nombre d'utilisateurs</td>
-												<td class="bubo-td">1</td>
+												<td class="bubo-td">Notification SMS Vocal</td>
+												<td class="bubo-td">15 offerts/mois</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">Auto découverte d'équipements</td>
-												<td class="bubo-td">Oui</td>
+												<td class="bubo-td">Prix SMS</td>
+												<td class="bubo-td">0,15€</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">24/7/365</td>
-												<td class="bubo-td">Oui</td>
+												<td class="bubo-td">Prix SMS Vocal</td>
+												<td class="bubo-td">0,15€</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">Historisque</td>
-												<td class="bubo-td">12 mois</td>
+												<td class="bubo-td">Notification spécifique</td>
+												<td class="bubo-td">Non</td>
 											</tr>
 										</table>
 									</div>
@@ -803,28 +830,16 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="bubo-td">Nombre de capteurs</td>
-												<td class="bubo-td">100*</td>
+												<td class="bubo-td">Comportement inhabituel</td>
+												<td class="bubo-td">Non</td>
 											</tr>	
 											<tr>
-												<td class="bubo-td">Fréquence</td>
-												<td class="bubo-td">5 minutes</td>
+												<td class="bubo-td">Personnalisation de l'interface</td>
+												<td class="bubo-td">Non</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">Nombre d'utilisateurs</td>
-												<td class="bubo-td">1</td>
-											</tr>
-											<tr>
-												<td class="bubo-td">Auto découverte d'équipements</td>
-												<td class="bubo-td">Oui</td>
-											</tr>
-											<tr>
-												<td class="bubo-td">24/7/365</td>
-												<td class="bubo-td">Oui</td>
-											</tr>
-											<tr>
-												<td class="bubo-td">Historisque</td>
-												<td class="bubo-td">12 mois</td>
+												<td class="bubo-td">Multi tenant</td>
+												<td class="bubo-td">Non</td>
 											</tr>
 										</table>
 									</div>
@@ -836,35 +851,27 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="bubo-td">Nombre de capteurs</td>
-												<td class="bubo-td">100*</td>
+												<td class="bubo-td">Mail</td>
+												<td class="bubo-td">Oui</td>
 											</tr>	
 											<tr>
-												<td class="bubo-td">Fréquence</td>
-												<td class="bubo-td">5 minutes</td>
-											</tr>
-											<tr>
-												<td class="bubo-td">Nombre d'utilisateurs</td>
-												<td class="bubo-td">1</td>
-											</tr>
-											<tr>
-												<td class="bubo-td">Auto découverte d'équipements</td>
+												<td class="bubo-td">Portail</td>
 												<td class="bubo-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">24/7/365</td>
+												<td class="bubo-td">Chat</td>
 												<td class="bubo-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">Historisque</td>
-												<td class="bubo-td">12 mois</td>
+												<td class="bubo-td">Tel</td>
+												<td class="bubo-td">Oui</td>
 											</tr>
 										</table>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="offre-mighty">
+						<div class="offre offre-mighty">
 							<button class="offre-btn">
 								<div class="offre-mobile offre-mighty">
 									<ul>
@@ -876,7 +883,7 @@ if(isset($_POST['submit'])){
 								</div>
 							</button>
 							<div class="mobile-toggle">
-								<div class="categorie active">
+								<div class="categorie ">
 									<button>
 										<p class="title-categorie">Basics</p>
 									</button>
@@ -884,15 +891,15 @@ if(isset($_POST['submit'])){
 										<table>
 											<tr>
 												<td class="mighty-td">Nombre de capteurs</td>
-												<td class="mighty-td">100*</td>
+												<td class="mighty-td">Jusqu'à 5000****</td>
 											</tr>	
 											<tr>
 												<td class="mighty-td">Fréquence</td>
-												<td class="mighty-td">5 minutes</td>
+												<td class="mighty-td">1 minute</td>
 											</tr>
 											<tr>
 												<td class="mighty-td">Nombre d'utilisateurs</td>
-												<td class="mighty-td">1</td>
+												<td class="mighty-td">Jusqu'à 30</td>
 											</tr>
 											<tr>
 												<td class="mighty-td">Auto découverte d'équipements</td>
@@ -904,7 +911,7 @@ if(isset($_POST['submit'])){
 											</tr>
 											<tr>
 												<td class="mighty-td">Historisque</td>
-												<td class="mighty-td">12 mois</td>
+												<td class="mighty-td">Jusqu'à 24 mois</td>
 											</tr>
 										</table>
 									</div>
@@ -916,28 +923,48 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="mighty-td">Nombre de capteurs</td>
-												<td class="mighty-td">100*</td>
+												<td class="mighty-td">SNMP & WMI</td>
+												<td class="mighty-td">Oui</td>
 											</tr>	
 											<tr>
-												<td class="mighty-td">Fréquence</td>
-												<td class="mighty-td">5 minutes</td>
-											</tr>
-											<tr>
-												<td class="mighty-td">Nombre d'utilisateurs</td>
-												<td class="mighty-td">1</td>
-											</tr>
-											<tr>
-												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Sites Web</td>
 												<td class="mighty-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="mighty-td">24/7/365</td>
+												<td class="mighty-td">Cloud</td>
 												<td class="mighty-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="mighty-td">Historisque</td>
-												<td class="mighty-td">12 mois</td>
+												<td class="mighty-td">AD & Microsoft productivity</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Base de données</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Virtualisation</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Stockage</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Réseau avancé</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Business Process</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Custom scripts</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Custom Bêta</td>
+												<td class="mighty-td">Oui</td>
 											</tr>
 										</table>
 									</div>
@@ -949,28 +976,28 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="mighty-td">Nombre de capteurs</td>
-												<td class="mighty-td">100*</td>
+												<td class="mighty-td">Notification Mail</td>
+												<td class="mighty-td">Illimité</td>
 											</tr>	
 											<tr>
-												<td class="mighty-td">Fréquence</td>
-												<td class="mighty-td">5 minutes</td>
+												<td class="mighty-td">Notification SMS</td>
+												<td class="mighty-td">20 offerts/mois</td>
 											</tr>
 											<tr>
-												<td class="mighty-td">Nombre d'utilisateurs</td>
-												<td class="mighty-td">1</td>
+												<td class="mighty-td">Notification SMS Vocal</td>
+												<td class="mighty-td">20 offerts/mois</td>
 											</tr>
 											<tr>
-												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Prix SMS</td>
+												<td class="mighty-td">0,10€</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Prix SMS Vocal</td>
+												<td class="mighty-td">0,10€</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Notification spécifique</td>
 												<td class="mighty-td">Oui</td>
-											</tr>
-											<tr>
-												<td class="mighty-td">24/7/365</td>
-												<td class="mighty-td">Oui</td>
-											</tr>
-											<tr>
-												<td class="mighty-td">Historisque</td>
-												<td class="mighty-td">12 mois</td>
 											</tr>
 										</table>
 									</div>
@@ -982,28 +1009,16 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="mighty-td">Nombre de capteurs</td>
-												<td class="mighty-td">100*</td>
+												<td class="mighty-td">Comportement inhabituel</td>
+												<td class="mighty-td">Oui</td>
 											</tr>	
 											<tr>
-												<td class="mighty-td">Fréquence</td>
-												<td class="mighty-td">5 minutes</td>
-											</tr>
-											<tr>
-												<td class="mighty-td">Nombre d'utilisateurs</td>
-												<td class="mighty-td">1</td>
-											</tr>
-											<tr>
-												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Personnalisation de l'interface</td>
 												<td class="mighty-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="mighty-td">24/7/365</td>
+												<td class="mighty-td">Multi tenant</td>
 												<td class="mighty-td">Oui</td>
-											</tr>
-											<tr>
-												<td class="mighty-td">Historisque</td>
-												<td class="mighty-td">12 mois</td>
 											</tr>
 										</table>
 									</div>
@@ -1015,28 +1030,20 @@ if(isset($_POST['submit'])){
 									<div class="table-slide-toggle">
 										<table>
 											<tr>
-												<td class="mighty-td">Nombre de capteurs</td>
-												<td class="mighty-td">100*</td>
+												<td class="mighty-td">Mail</td>
+												<td class="mighty-td">Oui</td>
 											</tr>	
 											<tr>
-												<td class="mighty-td">Fréquence</td>
-												<td class="mighty-td">5 minutes</td>
-											</tr>
-											<tr>
-												<td class="mighty-td">Nombre d'utilisateurs</td>
-												<td class="mighty-td">1</td>
-											</tr>
-											<tr>
-												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Portail</td>
 												<td class="mighty-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="mighty-td">24/7/365</td>
+												<td class="mighty-td">Chat</td>
 												<td class="mighty-td">Oui</td>
 											</tr>
 											<tr>
-												<td class="mighty-td">Historisque</td>
-												<td class="mighty-td">12 mois</td>
+												<td class="mighty-td">Tel</td>
+												<td class="mighty-td">Oui</td>
 											</tr>
 										</table>
 									</div>
@@ -1047,9 +1054,9 @@ if(isset($_POST['submit'])){
 					<div id="pricer" class="visible">
 						<table class="title-table-pricing">
 							<tr>
-								<td class="title-line"></td>
-							<tr>
-								<td class="title-line"></td>
+								<td class="title-line">
+									<div class="title-empty"></div>
+								</td>
 								<td class="title-scops">
 									<p class="surmesure"> </p>
 									<p class="title-offre">Scops</p>
@@ -1077,7 +1084,7 @@ if(isset($_POST['submit'])){
 							</tr>
 						</table>
 						<div id="basics" class="categorie">
-							<button type="button" onclick="window.location.href='#basics'"><p>Basics</p><span class="btn-categorie"></button>
+							<button type="button"><p>Basics</p><span class="btn-categorie"></button>
 							<div class="table-slide-toggle">
 								<table class="table-pricing">
 									<tr>
@@ -1157,6 +1164,7 @@ if(isset($_POST['submit'])){
 										</td>
 										<td class="asio-td">
 											Oui
+
 										</td>
 										<td class="bubo-td">
 											Oui
@@ -1186,63 +1194,12 @@ if(isset($_POST['submit'])){
 							</div>
 						</div>
 						<div id="capteurs" class="categorie">
-							<button type="button" onclick="setTimeout(function(){ window.location.href='#capteurs' }, 100);"><p>Capteurs</p><span class="btn-categorie"></button>
+							<button type="button"><p>Capteurs</p><span class="btn-categorie"></button>
 							<div class="table-slide-toggle">
 								<table class="table-pricing">
 									<tr>
 										<td class="title-line">
-											Nombre de capteurs
-										</td>
-										<td class="scops-td">
-											100*
-										</td>
-										<td class="asio-td">
-											500**
-										</td>
-										<td class="bubo-td">
-											1000***
-										</td>
-										<td class="mighty-td">
-											Jusqu'à 5000****
-										</td>
-									</tr>
-									<tr>
-										<td class="title-line">
-											Fréquence
-										</td>
-										<td class="scops-td">
-											5 minutes
-										</td>
-										<td class="asio-td">
-											5 minutes
-										</td>
-										<td class="bubo-td">
-											5 minutes
-										</td>
-										<td class="mighty-td">
-											1 minute
-										</td>
-									</tr>
-									<tr>
-										<td class="title-line">
-											Nombre d'utilisateurs
-										</td>
-										<td class="scops-td">
-											1
-										</td>
-										<td class="asio-td">
-											3
-										</td>
-										<td class="bubo-td">
-											5
-										</td>
-										<td class="mighty-td">
-											Jusqu'à 30
-										</td>
-									</tr>
-									<tr>
-										<td class="title-line">
-											Auto découverte d'équipements
+											SNMP & WMI
 										</td>
 										<td class="scops-td">
 											Oui
@@ -1259,7 +1216,7 @@ if(isset($_POST['submit'])){
 									</tr>
 									<tr>
 										<td class="title-line">
-											Plate-forme disponible 24/7/365
+											Sites Web
 										</td>
 										<td class="scops-td">
 											Oui
@@ -1276,19 +1233,155 @@ if(isset($_POST['submit'])){
 									</tr>
 									<tr>
 										<td class="title-line">
-											Historique
+											Cloud
 										</td>
 										<td class="scops-td">
-											12 mois
+											Oui
 										</td>
 										<td class="asio-td">
-											12 mois
+											Oui
 										</td>
 										<td class="bubo-td">
-											12 mois
+											Oui
 										</td>
 										<td class="mighty-td">
-											Jusqu'à 24 mois
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											AD & Microsoft productivity
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Base de données
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Virtualisation
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Stockage
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Réseau avancé
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Business Process
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Custom scripts
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Capteur Bêta
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
 										</td>
 									</tr>
 								</table>
@@ -1300,104 +1393,104 @@ if(isset($_POST['submit'])){
 								<table class="table-pricing">
 									<tr>
 										<td class="title-line">
-											Nombre de capteurs
+											Notification Mail
 										</td>
 										<td class="scops-td">
-											100*
+											Illimité
 										</td>
 										<td class="asio-td">
-											500**
+											Illimité
 										</td>
 										<td class="bubo-td">
-											1000***
+											Illimité
 										</td>
 										<td class="mighty-td">
-											Jusqu'à 5000****
+											Illimité
 										</td>
 									</tr>
 									<tr>
 										<td class="title-line">
-											Fréquence
+											Notification SMS
 										</td>
 										<td class="scops-td">
-											5 minutes
+											Non
 										</td>
 										<td class="asio-td">
-											5 minutes
+											10 offerts/mois
 										</td>
 										<td class="bubo-td">
-											5 minutes
+											15 offerts/mois
 										</td>
 										<td class="mighty-td">
-											1 minute
+											20 offerts/mois
 										</td>
 									</tr>
 									<tr>
 										<td class="title-line">
-											Nombre d'utilisateurs
+											Notification SMS Vocal
 										</td>
 										<td class="scops-td">
-											1
+											Non
 										</td>
 										<td class="asio-td">
-											3
+											Non
 										</td>
 										<td class="bubo-td">
-											5
+											15 offerts/mois
 										</td>
 										<td class="mighty-td">
-											Jusqu'à 30
+											20 offerts/mois
 										</td>
 									</tr>
 									<tr>
 										<td class="title-line">
-											Auto découverte d'équipements
+											Prix SMS
 										</td>
 										<td class="scops-td">
-											Oui
+											-
 										</td>
 										<td class="asio-td">
-											Oui
+											0,20€
 										</td>
 										<td class="bubo-td">
-											Oui
+											0,15€
 										</td>
 										<td class="mighty-td">
-											Oui
+											0,10€
 										</td>
 									</tr>
 									<tr>
 										<td class="title-line">
-											Plate-forme disponible 24/7/365
+											Prix SMS Vocal
 										</td>
 										<td class="scops-td">
-											Oui
+											-
 										</td>
 										<td class="asio-td">
-											Oui
+											-
 										</td>
 										<td class="bubo-td">
-											Oui
+											0,15€
 										</td>
 										<td class="mighty-td">
-											Oui
+											0,10€
 										</td>
 									</tr>
 									<tr>
 										<td class="title-line">
-											Historique
+											Notification spécifique
 										</td>
 										<td class="scops-td">
-											12 mois
+											Non
 										</td>
 										<td class="asio-td">
-											12 mois
+											Non
 										</td>
 										<td class="bubo-td">
-											12 mois
+											Non
 										</td>
 										<td class="mighty-td">
-											Jusqu'à 24 mois
+											Oui
 										</td>
 									</tr>
 								</table>
@@ -1409,67 +1502,16 @@ if(isset($_POST['submit'])){
 								<table class="table-pricing">
 									<tr>
 										<td class="title-line">
-											Nombre de capteurs
+											Comportement inhabituel
 										</td>
 										<td class="scops-td">
-											100*
+											Non
 										</td>
 										<td class="asio-td">
-											500**
+											Non
 										</td>
 										<td class="bubo-td">
-											1000***
-										</td>
-										<td class="mighty-td">
-											Jusqu'à 5000****
-										</td>
-									</tr>
-									<tr>
-										<td class="title-line">
-											Fréquence
-										</td>
-										<td class="scops-td">
-											5 minutes
-										</td>
-										<td class="asio-td">
-											5 minutes
-										</td>
-										<td class="bubo-td">
-											5 minutes
-										</td>
-										<td class="mighty-td">
-											1 minute
-										</td>
-									</tr>
-									<tr>
-										<td class="title-line">
-											Nombre d'utilisateurs
-										</td>
-										<td class="scops-td">
-											1
-										</td>
-										<td class="asio-td">
-											3
-										</td>
-										<td class="bubo-td">
-											5
-										</td>
-										<td class="mighty-td">
-											Jusqu'à 30
-										</td>
-									</tr>
-									<tr>
-										<td class="title-line">
-											Auto découverte d'équipements
-										</td>
-										<td class="scops-td">
-											Oui
-										</td>
-										<td class="asio-td">
-											Oui
-										</td>
-										<td class="bubo-td">
-											Oui
+											Non
 										</td>
 										<td class="mighty-td">
 											Oui
@@ -1477,16 +1519,16 @@ if(isset($_POST['submit'])){
 									</tr>
 									<tr>
 										<td class="title-line">
-											Plate-forme disponible 24/7/365
+											Personnalisation de l'interface
 										</td>
 										<td class="scops-td">
-											Oui
+											Non
 										</td>
 										<td class="asio-td">
-											Oui
+											Non
 										</td>
 										<td class="bubo-td">
-											Oui
+											Non
 										</td>
 										<td class="mighty-td">
 											Oui
@@ -1494,19 +1536,19 @@ if(isset($_POST['submit'])){
 									</tr>
 									<tr>
 										<td class="title-line">
-											Historique
+											Multi tenant
 										</td>
 										<td class="scops-td">
-											12 mois
+											Non
 										</td>
 										<td class="asio-td">
-											12 mois
+											Non
 										</td>
 										<td class="bubo-td">
-											12 mois
+											Non
 										</td>
 										<td class="mighty-td">
-											Jusqu'à 24 mois
+											Oui
 										</td>
 									</tr>
 								</table>
@@ -1518,58 +1560,7 @@ if(isset($_POST['submit'])){
 								<table class="table-pricing">
 									<tr>
 										<td class="title-line">
-											Nombre de capteurs
-										</td>
-										<td class="scops-td">
-											100*
-										</td>
-										<td class="asio-td">
-											500**
-										</td>
-										<td class="bubo-td">
-											1000***
-										</td>
-										<td class="mighty-td">
-											Jusqu'à 5000****
-										</td>
-									</tr>
-									<tr>
-										<td class="title-line">
-											Fréquence
-										</td>
-										<td class="scops-td">
-											5 minutes
-										</td>
-										<td class="asio-td">
-											5 minutes
-										</td>
-										<td class="bubo-td">
-											5 minutes
-										</td>
-										<td class="mighty-td">
-											1 minute
-										</td>
-									</tr>
-									<tr>
-										<td class="title-line">
-											Nombre d'utilisateurs
-										</td>
-										<td class="scops-td">
-											1
-										</td>
-										<td class="asio-td">
-											3
-										</td>
-										<td class="bubo-td">
-											5
-										</td>
-										<td class="mighty-td">
-											Jusqu'à 30
-										</td>
-									</tr>
-									<tr>
-										<td class="title-line">
-											Auto découverte d'équipements
+											Mail
 										</td>
 										<td class="scops-td">
 											Oui
@@ -1586,7 +1577,7 @@ if(isset($_POST['submit'])){
 									</tr>
 									<tr>
 										<td class="title-line">
-											Plate-forme disponible 24/7/365
+											Portail
 										</td>
 										<td class="scops-td">
 											Oui
@@ -1603,19 +1594,36 @@ if(isset($_POST['submit'])){
 									</tr>
 									<tr>
 										<td class="title-line">
-											Historique
+											Chat
 										</td>
 										<td class="scops-td">
-											12 mois
+											Oui
 										</td>
 										<td class="asio-td">
-											12 mois
+											Oui
 										</td>
 										<td class="bubo-td">
-											12 mois
+											Oui
 										</td>
 										<td class="mighty-td">
-											Jusqu'à 24 mois
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Tel
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
 										</td>
 									</tr>
 								</table>
@@ -1752,9 +1760,9 @@ if(isset($_POST['submit'])){
 						<li>©2016</li>
 						<li><a href="http://www.hibouvision.com/mentions-legales">Mentions Légales</a></li>
 						<li><a href="http://stereosuper.fr" target='_blank'>Crédit</a></li>
-						<li><a href="#">Comment ça marche</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Charte d'utilisation des données prsonnelles</a></li>
+						<li><a href="#">Notions importantes</a></li>
+						<li><a href="#">Questions fréquentes</a></li>
+						<li><a href="#">Données personnelles</a></li>
 					</ul>
 					<ul id="sensor">
 						<li>Service proposé par </li>
@@ -1765,7 +1773,6 @@ if(isset($_POST['submit'])){
 			</footer>
 		</div>
 
-		<script src="js/isMobile.min.js" type="text/javascript"></script>
 		<script src="js/libs/jquery-1.8.0.min.js" type="text/javascript"></script>
 	  	<script src="js/libs/jquery.easing.1.3.js" type="text/javascript"></script>
   	    <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>

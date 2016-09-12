@@ -39,10 +39,6 @@ $(document).ready(function() {
 
 	function initHome(){
 
-		//$('#pricer').first('.categorie').closest('table-slide-toggle').addClass( "highlight" )
-		$('#pricer .categorie').first().addClass( "active");
-
-
 		$('.title-table-pricing').clone().insertAfter("#clone-offre");
 
 
@@ -59,6 +55,13 @@ $(document).ready(function() {
 
 	if(isMobile.any){
 		$('html').addClass('isMobile');
+		$('#pricer-mobile .offre').first().addClass( "active");
+		$('#pricer-mobile .offre .mobile-toggle .categorie').first().addClass( "active");
+
+	}else{
+		$('html').addClass('isDesk');
+		$('#pricer .categorie').first().addClass( "active");
+
 	}
 
 
@@ -151,6 +154,9 @@ $(document).ready(function() {
 				if(ref.offset().top-$("header").outerHeight() <= myScroll && ref.offset().top-$("header").outerHeight()+ref.height() > myScroll){
 					$(this).parents('li').addClass('active').siblings().removeClass('active');
 				}
+
+
+
 			});
 		}
 	});
@@ -164,62 +170,63 @@ $(document).ready(function() {
 			TweenMax.set($(".wrapper-nav-left > ul"), {position: "absolute", top: "0"});
 		}
 	}
+
+
 	$( "button" ).click(function() {
 	  //$( ".table-slide-toggle" ).slideToggle( "slow" );
 	  //$(this).siblings('.table-slide-toggle').slideToggle( "slow" );
 	  //cas desktop
-	  if($(this).parent(".categorie").hasClass("active")){
+	  	if($(this).parent(".categorie").hasClass("active")){
 	  		$(this).parent(".categorie").toggleClass("active");
 
-	  }else{
+	  	}else{
 
 	  		$('#pricer .categorie.active').removeClass('active')
 	  		//$('#pricer-mobile .categorie.active').removeClass('active')
 	  		$(this).parent(".categorie").toggleClass("active");
-	  }
-
-
-  	  //cas mobile
-  	  $(this).next(".mobile-toggle").toggleClass("visible-infos");
-  	  //console.log($(this).next(".mobile-toggle").siblings(".visible-infos"));
-  	  var uncles = $(this).parent().siblings();
-  	  $(uncles).find(".visible-infos").removeClass("visible-infos");
-  	  /*if($(this).next(".mobile-toggle").hasClass("visible-infos")){
-  	  	$(this).next(".mobile-toggle").toggleClass("visible-infos");
-  	  }else{
-  	  	$(this).next(".mobile-toggle").toggleClass("visible-infos");
-  	  }*/
-	  /*if($(".mobile-toggle").hasClass("visible-infos")){
-	  		$(".mobile-toggle.visible-infos").toggleClass("visible-infos");
-
-	  }else{
-	  		$(".mobile-toggle").toggleClass("visible-infos");
-	  		$('#pricer .categorie.active').removeClass('active')
-	  		//$('#pricer-mobile .categorie.active').removeClass('active')
-	  		$(this).parent(".categorie").toggleClass("active");
-	  }*/
+	  	}
+	  	//$('html,body').animate({scrollTop: $('#pricer .categorie.active').top+$("#pricer").outerHeight()-85}, 400);
+				//$("#pricer").offset().top+$("#pricer").outerHeight()-85
+			
+		///SCROLL AU CLICK
+		//cas desktop
+		if($('html').hasClass('isDesk')){
+			var posElement =$('.isDesk #pricer .categorie.active').offset().top-175;
+		  	$('html,body').animate({scrollTop: posElement}, 400);
+		}else{
+		//cas mobile
+		}
 
 
 
-	  //cas mobile
-	  // if($(".mobile-toggle").hasClass("active")){
-	  // 		//$(this)(".mobile-toggle").toggleClass("active");
-	  // 		//$(".mobile-toggle.active").removeClass("active");
-	  // 		$(".mobile-toggle", this).toggleClass("active");
-	  // }else{
 
-	  // 		$('#pricer-mobile .offre-scops .mobile-toggle.active').removeClass('active')
-	  // 		$(this).parent(".mobile-toggle").toggleClass("active");
-	  // }
+	  	//cas mobile
+	  	//var uncles = $(this).siblings().parent();
+	  	//$(uncles).find(".visible-infos").removeClass("visible-infos");
 
 
+
+	  	//CHOIX OFFRE
+	  	if($(this).parent(".offre").hasClass("active")){
+	  		$(this).parent().removeClass("active");
+	  	}else{
+	  		$('.offre.active').removeClass('active')
+	  		$(this).parent().addClass("active");
+	  	}
+
+
+	  	//CHOIX CATEGORIE
+	  	if($(this).children(".offre .mobile-toggle .categorie").hasClass("active")){
+	  		$(this).children(".mobile-toggle .categorie.active").removeClass("active");
+	  	}else{
+	  		// $('.offre.active').removeClass('active')
+	  		// $(this).parent().addClass("active");
+	  	}
 
 	});
 
-	if (document.documentElement.clientWidth < 800) {
-			// $('#pricer').removeClass('visible');
-			// $('#pricer-mobile').addClass('visible');
-			//location.reload();
-			}
+	// if (document.documentElement.clientWidth < 1000) {
+
+	// }
 
 });

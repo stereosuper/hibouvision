@@ -798,36 +798,36 @@ header .btn.active a {
   font-size: 16px;
 }
 .categorie .table-pricing tr td.title-line {
-  width: 16%;
+  width: 200px;
   padding: 10px;
   text-align: left;
   line-height: 20px;
   background: rgba(222, 232, 237, 0.6);
 }
 .categorie .table-pricing tr td.scops-td {
-  background: rgba(255, 180, 0, 0.5);
+  background: rgba(255, 180, 0, 0.7);
 }
 .categorie .table-pricing tr td.asio-td {
-  background: rgba(206, 77, 37, 0.6);
+  background: rgba(206, 77, 37, 0.7);
 }
 .categorie .table-pricing tr td.bubo-td {
-  background: rgba(2, 122, 135, 0.5);
+  background: rgba(2, 122, 135, 0.7);
 }
 .categorie .table-pricing tr td.mighty-td {
   background: rgba(62, 60, 67, 0.9);
   color: #fff;
 }
 .categorie .table-pricing tr:nth-child(even) td.scops-td {
-  background: rgba(246, 201, 93, 0.5);
+  background: rgba(255, 180, 0, 0.5);
 }
 .categorie .table-pricing tr:nth-child(even) td.asio-td {
-  background: rgba(206, 77, 37, 0.5);
+  background: rgba(206, 77, 37, 0.55);
 }
 .categorie .table-pricing tr:nth-child(even) td.bubo-td {
-  background: rgba(2, 122, 135, 0.4);
+  background: rgba(2, 122, 135, 0.5);
 }
 .categorie .table-pricing tr:nth-child(even) td.mighty-td {
-  background: rgba(62, 60, 67, 0.4);
+  background: rgba(62, 60, 67, 0.6);
 }
 .categorie .table-pricing tr:nth-child(even) td.title-line {
   background-color: #fff;
@@ -984,6 +984,9 @@ header .btn.active a {
   position: absolute;
   top: -50%;
 }
+.title-table-pricing tr .title-empty {
+  width: 200px;
+}
 .title-table-pricing tr .title-scops {
   background-color: #ffb400;
 }
@@ -1040,21 +1043,60 @@ header .btn.active a {
   margin: auto;
   position: relative;
 }
-#pricer-mobile .offre-scops .mobile-toggle,
-#pricer-mobile .offre-asio .mobile-toggle,
-#pricer-mobile .offre-bubo .mobile-toggle,
-#pricer-mobile .offre-mighty .mobile-toggle {
+#pricer-mobile .offre .mobile-toggle {
   display: none;
 }
-#pricer-mobile .offre-scops .mobile-toggle.visible-infos,
-#pricer-mobile .offre-asio .mobile-toggle.visible-infos,
-#pricer-mobile .offre-bubo .mobile-toggle.visible-infos,
-#pricer-mobile .offre-mighty .mobile-toggle.visible-infos {
+#pricer-mobile .offre .mobile-toggle .categorie.active table {
   display: block;
+}
+#pricer-mobile .offre .mobile-toggle .categorie .title-categorie {
+  line-height: 60px;
+  font-family: NeutonBold;
+  font-size: 22px;
+  position: relative;
+}
+#pricer-mobile .offre .mobile-toggle .categorie .title-categorie:after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  background-color: #3e3c43;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 25px;
+  font-family: Lato;
+  padding-left: 8px;
+  top: 16px;
+}
+#pricer-mobile .offre .mobile-toggle .categorie.active:after {
+  content: "-";
+  position: absolute;
+  right: 20px;
+  background-color: #3e3c43;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 25px;
+  font-family: Lato;
+  padding-left: 11px;
+  top: 16px;
+}
+#pricer-mobile .offre.active .mobile-toggle {
+  display: block;
+}
+#pricer-mobile .offre.active .arrow-offre {
+  transform: rotate(90deg);
 }
 #pricer-mobile .offre-btn {
   width: 100%;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 #pricer-mobile .offre-btn .offre-scops {
   background: #ffb400;
@@ -1089,6 +1131,7 @@ header .btn.active a {
   color: #fff;
   font-family: latoBold;
   line-height: 22px;
+  transition: 0.3s ease-in-out;
 }
 #pricer-mobile .offre-mobile ul li:last-child {
   width: 40px;
@@ -1141,55 +1184,6 @@ header .btn.active a {
   font-size: 12px;
   line-height: 14px;
   color: #fff;
-}
-#pricer-mobile .categorie {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  text-align: left;
-  margin-bottom: 10px;
-}
-#pricer-mobile .categorie .title-categorie {
-  line-height: 60px;
-  font-family: NeutonBold;
-  font-size: 22px;
-  position: relative;
-}
-#pricer-mobile .categorie .title-categorie:after {
-  content: "+";
-  position: absolute;
-  right: 20px;
-  background-color: #3e3c43;
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  display: block;
-  border-radius: 50%;
-  line-height: 30px;
-  font-size: 25px;
-  font-family: Lato;
-  padding-left: 8px;
-  top: 16px;
-}
-#pricer-mobile .categorie p {
-  margin: 0;
-}
-#pricer-mobile .categorie.active table {
-  display: block;
-}
-#pricer-mobile .active .title-categorie:after {
-  content: "-";
-  position: absolute;
-  right: 20px;
-  background-color: #3e3c43;
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  display: block;
-  border-radius: 50%;
-  line-height: 30px;
-  font-size: 25px;
-  font-family: Lato;
-  padding-left: 11px;
-  top: 16px;
 }
 #pricer-mobile .table-slide-toggle {
   display: block;
@@ -1885,6 +1879,12 @@ fieldset.big-margin {
   }
 }
 @media (max-width: 900px) {
+  #pricer .title-offre {
+    font-size: 24px;
+  }
+  #pricer .title-price {
+    font-size: 12px;
+  }
   #pricer tr td {
     font-size: 14px;
   }
@@ -2008,6 +2008,18 @@ fieldset.big-margin {
   }
   #main .bloc-content ul {
     padding-left: 40px;
+  }
+}
+@media (max-width: 370px) {
+  #pricer-mobile .offre-mobile {
+    padding-left: 10px;
+  }
+  #pricer-mobile .offre-mobile ul .title-offre p {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  #pricer-mobile .title-price {
+    font-size: 12px;
   }
 }
 /******* RESPONSIVE VERTICAL *******/
