@@ -899,7 +899,9 @@ header {
     z-index:1000;
     display: none;
     width: 100%;
+    top:70px;
     position: fixed;
+    pointer-events: none;
     &.active{
         display: block;
     }
@@ -931,11 +933,6 @@ header {
         .mobile-toggle{
             display:none;
             .categorie{
-                &.active{
-                    table{
-                        display:block;
-                    }
-                }
                 .title-categorie{
                     line-height: 60px;
                     font-family: NeutonBold;
@@ -956,9 +953,13 @@ header {
                         font-family: Lato;
                         padding-left:8px;
                         top:16px;
+                        pointer-events: none;
                     }
                 }
-                &.active{
+                &.active-cate{
+                    table{
+                        display:block;
+                    }
                     &:after{
                         content:"-";
                         position: absolute;
@@ -974,6 +975,7 @@ header {
                         font-family: Lato;
                         padding-left:11px;
                         top:16px;
+                        pointer-events: none;
                     }
                 }
             }
@@ -1508,6 +1510,7 @@ fieldset{
     #nav-left-fixed{
         width: 200px;
         position: fixed;
+        transition-duration: 0.3s;
         ul{
             list-style: none;
             padding-left:20px;
@@ -1532,6 +1535,7 @@ fieldset{
         padding-top: 120px;
         padding-bottom: 50px;
         ul{
+            margin-bottom: 50px;
             padding-left: 70px;
             list-style: none;
             font-size:16px;
@@ -1542,13 +1546,27 @@ fieldset{
                 margin-left: -15px;
                 transition-duration: 0.3s;
             }
+            .mention-speciale{
+                margin-top: 20px;
+                font-size: 14px;
+                &:before{
+                    content:"";
+                }
+            }
         }
+        .bold{
+            font-weight: bold;
+         }
         img{
             padding-top: 20px;
             padding-bottom: 20px;
         }
         .img-full-width{
             width: 100%;
+            height: auto;
+        }
+        .img-3quarter-width{
+            width: 75%;
             height: auto;
         }
         .img-half-width{
@@ -1558,6 +1576,7 @@ fieldset{
         .align-center{
             display: block;
             margin: 30px auto;
+            text-align: center;
         }
         .align-right{
             float:right;
@@ -1568,6 +1587,21 @@ fieldset{
             float:left;
             display: block;
             margin-right: 30px;
+        }
+        .img-txt{
+            margin:60px auto;
+            table-layout: fixed;
+            width: 100%;
+            img{
+                display: table-cell;
+                display: block;
+                float: left;
+                padding: 0;
+                margin-right: 40px;
+            }
+            p{
+                display: table-cell;
+            }
         }
     }
 }
@@ -1667,6 +1701,15 @@ fieldset{
         }
         .btn{
             margin-left: 10px;
+        }
+    }
+    footer{
+        .container{
+            ul{
+                li{
+                    margin:0 5px;
+                }
+            }
         }
     }
 }
@@ -1804,6 +1847,7 @@ fieldset{
         }
         li{
             padding: 10px 0;
+            margin: 0 10px;
         }
     }
     #sensor{

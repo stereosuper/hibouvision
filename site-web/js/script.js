@@ -12,6 +12,8 @@ $(document).ready(function() {
 	            window.setTimeout(callback, 1000/60);
 	          };
 	})();
+	var mobileBreakpoint = 767,
+		tabletBreakpoint = 979;
 
 	var chouetteCanvas = false, menuLinks = $('#mainMenu a').not('.lang').not('.connect');
 
@@ -56,12 +58,14 @@ $(document).ready(function() {
 	if(isMobile.any){
 		$('html').addClass('isMobile');
 		$('#pricer-mobile .offre').first().addClass( "active");
-		$('#pricer-mobile .offre .mobile-toggle .categorie').first().addClass( "active");
+		$('#pricer-mobile .offre-scops .mobile-toggle .categorie').first().addClass( "active-cate");
+		$('#pricer-mobile .offre-asio .mobile-toggle .categorie').first().addClass( "active-cate");
+		$('#pricer-mobile .offre-bubo .mobile-toggle .categorie').first().addClass( "active-cate");
+		$('#pricer-mobile .offre-mighty .mobile-toggle .categorie').first().addClass( "active-cate");
 
 	}else{
 		$('html').addClass('isDesk');
 		$('#pricer .categorie').first().addClass( "active");
-
 	}
 
 
@@ -131,21 +135,21 @@ $(document).ready(function() {
 		var myScroll = $(document).scrollTop();
 
 		//pricer - version desktop
-		if($('html').hasClass('isMobile')){}else{
-			
-			if(myScroll > $("#pricer").offset().top+$("#pricer").outerHeight()-85){
-				$("#clone-container").removeClass("active");
-				$("#pricer  .title-table-pricing").removeClass("hiddden");			
-			}else if(myScroll> $("#pricer").offset().top-85){
-				$("#clone-container").addClass("active");
-				$("#pricer .title-table-pricing").addClass("hiddden");
-			}else{
-				$("#clone-container").removeClass("active");
-				$("#pricer .title-table-pricing").removeClass("hiddden");
+		if($('html').hasClass('isDesk')){
+			if($('body').hasClass('home')){
+				
+				if(myScroll > $("#pricer").offset().top+$("#pricer").outerHeight()-60){
+					$("#clone-container").removeClass("active");
+					$("#pricer  .title-table-pricing").removeClass("hiddden");			
+				}else if(myScroll> $("#pricer").offset().top-80){
+					$("#clone-container").addClass("active");
+					$("#pricer .title-table-pricing").addClass("hiddden");
+				}else{
+					$("#clone-container").removeClass("active");
+					$("#pricer .title-table-pricing").removeClass("hiddden");
+				}
 			}
-
 		}
-
 
 
 		if(menuLinks.length){
@@ -161,72 +165,68 @@ $(document).ready(function() {
 		}
 	});
 
-	$(window).on('beforeunload', function() { $("video").hide(); });
+	if($('html').hasClass('isDesk')){}else{
+		//nav latérale fixed
+		if($("body").hasClass("has-sidebar")){	
+			$(window).scroll(function() {   
+				var scroll = $(window).scrollTop();
+				if (scroll >=$(".wrapper-nav-left").outerHeight(true)-$("#nav-left-fixed").outerHeight()){
+				    TweenMax.set($("#nav-left-fixed"), {position: "absolute", top: $("#header").outerHeight()+$(".wrapper-nav-left").outerHeight(true)-$("#nav-left-fixed").outerHeight()+"px"});
+				}else if (scroll <=$(".wrapper-nav-left").outerHeight(true)-$("#nav-left-fixed").outerHeight()){
+				    TweenMax.set($("#nav-left-fixed"), {position: "fixed", top: "auto"});
+				}else{
 
-	if($("body").hasClass("has-sidebar")){
-		if(myScroll>=$(".wrapper-nav-left").offset().top+$(".content-with-navbar").outerHeight()-$(".wrapper-nav-left ul").outerHeight()){
-			TweenMax.set($(".wrapper-nav-left > ul"), {position: "absolute", top: $(".content-with-navbar").outerHeight()-$(".wrapper-nav-left ul").outerHeight()+$(".header").outerHeight()+"px"});
-		}else{
-			TweenMax.set($(".wrapper-nav-left > ul"), {position: "absolute", top: "0"});
+				}
+			});
 		}
 	}
 
-
 	$( "button" ).click(function() {
-	  //$( ".table-slide-toggle" ).slideToggle( "slow" );
-	  //$(this).siblings('.table-slide-toggle').slideToggle( "slow" );
+
 	  //cas desktop
-	  	if($(this).parent(".categorie").hasClass("active")){
-	  		$(this).parent(".categorie").toggleClass("active");
-
-	  	}else{
-
-	  		$('#pricer .categorie.active').removeClass('active')
-	  		//$('#pricer-mobile .categorie.active').removeClass('active')
-	  		$(this).parent(".categorie").toggleClass("active");
-	  	}
-	  	//$('html,body').animate({scrollTop: $('#pricer .categorie.active').top+$("#pricer").outerHeight()-85}, 400);
-				//$("#pricer").offset().top+$("#pricer").outerHeight()-85
-			
-		///SCROLL AU CLICK
-		//cas desktop
-		if($('html').hasClass('isDesk')){
-			var posElement =$('.isDesk #pricer .categorie.active').offset().top-175;
+	  	if($('html').hasClass('isDesk')){
+		  	if($(this).parent(".categorie").hasClass("active")){
+		  		$(this).parent(".categorie").toggleClass("active");
+		  	}else{
+		  		$('#pricer .categorie.active').removeClass('active')
+		  		$(this).parent(".categorie").toggleClass("active");
+		  	}
+		  	//scroll
+		  	var posElement =$('.isDesk #pricer .categorie.active').offset().top-97;
 		  	$('html,body').animate({scrollTop: posElement}, 400);
-		}else{
-		//cas mobile
-		}
-
-
-
-
+	  	}
 	  	//cas mobile
-	  	//var uncles = $(this).siblings().parent();
-	  	//$(uncles).find(".visible-infos").removeClass("visible-infos");
+	  if($('html').hasClass('isMobile')){
+	  		var posElement = 0 ;
 
+		  	//CHOIX CATEGORIE
+		  	if($(this).parent().hasClass('categorie')){
+			  	if($(this).parent(".categorie").hasClass("active-cate")){
+			  		$(this).parent().removeClass("active-cate");
+			  	}else{
+			  		$(this).parent(".categorie").addClass("active-cate");
+			  	}
+		  		posElement =$(this).parent(".categorie").offset().top;
+		 	 }
+		  	//CHOIX OFFRE
+		  	if($(this).hasClass('offre-btn')){
+			  	if($(this).parent(".offre").hasClass("active")){
+			  		$(this).parent(".offre").removeClass("active");
+			  	}else{
+			  		$(".offre.active").removeClass("active");
+			  		$(this).parent(".offre").addClass("active");
 
+			  	}
+		  		//scroll
+		  		posElement =$('.isMobile #pricer-mobile .offre.active').offset().top;
+		  	}
+		  	$('html,body').animate({scrollTop: posElement}, 400);
 
-	  	//CHOIX OFFRE
-	  	if($(this).parent(".offre").hasClass("active")){
-	  		$(this).parent().removeClass("active");
-	  	}else{
-	  		$('.offre.active').removeClass('active')
-	  		$(this).parent().addClass("active");
 	  	}
 
 
-	  	//CHOIX CATEGORIE
-	  	if($(this).children(".offre .mobile-toggle .categorie").hasClass("active")){
-	  		$(this).children(".mobile-toggle .categorie.active").removeClass("active");
-	  	}else{
-	  		// $('.offre.active').removeClass('active')
-	  		// $(this).parent().addClass("active");
-	  	}
 
 	});
 
-	// if (document.documentElement.clientWidth < 1000) {
-
-	// }
 
 });

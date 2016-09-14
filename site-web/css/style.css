@@ -1016,7 +1016,9 @@ header .btn.active a {
   z-index: 1000;
   display: none;
   width: 100%;
+  top: 70px;
   position: fixed;
+  pointer-events: none;
 }
 #clone-container.active {
   display: block;
@@ -1046,9 +1048,6 @@ header .btn.active a {
 #pricer-mobile .offre .mobile-toggle {
   display: none;
 }
-#pricer-mobile .offre .mobile-toggle .categorie.active table {
-  display: block;
-}
 #pricer-mobile .offre .mobile-toggle .categorie .title-categorie {
   line-height: 60px;
   font-family: NeutonBold;
@@ -1070,8 +1069,12 @@ header .btn.active a {
   font-family: Lato;
   padding-left: 8px;
   top: 16px;
+  pointer-events: none;
 }
-#pricer-mobile .offre .mobile-toggle .categorie.active:after {
+#pricer-mobile .offre .mobile-toggle .categorie.active-cate table {
+  display: block;
+}
+#pricer-mobile .offre .mobile-toggle .categorie.active-cate:after {
   content: "-";
   position: absolute;
   right: 20px;
@@ -1086,6 +1089,7 @@ header .btn.active a {
   font-family: Lato;
   padding-left: 11px;
   top: 16px;
+  pointer-events: none;
 }
 #pricer-mobile .offre.active .mobile-toggle {
   display: block;
@@ -1594,6 +1598,7 @@ fieldset.big-margin {
 #main #nav-left-fixed {
   width: 200px;
   position: fixed;
+  transition-duration: 0.3s;
 }
 #main #nav-left-fixed ul {
   list-style: none;
@@ -1617,6 +1622,7 @@ fieldset.big-margin {
   padding-bottom: 50px;
 }
 #main .bloc-content ul {
+  margin-bottom: 50px;
   padding-left: 70px;
   list-style: none;
   font-size: 16px;
@@ -1628,12 +1634,26 @@ fieldset.big-margin {
   margin-left: -15px;
   transition-duration: 0.3s;
 }
+#main .bloc-content ul .mention-speciale {
+  margin-top: 20px;
+  font-size: 14px;
+}
+#main .bloc-content ul .mention-speciale:before {
+  content: "";
+}
+#main .bloc-content .bold {
+  font-weight: bold;
+}
 #main .bloc-content img {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 #main .bloc-content .img-full-width {
   width: 100%;
+  height: auto;
+}
+#main .bloc-content .img-3quarter-width {
+  width: 75%;
   height: auto;
 }
 #main .bloc-content .img-half-width {
@@ -1643,6 +1663,7 @@ fieldset.big-margin {
 #main .bloc-content .align-center {
   display: block;
   margin: 30px auto;
+  text-align: center;
 }
 #main .bloc-content .align-right {
   float: right;
@@ -1653,6 +1674,21 @@ fieldset.big-margin {
   float: left;
   display: block;
   margin-right: 30px;
+}
+#main .bloc-content .img-txt {
+  margin: 60px auto;
+  table-layout: fixed;
+  width: 100%;
+}
+#main .bloc-content .img-txt img {
+  display: table-cell;
+  display: block;
+  float: left;
+  padding: 0;
+  margin-right: 40px;
+}
+#main .bloc-content .img-txt p {
+  display: table-cell;
 }
 /* @group Non semantic Boilerplate */
 /* remplacement image */
@@ -1731,6 +1767,9 @@ fieldset.big-margin {
   }
   header .btn {
     margin-left: 10px;
+  }
+  footer .container ul li {
+    margin: 0 5px;
   }
 }
 @media (max-width: 1000px) {
@@ -1867,6 +1906,7 @@ fieldset.big-margin {
   }
   footer li {
     padding: 10px 0;
+    margin: 0 10px;
   }
   #sensor {
     float: none;

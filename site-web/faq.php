@@ -28,6 +28,8 @@
 	  	<link rel="stylesheet" href="css/style.css">
 
 	  	<script src="js/libs/modernizr-2.6.1.min.js" type="text/javascript"></script>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
 	  	<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -51,7 +53,7 @@
 	</head>
 
 	<body class="has-sidebar">
-		<header>
+		<header id="header">
 			<div class="container clearfix">
 				<h1 id="logo"><a href='./'>Hibouvision</a></h1>
 				<ul class="nav" id='mainMenu'>
@@ -118,20 +120,22 @@
 			</div>
 		</div>
 		<footer>
-				<div class="container">
-					<ul>
-						<li>©2016</li>
-						<li><a href="http://www.hibouvision.com/mentions-legales">Mentions Légales</a></li>
-						<li><a href="http://stereosuper.fr" target='_blank'>Crédit</a></li>
-					</ul>
-					<ul id="sensor">
-						<li>Hibouvision est un service proposé par </li>
-						<li class="sf"><img src="layoutImg/sensor-factory1.png" alt=""></li>
-						<li class="sf"><a href="http://www.hibouvision.com/" target='_blank'><img src="layoutImg/SF.png" alt=""></a></li>
-					</ul>
-				</div>
+			<div class="container">
+				<ul>
+					<li>©2016</li>
+					<li><a href="http://www.hibouvision.com/mentions-legales">Mentions Légales</a></li>
+					<li><a href="http://stereosuper.fr" target='_blank'>Crédit</a></li>
+					<li><a href="#">Notions importantes</a></li>
+					<li><a href="#">Questions fréquentes</a></li>
+					<li><a href="#">Données personnelles</a></li>
+				</ul>
+				<ul id="sensor">
+					<li>Service proposé par </li>
+					<li class="sf"><img src="layoutImg/sensor-factory1.png" alt="Sensor Factory"></li>
+					<li class="sf"><a href="http://www.sensorfactory.eu/" target='_blank'><img src="layoutImg/SF.png" alt=""></a></li>
+				</ul>
+			</div>
 		</footer>
-
 		<script src="js/isMobile.min.js" type="text/javascript"></script>
 		<script src="js/libs/jquery-1.8.0.min.js" type="text/javascript"></script>
 	  	<script src="js/libs/jquery.easing.1.3.js" type="text/javascript"></script>
