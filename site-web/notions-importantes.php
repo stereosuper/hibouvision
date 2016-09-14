@@ -69,7 +69,7 @@
 						Créons un device “Firewall” et un device “Mail server”. Sur chaque device, créons un ou plusieurs capteurs. Chaque capteur supervise un aspect unique de votre équipement. Cela peut être un temps de réponse au ping, une charge CPU sur un serveur, le trafic sur une interface réseau ou l’ouverture d’un port réseau.
 					</p>
 
-					<img class="align-center" src="layoutImg/table-capteur.jpg">
+					<a href="layoutImg/table-capteur.jpg"><img class="align-center" src="layoutImg/table-capteur.jpg"></a>
 
 					<div class="img-txt">
 						<img src="layoutImg/check.jpg">
@@ -106,7 +106,7 @@
 					<p>
 						Aucun accès à votre réseau depuis l’extérieur n’est nécessaire. C’est la sonde qui se connecte vers Hibouvision et non l’inverse. Un simple accès sortant vers Internet est donc suffisant pour déployer Hibouvision chez vous.
 					</p>
-					<img class="img-3quarter-width align-center" src="layoutImg/schema.jpg">
+					<a href="layoutImg/schema.jpg"><img class="img-3quarter-width align-center" src="layoutImg/schema.jpg"></a>
 					<p class="bold align-center">
 						Schéma de principe
 					</p>
@@ -116,7 +116,7 @@
 					<p>
 						Pour vous guider, Hibouvision intègre des templates de supervision éprouvés qui conviendront à la plupart des cas de figures.
 					</p>
-					<img class="img-quarter3-width align-center" src="layoutImg/table-template.jpg">
+					<a href="layoutImg/table-template.jpg"><img class="img-quarter3-width align-center" src="layoutImg/table-template.jpg"></a>
 					<p class="bold align-center">
 						Liste des templates par défaut
 					</p>
