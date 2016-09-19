@@ -207,7 +207,8 @@ if(isset($_POST['submit'])){
 								<img src="layoutImg/prtg.png" srcset="layoutImg/prtg.png 1x, layoutImg/prtg2x.png 2x" alt="">
 							</div>
 							<h4>Basé sur PRTG</h4>
-							<p>Profitez de l'experience de 150 000 administrateurs.</p>
+							<p>Profitez de l'experience de 150 000 administrateurs.<br/>
+							<a href="http://www.paessler.com" class="underline">www.paessler.com</a></p>
 						</div>
 					</div>
 				</div>
@@ -439,19 +440,19 @@ if(isset($_POST['submit'])){
 											</tr>	
 											<tr>
 												<td class="scops-td">Notification SMS</td>
-												<td class="scops-td">Non</td>
+												<td class="scops-td">Oui</td>
 											</tr>
 											<tr>
 												<td class="scops-td">Notification SMS Vocal</td>
-												<td class="scops-td">Non</td>
+												<td class="scops-td">Oui</td>
 											</tr>
 											<tr>
 												<td class="scops-td">Prix SMS</td>
-												<td class="scops-td">-</td>
+												<td class="scops-td">0,20€</td>
 											</tr>
 											<tr>
 												<td class="scops-td">Prix SMS Vocal</td>
-												<td class="scops-td">-</td>
+												<td class="scops-td">0,20€</td>
 											</tr>
 											<tr>
 												<td class="scops-td">Notification spécifique</td>
@@ -627,7 +628,7 @@ if(isset($_POST['submit'])){
 											</tr>
 											<tr>
 												<td class="asio-td">Notification SMS Vocal</td>
-												<td class="asio-td">Non</td>
+												<td class="asio-td">Oui</td>
 											</tr>
 											<tr>
 												<td class="asio-td">Prix SMS</td>
@@ -635,7 +636,7 @@ if(isset($_POST['submit'])){
 											</tr>
 											<tr>
 												<td class="asio-td">Prix SMS Vocal</td>
-												<td class="asio-td">-</td>
+												<td class="asio-td">0.20€</td>
 											</tr>
 											<tr>
 												<td class="asio-td">Notification spécifique</td>
@@ -1413,7 +1414,7 @@ if(isset($_POST['submit'])){
 											Notification SMS
 										</td>
 										<td class="scops-td">
-											Non
+											Oui
 										</td>
 										<td class="asio-td">
 											10 offerts/mois
@@ -1430,10 +1431,10 @@ if(isset($_POST['submit'])){
 											Notification SMS Vocal
 										</td>
 										<td class="scops-td">
-											Non
+											Oui
 										</td>
 										<td class="asio-td">
-											Non
+											Oui
 										</td>
 										<td class="bubo-td">
 											15 offerts/mois
@@ -1447,7 +1448,7 @@ if(isset($_POST['submit'])){
 											Prix SMS
 										</td>
 										<td class="scops-td">
-											-
+											0,20€								
 										</td>
 										<td class="asio-td">
 											0,20€
@@ -1464,10 +1465,10 @@ if(isset($_POST['submit'])){
 											Prix SMS Vocal
 										</td>
 										<td class="scops-td">
-											-
+											0,20€
 										</td>
 										<td class="asio-td">
-											-
+											0,20€
 										</td>
 										<td class="bubo-td">
 											0,15€
@@ -1630,47 +1631,6 @@ if(isset($_POST['submit'])){
 							</div>
 						</div>
 					</div>
-					
-
-					<!-- <ul id="offre">
-						<li id="scop">
-							<div class="container-img">
-								<img src="layoutImg/scop.jpg" alt="">
-							</div>
-							<ul>
-								<li><h4>Scops</h4></li>
-								<li class="gris">1 sonde</li>
-								<li>200 capteurs</li>
-								<li class="gris">Aide à la configuration initiale</li>
-								<li>plate-forme disponible 24/7/365</li>
-							</ul>
-						</li>
-						<li id="asio">
-							<div class="container-img">
-								<img src="layoutImg/asio.jpg" alt="">
-							</div>
-							<ul>
-								<li><h4>Asio</h4></li>
-								<li class="gris">2 sondes</li>
-								<li>450 capteurs</li>
-								<li class="gris">Aide à la configuration initiale</li>
-								<li>plate-forme disponible 24/7/365</li>
-							</ul>
-						</li>
-						<li id="bubo">
-						<div class="container-img">
-								<img src="layoutImg/bubo.jpg" alt="">
-							</div>
-							<ul>
-								<li><h4>Bubo</h4></li>
-								<li class="gris">3 sondes</li>
-								<li>1000 capteurs</li>
-								<li class="gris">Aide à la configuration initiale</li>
-								<li>plate-forme disponible 24/7/365</li>
-							</ul>
-						</li>
-					</ul> -->
-					<div id="btn"><a href="#contact" class="bouton btnScroll ga-tracking" title="découvrir les fonctionnalités">Découvrir toutes les fonctionnalités</a></div>
 				</div>
 			</div>
 			<div id="contact">
@@ -1695,7 +1655,7 @@ if(isset($_POST['submit'])){
 				<div class="bg-grey">
 					<div class="container-small clearfix">
 						<div class="text">
-							<div class="chapeau">Démo</div>
+							<div class="chapeau">Contact</div>
 							<h3>Testez Hibouvision</h3>
 							<p>Testez notre offre Bubo (limitée à 100 capteurs) pendant 15 jours. Pour toute autre information, <a href="#">contactez-nous</a>.
 						</div>
@@ -1740,7 +1700,7 @@ if(isset($_POST['submit'])){
 								        </fieldset>
 								    </fieldset>
 								    <fieldset class='<?php if($erreurMsg != '') echo 'error'; ?>'>
-								        <label for="message">Message</label><textarea id="message" placeholder="Bonjour, j'aurais souhaité une démo..." name="message"><?php echo $message; ?></textarea>
+								        <label for="message">Message</label><textarea id="message" placeholder="Bonjour, je souhaiterais avoir plus d'informations..." name="message"><?php echo $message; ?></textarea>
 								    </fieldset>
 								    <fieldset class='captcha <?php if($erreurCaptcha != '') echo 'error'; ?>'>
 								    	<label for='captcha'>

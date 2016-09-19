@@ -213,12 +213,12 @@ $(document).ready(function() {
 			  	if($(this).parent(".offre").hasClass("active")){
 			  		$(this).parent(".offre").removeClass("active");
 			  	}else{
-			  		$(".offre.active").removeClass("active");
+			  		//$(".offre.active").removeClass("active");
 			  		$(this).parent(".offre").addClass("active");
 
 			  	}
 		  		//scroll
-		  		posElement =$('.isMobile #pricer-mobile .offre.active').offset().top;
+		  		posElement =$(this).parent('.offre.active').offset().top;
 		  	}
 		  	$('html,body').animate({scrollTop: posElement}, 400);
 
