@@ -1657,7 +1657,7 @@ if(isset($_POST['submit'])){
 						<div class="text">
 							<div class="chapeau">Contact</div>
 							<h3>Testez Hibouvision</h3>
-							<p>Testez notre offre Bubo (limitée à 100 capteurs) pendant 15 jours. Pour toute autre information, <a href="#">contactez-nous</a>.
+							<p>Testez notre offre Bubo (limitée à 100 capteurs) pendant 15 jours. Pour toute autre information, <a href="mailto:contact@hibouvision.com">contactez-nous</a>.
 						</div>
 						<div id="formulaire">
 							<?php if($status == 'succes'){ ?>

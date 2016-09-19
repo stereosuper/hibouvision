@@ -192,7 +192,7 @@ $(document).ready(function() {
 		  		$(this).parent(".categorie").toggleClass("active");
 		  	}
 		  	//scroll
-		  	var posElement =$('.isDesk #pricer .categorie.active').offset().top-97;
+		  	var posElement =$('.isDesk #pricer .categorie.active').offset().top-160;
 		  	$('html,body').animate({scrollTop: posElement}, 400);
 	  	}
 	  	//cas mobile
