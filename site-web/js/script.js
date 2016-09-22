@@ -31,23 +31,41 @@ $(document).ready(function() {
 		}
 	}*/
 
-	/*function animer(){
-		var myScroll = $(document).scrollTop();
-
-		requestAnimFrame(function(){
-			animer();
-		});
-	}*/
-
 	function initHome(){
-
 		$('.title-table-pricing').clone().insertAfter("#clone-offre");
-
-
-
 	}
+
 	function scrollToAnchor(id){
 	    $('html,body').animate({scrollTop: $(id).offset().top-$("header").outerHeight()+10}, 400);
+	}
+
+	function pricer(myScroll){
+		var intViewportHeight = window.innerHeight;
+		if($('html').hasClass('isDesk')){
+			if($('body').hasClass('home')){
+				// version small ou pas
+				var heightTitlePricer;
+				if (intViewportHeight < 600){
+					$("#clone-container").addClass("disable");
+					heightTitlePricer = 76;
+				}else{
+					$("#clone-container").removeClass("disable");
+					heightTitlePricer = 165;
+				}
+
+				// position pricer
+				if(myScroll > $("#pricer").offset().top+$("#pricer").outerHeight()-60){
+					$("#clone-container").removeClass("active");
+					$("#pricer  .title-table-pricing").removeClass("hiddden");			
+				}else if(myScroll> $("#pricer").offset().top-heightTitlePricer){
+					$("#clone-container").addClass("active");
+					$("#pricer .title-table-pricing").addClass("hiddden");
+				}else{
+					$("#clone-container").removeClass("active");
+					$("#pricer .title-table-pricing").removeClass("hiddden");
+				}
+			}
+		}
 	}
 
 
@@ -78,6 +96,56 @@ $(document).ready(function() {
 	$('.btnScroll').on('click', function(e){
 		e.preventDefault();
 		scrollToAnchor($(this).attr('href'));
+	});
+
+	$("button").click(function() {
+	  //cas desktop
+	  	if($('html').hasClass('isDesk')){
+		  	if($(this).parent(".categorie").hasClass("active")){
+		  		$(this).parent(".categorie").toggleClass("active");
+		  	}else{
+		  		$('#pricer .categorie.active').removeClass('active')
+		  		$(this).parent(".categorie").toggleClass("active");
+		  	}
+		  	//scroll
+		  	var posiScroll;
+		  	if($("#clone-container").hasClass("disable")){
+		  		posiScroll = 160;
+		  	}else{
+	  			posiScroll = 260;
+		  	}
+		  	var posElement =$('.isDesk #pricer .categorie.active').offset().top-posiScroll;
+		  	$('html,body').animate({scrollTop: posElement}, 400);
+	  	}
+	  	//cas mobile
+	  if($('html').hasClass('isMobile')){
+	  		var posElement = 0 ;
+
+		  	//CHOIX CATEGORIE
+		  	if($(this).parent().hasClass('categorie')){
+			  	if($(this).parent(".categorie").hasClass("active-cate")){
+			  		$(this).parent().removeClass("active-cate");
+			  	}else{
+			  		$(this).parent(".categorie").addClass("active-cate");
+			  	}
+		  		posElement =$(this).parent(".categorie").offset().top;
+		 	 }
+		  	//CHOIX OFFRE
+		  	if($(this).hasClass('offre-btn')){
+			  	if($(this).parent(".offre").hasClass("active")){
+			  		$(this).parent(".offre").removeClass("active");
+			  	}else{
+			  		//$(".offre.active").removeClass("active");
+			  		$(this).parent(".offre").addClass("active");
+
+			  	}
+		  		//scroll
+		  		posElement =$(this).parent('.offre.active').offset().top;
+		  	}
+		  	$('html,body').animate({scrollTop: posElement}, 400);
+
+	  	}
+
 	});
 
 	//seeThru video
@@ -131,25 +199,10 @@ $(document).ready(function() {
 		}
 	});*/
 
-	$(document).on('scroll', function(){
-		var myScroll = $(document).scrollTop();
+	animer();
 
-		//pricer - version desktop
-		if($('html').hasClass('isDesk')){
-			if($('body').hasClass('home')){
-				
-				if(myScroll > $("#pricer").offset().top+$("#pricer").outerHeight()-60){
-					$("#clone-container").removeClass("active");
-					$("#pricer  .title-table-pricing").removeClass("hiddden");			
-				}else if(myScroll> $("#pricer").offset().top-80){
-					$("#clone-container").addClass("active");
-					$("#pricer .title-table-pricing").addClass("hiddden");
-				}else{
-					$("#clone-container").removeClass("active");
-					$("#pricer .title-table-pricing").removeClass("hiddden");
-				}
-			}
-		}
+	function animer(){
+		var myScroll = $(document).scrollTop();
 
 
 		if(menuLinks.length){
@@ -158,14 +211,21 @@ $(document).ready(function() {
 				if(ref.offset().top-$("header").outerHeight() <= myScroll && ref.offset().top-$("header").outerHeight()+ref.height() > myScroll){
 					$(this).parents('li').addClass('active').siblings().removeClass('active');
 				}
-
-
-
 			});
 		}
-	});
 
-	if($('html').hasClass('isDesk')){}else{
+		pricer(myScroll);
+
+		requestAnimFrame(function(){
+			animer();
+		});
+	}
+
+	// $(document).on('scroll', function(){
+		
+	// });
+
+	if(!$('html').hasClass('isDesk')){
 		//nav latérale fixed
 		if($("body").hasClass("has-sidebar")){	
 			$(window).scroll(function() {   
@@ -181,52 +241,5 @@ $(document).ready(function() {
 		}
 	}
 
-	$( "button" ).click(function() {
-
-	  //cas desktop
-	  	if($('html').hasClass('isDesk')){
-		  	if($(this).parent(".categorie").hasClass("active")){
-		  		$(this).parent(".categorie").toggleClass("active");
-		  	}else{
-		  		$('#pricer .categorie.active').removeClass('active')
-		  		$(this).parent(".categorie").toggleClass("active");
-		  	}
-		  	//scroll
-		  	var posElement =$('.isDesk #pricer .categorie.active').offset().top-160;
-		  	$('html,body').animate({scrollTop: posElement}, 400);
-	  	}
-	  	//cas mobile
-	  if($('html').hasClass('isMobile')){
-	  		var posElement = 0 ;
-
-		  	//CHOIX CATEGORIE
-		  	if($(this).parent().hasClass('categorie')){
-			  	if($(this).parent(".categorie").hasClass("active-cate")){
-			  		$(this).parent().removeClass("active-cate");
-			  	}else{
-			  		$(this).parent(".categorie").addClass("active-cate");
-			  	}
-		  		posElement =$(this).parent(".categorie").offset().top;
-		 	 }
-		  	//CHOIX OFFRE
-		  	if($(this).hasClass('offre-btn')){
-			  	if($(this).parent(".offre").hasClass("active")){
-			  		$(this).parent(".offre").removeClass("active");
-			  	}else{
-			  		//$(".offre.active").removeClass("active");
-			  		$(this).parent(".offre").addClass("active");
-
-			  	}
-		  		//scroll
-		  		posElement =$(this).parent('.offre.active').offset().top;
-		  	}
-		  	$('html,body').animate({scrollTop: posElement}, 400);
-
-	  	}
-
-
-
-	});
-
-
 });
+
