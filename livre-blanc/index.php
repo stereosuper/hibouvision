@@ -199,10 +199,10 @@
 					À propos de Hibouvision
 				</h3>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sapien eros. Donec convallis finibus turpis vitae ullamcorper. Nam viverra tellus vel diam sodales tristique.
+					Hibouvision est une plateforme SaaS de supervision basée sur PRTG et opérée par Sensor Factory.
 				</p>
 				<p>
-					Integer dictum sapien et dui sollicitudin congue. Pellentesque sagittis enim feugiat ex tincidunt, eget interdum massa pharetra. Nullam luctus, mi et pellentesque rutrum, lacus libero vestibulum lacus, vitae dapibus tellus tortor vel ante.
+					Grâce à la richesse de sa bibliothèque de capteurs prédéfinis et son architecture respectueuse des normes actuelles de sécurité, Hibouvision est la solution adaptée à tous les réseaux petits et grands.
 				</p> <a href="http://hibouvision.com" class="btn   btn-wire wire-btn-paynes-grey">Visitez Hibouvision.com</a>
 			</div>
 			<div class="col-sm-6">
