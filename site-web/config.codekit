@@ -643,6 +643,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/min\/isMobile.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/isMobile.min-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/isMobile.min-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/min\/script-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -749,6 +760,17 @@
 		"initialSize": 68571,
 		"inputAbbreviatedPath": "\/layoutImg\/bubo@2x.jpg",
 		"outputAbbreviatedPath": "\/layoutImg\/bubo@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/check.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2280,
+		"inputAbbreviatedPath": "\/layoutImg\/check.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/check.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1094,6 +1116,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layoutImg\/schema.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 86623,
+		"inputAbbreviatedPath": "\/layoutImg\/schema.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/schema.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layoutImg\/scop.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1211,6 +1244,28 @@
 		"initialSize": 2392,
 		"inputAbbreviatedPath": "\/layoutImg\/SF.png",
 		"outputAbbreviatedPath": "\/layoutImg\/SF.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/table-capteur.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 62237,
+		"inputAbbreviatedPath": "\/layoutImg\/table-capteur.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/table-capteur.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/table-template.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 150684,
+		"inputAbbreviatedPath": "\/layoutImg\/table-template.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/table-template.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1427,6 +1482,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/notions-importantes.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/notions-importantes.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/page-type.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1603,7 +1667,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http:\/\/localhost:8888\/",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,
