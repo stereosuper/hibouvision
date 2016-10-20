@@ -200,7 +200,7 @@ if(isset($_POST['submit'])){
 							</div>
 							<h4>Saas &amp; Sécurisé</h4>
 							<p>Tous les avantages d’une solution  Saas, avec une sécurité optimale garantie.<br />
-							<a href="../livre-blanc" class="underline" title="En savoir plus">En savoir plus</a></p>
+							<a href="livre-blanc" class="underline" title="En savoir plus">En savoir plus</a></p>
 						</div>
 						<div class="right">
 							<div id="hibou2" class="hd">
