@@ -87,7 +87,7 @@
 
 							<h4 id="paiement">Quels sont les moyens de paiements acceptés ?</h4>
 
-							<p>Pour le moment nous n’acceptons que les règlements par prélèvements ou virements bancaires. Vous pouvez nous consulter pour tout moyen de paiement alternatifs.</p>
+							<p>Pour le moment nous n’acceptons que les règlements par prélèvements ou virements bancaires. Vous pouvez nous consulter pour tout moyen de paiement alternatif.</p>
 
 							<h4 id="remise">Comment obtenir une remise ?</h4>
 
