@@ -142,7 +142,7 @@
 			</div>
 			<div class="col-sm-6 marginT-neg">
 				<h1 class="mg-lg tc-paynes-grey">
-					La gestion des notifications en supervision&nbsp;IT
+					Supervision en mode Saas ou Hébergée maison ?
 				</h1>
 				<h2 class="mg-lg tc-paynes-grey">
 					Livre blanc - mai 2016
