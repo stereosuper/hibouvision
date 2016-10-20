@@ -200,7 +200,7 @@ if(isset($_POST['submit'])){
 							</div>
 							<h4>Saas &amp; Sécurisé</h4>
 							<p>Tous les avantages d’une solution  Saas, avec une sécurité optimale garantie.<br />
-							<a href="#" class="underline" title="En savoir plus">En savoir plus</a></p>
+							<a href="../livre-blanc" class="underline" title="En savoir plus">En savoir plus</a></p>
 						</div>
 						<div class="right">
 							<div id="hibou2" class="hd">
@@ -1718,11 +1718,10 @@ if(isset($_POST['submit'])){
 				<div class="container">
 					<ul>
 						<li>©2016</li>
-						<li><a href="http://www.hibouvision.com/mentions-legales">Mentions Légales</a></li>
+						<li><a href="mentions-legales.php">Mentions Légales</a></li>
 						<li><a href="http://stereosuper.fr" target='_blank'>Crédit</a></li>
-						<li><a href="#">Notions importantes</a></li>
-						<li><a href="#">Questions fréquentes</a></li>
-						<li><a href="#">Données personnelles</a></li>
+						<li><a href="notions-importantes.php">Notions importantes</a></li>
+						<li><a href="faq.php">Questions fréquentes</a></li>
 					</ul>
 					<ul id="sensor">
 						<li>Service proposé par </li>
