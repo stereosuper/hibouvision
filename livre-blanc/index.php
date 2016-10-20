@@ -142,7 +142,7 @@
 			</div>
 			<div class="col-sm-6 marginT-neg">
 				<h1 class="mg-lg tc-paynes-grey">
-					Supervision en mode Saas ou Hébergée maison ?
+					Supervision en mode SaaS ou Hébergée maison ?
 				</h1>
 				<h2 class="mg-lg tc-paynes-grey">
 					Livre blanc - mai 2016
