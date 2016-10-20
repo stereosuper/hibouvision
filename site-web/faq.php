@@ -87,7 +87,7 @@
 
 							<h4 id="paiement">Quels sont les moyens de paiements acceptés ?</h4>
 
-							<p>Pour le moment nous n’acceptons que les règlements par prélèvements ou virements bancaires. Vous pouvez nous consulter pour tous moyens de paiements alternatifs.</p>
+							<p>Pour le moment nous n’acceptons que les règlements par prélèvements ou virements bancaires. Vous pouvez nous consulter pour tout moyen de paiement alternatifs.</p>
 
 							<h4 id="remise">Comment obtenir une remise ?</h4>
 
@@ -95,13 +95,13 @@
 								<ul>
 									<li>Choisir l’offre Mighty Owl,</li>
 									<li>Vous êtes un  revendeur/partenaire</li>
-									<li>Vous faîtes le choix de vous engager annuellement</li>
+									<li>Vous faites le choix de vous engager annuellement</li>
 								</ul>
 
 							<h4 id="upgrade">Comment augmenter mon abonnement ?</h4>
 
 							<p>Vous pouvez à tout moment monter en gamme via notre portail client. Ces changements sont effectifs immédiatement après la validation par notre équipe.
-							Si vous faîtes cette augmentation en cours de mois d’abonnement, un prorata est calculé pour que vous ne payiez que la différence.</p>
+							Si vous faites cette augmentation en cours de mois d’abonnement, un prorata est calculé pour que vous ne payiez que la différence.</p>
 
 							<h4 id="cancel">Comment annuler mon abonnement ?</h4>
 

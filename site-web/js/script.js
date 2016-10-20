@@ -54,7 +54,7 @@ $(document).ready(function() {
 				}
 
 				// position pricer
-				if(myScroll > $("#pricer").offset().top+$("#pricer").outerHeight()-60){
+				if(myScroll > $("#pricer").offset().top+$("#pricer").outerHeight()-320){
 					$("#clone-container").removeClass("active");
 					$("#pricer  .title-table-pricing").removeClass("hiddden");			
 				}else if(myScroll> $("#pricer").offset().top-heightTitlePricer){

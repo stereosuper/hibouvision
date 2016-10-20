@@ -286,7 +286,7 @@ if(isset($_POST['submit'])){
 					<div id="gauche" class='col'>
 						<div class="chapeau">Spécifications</div >
 						<h3>Une solution tout-terrain !</h3>
-						<p>Profiter d'une bibliothèque de capteurs parmi les plus complètes du marché et continuellement enrichie.</p>
+						<p>Profitez d'une bibliothèque de capteurs parmi les plus complètes du marché et continuellement enrichie.</p>
 						<p>Pour votre sécurité, le monitoring est réalisé à partir de sondes installées au cœur de votre SI.</p>
 						<a href="https://dash01.hibouvision.com/help/available_sensor_types.htm" class="bouton ga-tracking" title="Voir la liste complete">Voir la liste complète</a>
 					</div><ul id="centre" class='col'>
@@ -314,7 +314,7 @@ if(isset($_POST['submit'])){
 								<img src="layoutImg/hibou-simple.png" srcset="layoutImg/hibou-simple.png 1x, layoutImg/hibou-simple2x.png 2x" alt="">
 							</div>
 							<h4>Installation simple</h4>
-							<p>En un click, une supervision de haut niveau clé en main !</p>
+							<p>En un clic, une supervision de haut niveau clé en main !</p>
 						</div>
 						<div class="right">
 							<div id="hibou8" class="hd">
@@ -357,7 +357,7 @@ if(isset($_POST['submit'])){
 												<td class="scops-td">5 minutes</td>
 											</tr>
 											<tr>
-												<td class="scops-td">Nombre d'utilisateurs</td>
+												<td class="scops-td">Utilisateurs simultanés</td>
 												<td class="scops-td">1</td>
 											</tr>
 											<tr>
@@ -537,7 +537,7 @@ if(isset($_POST['submit'])){
 												<td class="asio-td">5 minutes</td>
 											</tr>
 											<tr>
-												<td class="asio-td">Nombre d'utilisateurs</td>
+												<td class="asio-td">Utilisateurs simultanés</td>
 												<td class="asio-td">3</td>
 											</tr>
 											<tr>
@@ -720,7 +720,7 @@ if(isset($_POST['submit'])){
 												<td class="bubo-td">5 minutes</td>
 											</tr>
 											<tr>
-												<td class="bubo-td">Nombre d'utilisateurs</td>
+												<td class="bubo-td">Utilisateurs simultanés</td>
 												<td class="bubo-td">5</td>
 											</tr>
 											<tr>
@@ -899,7 +899,7 @@ if(isset($_POST['submit'])){
 												<td class="mighty-td">1 minute</td>
 											</tr>
 											<tr>
-												<td class="mighty-td">Nombre d'utilisateurs</td>
+												<td class="mighty-td">Utilisateurs simultanés</td>
 												<td class="mighty-td">Jusqu'à 30</td>
 											</tr>
 											<tr>
@@ -1124,7 +1124,7 @@ if(isset($_POST['submit'])){
 									</tr>
 									<tr>
 										<td class="title-line">
-											Nombre d'utilisateurs
+											Utilisateurs simultanés
 										</td>
 										<td class="scops-td">
 											1
