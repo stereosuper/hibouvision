@@ -1720,8 +1720,8 @@ if(isset($_POST['submit'])){
 						<li>©2016</li>
 						<li><a href="disclaimer.php">Legal Notice</a></li>
 						<li><a href="http://stereosuper.fr" target='_blank'>Credit</a></li>
-						<li><a href="notions-importantes.php">Concepts</a></li>
-						<li><a href="faq.php">FAQ</a></li>
+						<li><a href="notions-importantes-en.php">Concepts</a></li>
+						<li><a href="faq-en.php">FAQ</a></li>
 					</ul>
 					<ul id="sensor">
 						<li>Operated by </li>
