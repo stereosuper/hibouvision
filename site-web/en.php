@@ -2,23 +2,23 @@
 
 $questions = array(
     1 => array(
-        'question' => "Resolve the captcha : two + four = ?",
+        'question' => "Combien font deux + quatre ?",
         'reponses' => array('6', 'six')
     ),
     2 => array(
-        'question' => "Resolve the captcha : three + four = ?",
+        'question' => "Combien font trois + quatre ?",
         'reponses' => array('7', 'sept')
     ),
     3 => array(
-        'question' => "Resolve the captcha : two + two = ?",
+        'question' => "Combien font deux + deux ?",
         'reponses' => array('4', 'quatre')
     ),
     4 => array(
-        'question' => "Resolve the captcha : five + two = ?",
+        'question' => "Combien font cinq + deux ?",
         'reponses' => array('7', 'sept')
     ),
     5 => array(
-        'question' => "Resolve the captcha : one + six = ?",
+        'question' => "Combien font un + six ?",
         'reponses' => array('7', 'sept')
     )
 );
@@ -51,27 +51,27 @@ $mailto = 'contact@hibouvision.com';
 
 if(isset($_POST['submit'])){
  	if(empty($nom)){
- 		$erreurNom = 'Name is mandatory';
+ 		$erreurNom = 'Le champ Nom est obligatoire';
  		$status = 'erreur';
  	}
  	if(empty($ent)){
- 		$erreurEnt = 'Company is mandatory';
+ 		$erreurEnt = 'Le champ Société est obligatoire';
  		$status = 'erreur';
  	}
  	if(empty($mail)){
- 		$erreurMail = 'Email is mandatory';
+ 		$erreurMail = 'Le champ Email est obligatoire';
  		$status = 'erreur';
  	}else{
  		if(!preg_match('/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i', $mail)){
- 			$erreurMail = "Email is invalid";
+ 			$erreurMail = "L'adresse email est invalide";
  			$status = 'erreur';
  		}
  	}
  	if(empty($message)){
- 		$erreurMsg = 'Message is mandatory';
+ 		$erreurMsg = 'Le champ Message est obligatoire';
  		$status = 'erreur';
  	}
- 	 if(empty($captcha)){
+ 	if(empty($captcha)){
  		$erreurCaptcha = 'Le champ Captcha est obligatoire';
  		$status = 'erreur';
  	}else{
@@ -84,7 +84,7 @@ if(isset($_POST['submit'])){
  	}
 
  	if(empty($status)){
-        $subject = "Nouveau message provenant de Hibouvision.com (english)";
+        $subject = "Nouveau message provenant de Hibouvision.com";
 
  		$content = 'De: ' . $nom . "\r\n" .
  				   'E-mail: ' . $mail . "\r\n" .
@@ -93,7 +93,7 @@ if(isset($_POST['submit'])){
  				   'Usage: ' . $usage . "\r\n\r\n" .
  				   'Message: ' . "\r\n" . $message;
 
-        $headers = 'From: ' . $mailto . "\r\n" .
+ 		$headers = 'From: ' . $mailto . "\r\n" .
      	'Reply-To:' . $mailto ;
 
         $sent = mail($mailto, $subject, $content, $headers);
@@ -102,7 +102,7 @@ if(isset($_POST['submit'])){
  			$status = 'succes';
  		}else{
  			$status = 'erreur';
- 			$erreurEnvoi = "Sorry, server error. Please try again later";
+ 			$erreurEnvoi = "Nous sommes désolés, une erreur est survenue. Veuillez réessayer!";
  		}
  	}
 }
@@ -110,13 +110,13 @@ if(isset($_POST['submit'])){
 ?>
 
 <!DOCTYPE html>
-<html class="no-js" lang='en-EN'>
+<html class="no-js" lang='fr-FR'>
 	<head>
 	  	<meta charset="utf-8">
 	  	<meta name="viewport" content="width=device-width,initial-scale=1">
 	  	<title>Hibouvision — Saas solution for iT systems monitoring 100% owl inclusive !</title>
-	  	<meta name="description" content="Hibouvision is fully saas monitoring solution, 100% easy, 100% efficient... 100% owl inclusive!">
-		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+	  	<meta name="description" content="Hibouvision est un outil de supervision de SI en Saas 100% tout compris, 100% simple... 100% chouette !">
+	  	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
 		<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
@@ -137,10 +137,12 @@ if(isset($_POST['submit'])){
 	  	<meta property="og:title" content="Hibouvision">
 	  	<meta property="og:url" content="http://www.hibouvision.com">
 	  	<meta property="og:image" content="http://www.hibouvision.com/layoutImg/hibou.png">
+	  	<meta name="msvalidate.01" content="4F2DD58AE4374E8E8765489651556703" />
 	  	<link rel="stylesheet" href="css/themes/tooltipster-shadow.css">
 	  	<link rel="stylesheet" type="text/css" href="css/tooltipster.css">
 	  	<link rel="stylesheet" href="css/style.css">
 	  	<script src="js/libs/modernizr-2.6.1.min.js" type="text/javascript"></script>
+	  	<script src="js/isMobile.min.js" type="text/javascript"></script>
 	  	<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -153,17 +155,22 @@ if(isset($_POST['submit'])){
 		</script>
 	</head>
 
-	<body class="home english">
+	<body class="home">
+		<div id="clone-container">
+			<div class="container-small">
+				<div id="clone-offre"></div>
+			</div>
+		</div>
 		<header>
 			<div class="container clearfix">
 				<h1 id="logo"><a href='./'>Hibouvision</a></h1>
 				<ul class="nav" id='mainMenu'>
-					<li><a href="#simple" title="100% Easy">100% Easy</a></li>
-					<li><a href="#efficace" title="100% Efficient">100% Efficient</a></li>
-					<li><a href="#specifications" title="Specifications">Specifications</a></li>
-					<li><a href="#formules" title="Offers">Offers</a></li>
-					<li class="btn"><a href="#contact" title="Contact">Contact</a></li>
-					<li id="flag" class="en"><a href="./" title="french version" class="lang">&nbsp;</a></li>
+					<li><a href="#simple" title="Simple">100% Easy</a></li>
+					<li><a href="#efficace" title="Efficace">100% Efficient</a></li>
+					<li><a href="#specifications" title="Spécifications">Specifications</a></li>
+					<li><a href="#formules" title="Formules">Offers</a></li>
+					<li class="btn"><a href="#contact" title="Contact" class="ga-tracking" title="Menu Contact">Contact</a></li>
+					<li id="flag"><a href="en" title="english version" class="lang">&nbsp;</a></li>
 					<li id="connect"><a href="http://support.hibouvision.com" title="connexion" class="connect">&nbsp;</a></li>
 				</ul>
 			</div>
@@ -171,7 +178,7 @@ if(isset($_POST['submit'])){
 		<div id="main">
 			<div class="container">
 				<div id="part1">
-					<h2>Saas solution for iT systems monitoring<span id="chouette">100% owl inclusive!</span></h2>
+					<h2>Saas solution for iT systems monitoring<span id="chouette"> 100% owl inclusive&nbsp;&nbsp;!</span></h2>
 					 <video id="hibou" autoplay loop muted poster="layoutImg/hibouvision.jpg">
 						<source src="video/hibou2.webm" type="video/webm">
 						<source src="video/hibou2.mp4" type="video/mp4">
@@ -182,7 +189,7 @@ if(isset($_POST['submit'])){
 				 		<img src="layoutImg/arrow.gif" alt="">
 				 	</a>
 				</div>
-				<p>Hibouvision is fully saas monitoring solution, 100% easy, 100% efficient... 100% owl inclusive!</p>
+				<p>Hibouvision is fully saas monitoring solution, 100% easy, 100% efficient... 100% owl inclusive&nbsp;&nbsp;!</p>
 			</div>
 			<div id="simple">
 				<div class="infos">
@@ -192,14 +199,16 @@ if(isset($_POST['submit'])){
 								<img src="layoutImg/hibou-nuage.png" srcset="layoutImg/hibou-nuage.png 1x, layoutImg/hibou-nuage2x.png 2x" alt="">
 							</div>
 							<h4>Saas &amp; Secure</h4>
-							<p>All the benefits of Saas with guaranteed optimal security.</p>
+							<p>All the benefits of Saas with guaranteed optimal security.<br />
+							<a href="livre-blanc" class="underline" title="En savoir plus">More</a></p>
 						</div>
 						<div class="right">
 							<div id="hibou2" class="hd">
 								<img src="layoutImg/prtg.png" srcset="layoutImg/prtg.png 1x, layoutImg/prtg2x.png 2x" alt="">
 							</div>
 							<h4>PRTG based</h4>
-							<p>Trusted every day by 150,000 Admins around the globe.</p>
+							<p>Trusted every day by 150,000 Admins around the globe.<br/>
+							<a href="http://www.paessler.com" class="underline">www.paessler.com</a></p>
 						</div>
 					</div>
 				</div>
@@ -208,9 +217,9 @@ if(isset($_POST['submit'])){
 				<div class="container-small padTopBot">
 					<div class="text">
 						<div class="chapeau">100% Easy</div>
-						<h3>The interface of your dreams</h3>
+						<h3>The interface<br /> of your dreams</h3>
 						<p>Hibouvision is easy to use, fast, stylish and customizable: integrated mapping, tree views, graphics... Also available on mobile devices!</p>
-						<a href="#contact" class="bouton btnScroll">Request a demo</a>
+						<a href="#contact" class="bouton btnScroll ga-tracking" title="Demander une demo">Try it for free</a>
 					</div><div class="img ">
 						<!--<img src="layoutImg/tel.png" alt="" id="img-tel" class="foo">-->
 						<img src="layoutImg/tel.png" srcset="layoutImg/tel.png 1x, layoutImg/tel@2x.png 2x" alt="" id="img-tel" class="foo">
@@ -233,7 +242,7 @@ if(isset($_POST['submit'])){
 							<div id="hibou4" class="hd">
 								<img src="layoutImg/hibou-babies.png" srcset="layoutImg/hibou-babies.png 1x, layoutImg/hibou-babies2x.png 2x" alt="">
 							</div>
-							<h4>Scalability &amp; Resilience</h4>
+							<h4> Scalability &amp; Resilience</h4>
 							<p>Hibouvision naturally grows according to your needs</p>
 						</div>
 					</div>
@@ -243,8 +252,8 @@ if(isset($_POST['submit'])){
 						<div class="chapeau">100% Efficient</div >
 						<h3>A clear an comprehensive view</h3>
 						<p>See at a glance the status and alerts of your devices.</p>
-						<p>Single clic identification of incidents.</p>
-						<a href="#contact" class="bouton btnScroll">Request a demo</a>
+						<p>Single clic identification of incidents</p>
+						<a href="#contact" class="bouton btnScroll ga-tracking" title="Demander une demo 2">Try it for free</a>
 					</div>
 					<div class="img">
 						<!-- <img class="bar" src="layoutImg/screenshot2.png" alt="" id="screen2" > -->
@@ -266,8 +275,8 @@ if(isset($_POST['submit'])){
 							<div id="hibou6" class="hd">
 								<img src="layoutImg/hibou-vieux.png" srcset="layoutImg/hibou-vieuxdegeu.png 1x, layoutImg/hibou-vieuxdegeu2x.png 2x" alt="">
 							</div>
-							<h4>Hibouvision's partner</h4>
-							<p>Become an <a href="#contact" class="btnScroll underline">Hibouvision's partner</a> or <a href="#contact" class="btnScroll underline">find the plan</a> that suits you.</p>
+							<h4>Partenaire hibouvision</h4>
+							<p><a href="#contact" class="btnScroll underline ga-tracking" title="Devenez partenaire">Become an Hibouvision's partner</a> or<br><span class="underline"><a href="#contact" class="btnScroll ga-tracking" title="Trouvez un partenaire">find the plan that suits you.</a></span></p>
 						</div>
 					</div>
 				</div>
@@ -275,10 +284,11 @@ if(isset($_POST['submit'])){
 			<div class="bg-yellow">
 				<div class="container-small">
 					<div id="gauche" class='col'>
-						<div class="chapeau">Specifications</div >
-						<h3>No hidden costs!</h3>
-						<p>All is included in a single Hibouvision release: no add-on, no hidden costs</p>
-						<a href="#contact" class="bouton btnScroll">Request complete list</a>
+						<div class="chapeau">SPECIFICATIONS</div >
+						<h3>An all-road solution !</h3>
+						<p>Enjoy a sensors library of the most comprehensive and ever-growing market.</p>
+						<p>For your network security, monitoring requests are initialized from a local probe deployed on your IT infrastructure</p>
+						<a href="https://dash01.hibouvision.com/help/available_sensor_types.htm" class="bouton ga-tracking" title="Voir la liste complete">See the complete list</a>
 					</div><ul id="centre" class='col'>
 						<li>Agentless monitoring of bandwidth, usage, activity, uptime, and SLA monitoring</li>
 						<li>Suitable for networks of all sizes</li>
@@ -292,7 +302,7 @@ if(isset($_POST['submit'])){
 						<li>200+ sensor types (Ping, HTTP, WMI, Perccounters, WEBM, and many others)</li>
 						<li>Network traffic and behavior analysis using SNMP, NetFlow v5/v9, sFlow v5, jFlow v5, packet sniffing</li>
 						<li>Preconfigured device templates for Cisco routers, SQL servers, virtual systems, etc.</li>
-						<li>This is a non-exhaustive list, <a href="#contact" class="btnScroll">contact us</a> to learn more!</li>
+						<li>This is a non-exhaustive list,<a href="#contact" class="btnScroll ga-tracking" title="Contactez nous"> contact us</a>  to learn more!</li>
 					</ul>
 				</div>
 			</div>
@@ -311,73 +321,1316 @@ if(isset($_POST['submit'])){
 								<img src="layoutImg/sensor-factory.png" srcset="layoutImg/sensor-factory.png 1x, layoutImg/sensor-factory2x.png 2x" alt="">
 							</div>
 							<h4>Sensor Factory team</h4>
-							<p>Hibouvision is supported 24/7 by monitoring experts.</p>
+							<p>Hibouvision is supported 24/7 by monitoring experts.<br />
+							<a href="http://www.sensorfactory.eu/" class="underline">Sensor Factory</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="container-small">
 					<div class="chapeau">Plans</div>
 					<h3>To each his own Hibouvision</h3>
-					<ul id="offre">
-						<li id="scop">
-							<div class="container-img">
-								<img src="layoutImg/scop.jpg" alt="">
+					<div id="pricer-mobile">
+						<div class="offre offre-scops">
+							<button class="offre-btn">
+								<div class="offre-mobile offre-scops">
+									<ul>
+										<li class="masquotte-scops"></li>
+										<li class="title-offre"><p>Scops</p>
+										<p class="title-price">€40/month</p></li>
+										<li><p class="arrow-offre">›</p></li>
+									</ul>
+								</div>
+							</button>
+							<div class="mobile-toggle ">
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Basics</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">Number of sensors</td>
+												<td class="scops-td">100*</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">Frequency</td>
+												<td class="scops-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Concurrent users</td>
+												<td class="scops-td">1</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Auto discovering</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">24/7/365</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Retention</td>
+												<td class="scops-td">12 months</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Sensors</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">SNMP & WMI</td>
+												<td class="scops-td">Yes</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">Websites</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Cloud</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">AD & Microsoft productivity</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Databases</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Virtualisation</td>
+												<td class="scops-td">No</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Storage</td>
+												<td class="scops-td">No</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Advanced network</td>
+												<td class="scops-td">No</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Business Process</td>
+												<td class="scops-td">No</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Custom scripts</td>
+												<td class="scops-td">No</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Beta sensors</td>
+												<td class="scops-td">No</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Notifications</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">Email</td>
+												<td class="scops-td">Unlimited</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">SMS</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Voice SMS</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">SMS price/td>
+												<td class="scops-td">€ 0,20</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Voice SMS price</td>
+												<td class="scops-td">€ 0,20</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Custom notification</td>
+												<td class="scops-td">No</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Advanced</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">Unusual detection</td>
+												<td class="scops-td">No</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">Interface customization</td>
+												<td class="scops-td">No</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Multitenancy</td>
+												<td class="scops-td">No</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Support</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="scops-td">Email</td>
+												<td class="scops-td">Yes</td>
+											</tr>	
+											<tr>
+												<td class="scops-td">Portal</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Chat</td>
+												<td class="scops-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="scops-td">Phone</td>
+												<td class="scops-td">No</td>
+											</tr>
+										</table>
+									</div>
+								</div>
 							</div>
-							<ul>
-								<li><h4>Scops</h4></li>
-								<li class="gris">1 probe</li>
-								<li>200 sensors</li>
-								<li class="gris">Initial setup assistance</li>
-								<li>Year round 24/7 monitoring</li>
-							</ul>
-						</li><!--
-						--><li id="asio">
-							<div class="container-img">
-								<img src="layoutImg/asio.jpg" alt="">
+						</div>
+						<div class="offre offre-asio">
+							<button class="offre-btn">
+								<div class="offre-mobile offre-asio">
+									<ul>
+										<li class="masquotte-asio"></li>
+										<li class="title-offre"><p>Asio</p>
+										<p class="title-price">€180/month</p></li>
+										<li><p class="arrow-offre">›</p></li>
+									</ul>
+								</div>
+							</button>
+							<div class="mobile-toggle
+							">
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Basics</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">Number of sensors</td>
+												<td class="asio-td">500**</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">Frequency</td>
+												<td class="asio-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Concurrent users</td>
+												<td class="asio-td">3</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Auto discovering</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">24/7/365</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Retention</td>
+												<td class="asio-td">12 months</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Sensors</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">SNMP & WMI</td>
+												<td class="asio-td">Yes</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">Websites</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Cloud</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">AD & Microsoft productivity</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Databases</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Virtualisation</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Storage</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Advanced network</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Business Process</td>
+												<td class="asio-td">No</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Virtualisation</td>
+												<td class="asio-td">No</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Custom scripts</td>
+												<td class="asio-td">No</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Beta sensors</td>
+												<td class="asio-td">No</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Notifications</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">Email</td>
+												<td class="asio-td">Unlimited</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">SMS</td>
+												<td class="asio-td">10 included/month</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Voice SMS</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">SMS price</td>
+												<td class="asio-td">€ 0,20</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Voice SMS price</td>
+												<td class="asio-td">€ 0,20</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Custom notification</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Advanced</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">Unusual detection</td>
+												<td class="asio-td">No</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">Interface customization</td>
+												<td class="asio-td">No</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Multitenancy</td>
+												<td class="asio-td">No</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Support</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="asio-td">Email</td>
+												<td class="asio-td">Yes</td>
+											</tr>	
+											<tr>
+												<td class="asio-td">Portal</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Chat</td>
+												<td class="asio-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="asio-td">Phone</td>
+												<td class="asio-td">No</td>
+											</tr>
+										</table>
+									</div>
+								</div>
 							</div>
-							<ul>
-								<li><h4>Asio</h4></li>
-								<li class="gris">2 probes</li>
-								<li>450 sensors</li>
-								<li class="gris">Initial setup assistance</li>
-								<li>Year round 24/7 monitoring</li>
-							</ul>
-						</li><!--
-						--><li id="bubo">
-						<div class="container-img">
-								<img src="layoutImg/bubo.jpg" alt="">
+						</div>
+						<div class="offre offre-bubo">
+							<button class="offre-btn">
+								<div class="offre-mobile offre-bubo">
+									<ul>
+										<li class="masquotte-bubo"></li>
+										<li class="title-offre"><p>Bubo</p>
+										<p class="title-price">€290/month</p></li>
+										<li><p class="arrow-offre">›</p></li>
+									</ul>
+								</div>
+							</button>
+							<div class="mobile-toggle">
+								<div class="categorie ">
+									<button>
+										<p class="title-categorie">Basics</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">Number of sensors</td>
+												<td class="bubo-td">1000***</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Frequency</td>
+												<td class="bubo-td">5 minutes</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Concurrent users</td>
+												<td class="bubo-td">5</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Auto discovering</td>
+												<td class="bubo-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">24/7/365</td>
+												<td class="bubo-td">Yes</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Retention</td>
+												<td class="bubo-td">Up to 24 months</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Capteurs</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">SNMP & WMI</td>
+												<td class="bubo-td">Oui</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Sites Web</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Cloud</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">AD & Microsoft productivity</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Base de données</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Virtualisation</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Stockage</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Réseau avancé</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Business Process</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Custom scripts</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Capteur Bêta</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Notifications</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">Notification Mail</td>
+												<td class="bubo-td">Illimité</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Notification SMS</td>
+												<td class="bubo-td">15 offerts/mois</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Notification SMS Vocal</td>
+												<td class="bubo-td">15 offerts/mois</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Prix SMS</td>
+												<td class="bubo-td">0,15€</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Prix SMS Vocal</td>
+												<td class="bubo-td">0,15€</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Notification spécifique</td>
+												<td class="bubo-td">Non</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Avancées</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">Comportement inhabituel</td>
+												<td class="bubo-td">Non</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Personnalisation de l'interface</td>
+												<td class="bubo-td">Non</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Multi tenant</td>
+												<td class="bubo-td">Non</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Support</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="bubo-td">Mail</td>
+												<td class="bubo-td">Oui</td>
+											</tr>	
+											<tr>
+												<td class="bubo-td">Portail</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Chat</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="bubo-td">Tel</td>
+												<td class="bubo-td">Oui</td>
+											</tr>
+										</table>
+									</div>
+								</div>
 							</div>
-							<ul>
-								<li><h4>Bubo</h4></li>
-								<li class="gris">3 probes</li>
-								<li>1000 sensors</li>
-								<li class="gris">Initial setup assistance</li>
-								<li>Year round 24/7 monitoring</li>
-							</ul>
-						</li>
-					</ul>
-					<div id="option">
-						<h4>Options</h4>
-						<ul id="option-2">
-							<li>Work time
-								<span class="tooltip" title="
-											Contact us anytime to adjust your monitoring :
-											<ul>
-											<br>
-											<li>Probe setup and deployement</li>
-											<li>Adding a device</li>
-											<li>Adding a sensor</li>
-											<li>Existing sensor optimization</li>
-											<li>Map building</li>
-											<li>Report building</li>
-											<li>Notifications management</li>
-											<li>etc.</li>
-										</ul>">?</span>
-							</li>
-							<li class="gris">White brand: Hibouvision with your logo!</li>
-						</ul>
+						</div>
+						<div class="offre offre-mighty">
+							<button class="offre-btn">
+								<div class="offre-mobile offre-mighty">
+									<ul>
+										<li class="masquotte-mighty"></li>
+										<li class="title-offre"><p>Mighty Owl</p>
+										<p class="title-price">À partir de 340€HT/mois</p></li>
+										<li><p class="arrow-offre">›</p></li>
+									</ul>
+								</div>
+							</button>
+							<div class="mobile-toggle">
+								<div class="categorie ">
+									<button>
+										<p class="title-categorie">Basics</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">Nombre de capteurs</td>
+												<td class="mighty-td">Jusqu'à 5000****</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Fréquence</td>
+												<td class="mighty-td">1 minute</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Utilisateurs simultanés</td>
+												<td class="mighty-td">Jusqu'à 30</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Auto découverte d'équipements</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">24/7/365</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Historisque</td>
+												<td class="mighty-td">Jusqu'à 24 mois</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Capteurs</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">SNMP & WMI</td>
+												<td class="mighty-td">Oui</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Sites Web</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Cloud</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">AD & Microsoft productivity</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Base de données</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Virtualisation</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Stockage</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Réseau avancé</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Business Process</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Custom scripts</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Custom Bêta</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Notifications</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">Notification Mail</td>
+												<td class="mighty-td">Illimité</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Notification SMS</td>
+												<td class="mighty-td">20 offerts/mois</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Notification SMS Vocal</td>
+												<td class="mighty-td">20 offerts/mois</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Prix SMS</td>
+												<td class="mighty-td">0,10€</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Prix SMS Vocal</td>
+												<td class="mighty-td">0,10€</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Notification spécifique</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Avancées</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">Comportement inhabituel</td>
+												<td class="mighty-td">Oui</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Personnalisation de l'interface</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Multi tenant</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="categorie">
+									<button>
+										<p class="title-categorie">Support</p>
+									</button>
+									<div class="table-slide-toggle">
+										<table>
+											<tr>
+												<td class="mighty-td">Mail</td>
+												<td class="mighty-td">Oui</td>
+											</tr>	
+											<tr>
+												<td class="mighty-td">Portail</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Chat</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+											<tr>
+												<td class="mighty-td">Tel</td>
+												<td class="mighty-td">Oui</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div id="btn"><a href="#contact" class="bouton btnScroll">Ask for our pricing</a></div>
+					<div id="pricer" class="visible">
+						<table class="title-table-pricing">
+							<tr>
+								<td class="title-line">
+									<div class="title-empty"></div>
+								</td>
+								<td class="title-scops">
+									<p class="surmesure"> </p>
+									<p class="title-offre">Scops</p>
+									<p class="title-price">40€HT/mois</p>
+									<div class="masquotte-scops"></div>
+								</td>
+								<td class="title-asio">
+								<p class="surmesure"> </p>
+									<p class="title-offre">Asio</p>
+									<p class="title-price">180€HT/mois</p>
+									<div class="masquotte-asio"></div>
+								</td>
+								<td class="title-bubo">
+									<p class="surmesure"> </p>
+									<p class="title-offre">Bubo</p>
+									<p class="title-price">290€HT/mois</p>
+									<div class="masquotte-bubo"></div>
+								</td>
+								<td class="title-mighty">
+									<p class="surmesure">sur mesure</p>
+									<p class="title-offre">Mighty Owl</p>
+									<p class="title-price">À partir de 340€HT/mois</p>
+									<div class="masquotte-mighty"></div>
+								</td>
+							</tr>
+						</table>
+						<div id="basics" class="categorie">
+							<button type="button"><p>Basics</p><span class="btn-categorie"></button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											Nombre de capteurs
+										</td>
+										<td class="scops-td">
+											100*
+										</td>
+										<td class="asio-td">
+											500**
+										</td>
+										<td class="bubo-td">
+											1000***
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 5000****
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Fréquence
+										</td>
+										<td class="scops-td">
+											5 minutes
+										</td>
+										<td class="asio-td">
+											5 minutes
+										</td>
+										<td class="bubo-td">
+											5 minutes
+										</td>
+										<td class="mighty-td">
+											1 minute
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Utilisateurs simultanés
+										</td>
+										<td class="scops-td">
+											1
+										</td>
+										<td class="asio-td">
+											3
+										</td>
+										<td class="bubo-td">
+											5
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 30
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Auto découverte d'équipements
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											24/7/365
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Historique
+										</td>
+										<td class="scops-td">
+											12 mois
+										</td>
+										<td class="asio-td">
+											12 mois
+										</td>
+										<td class="bubo-td">
+											12 mois
+										</td>
+										<td class="mighty-td">
+											Jusqu'à 24 mois
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div id="capteurs" class="categorie">
+							<button type="button"><p>Capteurs</p><span class="btn-categorie"></button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											SNMP & WMI
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Sites Web
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Cloud
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											AD & Microsoft productivity
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Base de données
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Virtualisation
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Stockage
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Réseau avancé
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Business Process
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Custom scripts
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Capteur Bêta
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="categorie">
+							<button type="button"><p>Notifications</p><span class="btn-categorie"></button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											Notification Mail
+										</td>
+										<td class="scops-td">
+											Illimité
+										</td>
+										<td class="asio-td">
+											Illimité
+										</td>
+										<td class="bubo-td">
+											Illimité
+										</td>
+										<td class="mighty-td">
+											Illimité
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Notification SMS
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											10 offerts/mois
+										</td>
+										<td class="bubo-td">
+											15 offerts/mois
+										</td>
+										<td class="mighty-td">
+											20 offerts/mois
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Notification SMS Vocal
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											15 offerts/mois
+										</td>
+										<td class="mighty-td">
+											20 offerts/mois
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Prix SMS
+										</td>
+										<td class="scops-td">
+											0,20€								
+										</td>
+										<td class="asio-td">
+											0,20€
+										</td>
+										<td class="bubo-td">
+											0,15€
+										</td>
+										<td class="mighty-td">
+											0,10€
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Prix SMS Vocal
+										</td>
+										<td class="scops-td">
+											0,20€
+										</td>
+										<td class="asio-td">
+											0,20€
+										</td>
+										<td class="bubo-td">
+											0,15€
+										</td>
+										<td class="mighty-td">
+											0,10€
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Notification spécifique
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Non
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="categorie">
+							<button type="button"><p>Avancées</p><span class="btn-categorie"></button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											Comportement inhabituel
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Non
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Personnalisation de l'interface
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Non
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Multi tenant
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Non
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="categorie">
+							<button type="button"><p>Support</p><span class="btn-categorie"></button>
+							<div class="table-slide-toggle">
+								<table class="table-pricing">
+									<tr>
+										<td class="title-line">
+											Mail
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Portail
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Chat
+										</td>
+										<td class="scops-td">
+											Oui
+										</td>
+										<td class="asio-td">
+											Oui
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+									<tr>
+										<td class="title-line">
+											Tel
+										</td>
+										<td class="scops-td">
+											Non
+										</td>
+										<td class="asio-td">
+											Non
+										</td>
+										<td class="bubo-td">
+											Oui
+										</td>
+										<td class="mighty-td">
+											Oui
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div id="contact">
@@ -387,15 +1640,15 @@ if(isset($_POST['submit'])){
 							<div id="hibou9" class="hg">
 								<img src="layoutImg/hibou-euros.png" srcset="layoutImg/hibou-cheap.png 1x, layoutImg/hibou-cheap2x.png 2x" alt="">
 							</div>
-							<h4>Economic</h4>
-							<p>Don't pay for licenses you don't need!</p>
+							<h4>Économique</h4>
+							<p>Ne payez pas des licences dont vous n'avez pas besoin.</p>
 						</div>
 						<div class="right">
 							<div id="hibou10" class="hd">
 								<img src="layoutImg/hibou-clock.png" srcset="layoutImg/hibou-clock.png 1x, layoutImg/hibou-clock2x.png 2x" alt="">
 							</div>
-							<h4>Work time</h4>
-							<p>We can help you setup up and configure your monitoring platform.</p>
+							<h4>Heures de travaux</h4>
+							<p>Nous sommes là pour vous aider à configurer et administrer votre plate-forme.</p>
 						</div>
 					</div>
 				</div>
@@ -403,16 +1656,18 @@ if(isset($_POST['submit'])){
 					<div class="container-small clearfix">
 						<div class="text">
 							<div class="chapeau">Contact</div>
-							<h3>We are glad to answer you!</h3>
-							<p>Want to know more? Need a demo or a test drive of all the functionnalities? We're here to help!</p>
+							<h3>Testez Hibouvision</h3>
+							<p>Testez notre offre Bubo gratuitement pendant 15 jours. Pour toute autre information,  <a href="mailto:contact@hibouvision.com">contactez-nous</a>.
 						</div>
 						<div id="formulaire">
 							<?php if($status == 'succes'){ ?>
-								<p class='succes'>Thanks for your message, We will call you back as soon as possible. <br/><br/><a href="en#contact" onclick="location.reload();">Click here</a> to send another message.</p>
+								<p class='succes'>Merci, votre message a bien été envoyé.<br>Nous vous répondrons dans les plus bref délais&nbsp;! <br/><br/><a href="/#contact" onclick="location.reload();">Cliquez ici</a> pour renvoyer un autre message.</p>
+								<div class="ga-tracking-load" data-cat="Formulaire" data-action="Validation" data-label="Succes"></div>
+
 							<?php }else{ ?>
 								<?php
 								if($status == 'erreur'){
-									echo "<p class='error'><b>Oops! We could not send your message:</b><br/>";
+									echo "<p class='error'><b>Oups! Nous n'avons pas pu envoyer votre demande:</b><br/>";
 									if($erreurNom != '') echo $erreurNom .'<br/>';
 									if($erreurEnt != '') echo $erreurEnt .'<br/>';
 									if($erreurMail != '') echo $erreurMail .'<br/>';
@@ -422,13 +1677,13 @@ if(isset($_POST['submit'])){
 									echo '</p><div class="ga-tracking-load" data-cat="Formulaire" data-action="Validation" data-label="Erreur"></div>';
 								}
 								?>
-								<form method="post" action="#contact" method='POST'>
+								<form method="post" action="#contact" method='POST' >
 								    <fieldset class='<?php if($erreurNom != '') echo 'error'; ?>'>
-								        <label for="nom">Name</label>
+								        <label for="nom">Nom</label>
 								        <input type="text" id="nom" name="nom" value='<?php echo $nom; ?>'>
 								    </fieldset>
 								    <fieldset class='<?php if($erreurEnt != '') echo 'error'; ?>'>
-								        <label for="societe">Company</label>
+								        <label for="societe">Société</label>
 								        <input type="text" id="societe" name='societe' value='<?php echo $ent; ?>'>
 								    </fieldset>
 								    <fieldset class='<?php if($erreurMail != '') echo 'error'; ?>'>
@@ -436,23 +1691,23 @@ if(isset($_POST['submit'])){
 								        <input type="email" id="courriel" name='email' pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" value='<?php echo $mail; ?>'>
 								    </fieldset>
 								    <fieldset>
-								        <label for="tel">Phone</label>
+								        <label for="tel">Téléphone</label>
 								        <input type="tel" id="tel" name='tel' value='<?php echo $tel; ?>'>
 								    </fieldset>
 								    <fieldset class='big-margin'>
 								        <legend class="usage">Usage</legend><fieldset>
-								        	<input type="radio" name="usage" id='clients' value='pour vos clients' checked='checked'><label class="label-radio" for='clients'>For your customers</label><input type="radio" name="usage" id='vous' value='pour vous'> <label class="label-radio" for='vous'>For your needs</label>
+								        	<input type="radio" name="usage" id='clients' value='pour vos clients' checked='checked'><label class="label-radio" for='clients'>Pour vos clients</label><input type="radio" name="usage" id='vous' value='pour vous'> <label class="label-radio" for='vous'>Pour vous</label>
 								        </fieldset>
 								    </fieldset>
 								    <fieldset class='<?php if($erreurMsg != '') echo 'error'; ?>'>
-								        <label for="message">Message</label><textarea id="message" placeholder="Hi, I'd like to request a demo" name="message"><?php echo $message; ?></textarea>
+								        <label for="message">Message</label><textarea id="message" placeholder="Bonjour, je souhaiterais avoir plus d'informations..." name="message"><?php echo $message; ?></textarea>
 								    </fieldset>
-								     <fieldset class='captcha <?php if($erreurCaptcha != '') echo 'error'; ?>'>
+								    <fieldset class='captcha <?php if($erreurCaptcha != '') echo 'error'; ?>'>
 								    	<label for='captcha'>
 								    		<?php echo $questions[$idQuestion]['question']; ?>
 								    	</label><input type="text" name="captcha" value="">
 								    </fieldset>
-								    <button type='submit' name='submit' class="bouton">Send it!</button>
+								    <button type='submit' name='submit' class="bouton">Envoyer</button>
 								</form>
 							<?php } ?>
 						</div>
@@ -460,14 +1715,16 @@ if(isset($_POST['submit'])){
 				</div>
 			</div>
 			<footer>
-				<div class="container-small">
+				<div class="container">
 					<ul>
 						<li>©2016</li>
-						<li><a href="http://www.hibouvision.com/disclaimer">Disclaimer</a></li>
-						<li><a href="http://stereosuper.fr" target='_blank'>Credit</a></li>
+						<li><a href="mentions-legales.php">Mentions Légales</a></li>
+						<li><a href="http://stereosuper.fr" target='_blank'>Crédit</a></li>
+						<li><a href="notions-importantes.php">Notions importantes</a></li>
+						<li><a href="faq.php">Questions fréquentes</a></li>
 					</ul>
 					<ul id="sensor">
-						<li>Operated by </li>
+						<li>Service proposé par </li>
 						<li class="sf"><img src="layoutImg/sensor-factory1.png" alt="Sensor Factory"></li>
 						<li class="sf"><a href="http://www.sensorfactory.eu/" target='_blank'><img src="layoutImg/SF.png" alt=""></a></li>
 					</ul>
@@ -475,12 +1732,12 @@ if(isset($_POST['submit'])){
 			</footer>
 		</div>
 
-		<script src="js/isMobile.min.js" type="text/javascript"></script>
 		<script src="js/libs/jquery-1.8.0.min.js" type="text/javascript"></script>
 	  	<script src="js/libs/jquery.easing.1.3.js" type="text/javascript"></script>
   	    <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
   	    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.2/scrollreveal.min.js"></script>
 	  	<!--<script type="text/javascript" src="js/seeThru.js"></script>-->
 	  	<script src="js/script.js" type="text/javascript"></script>
+	  	<script src="js/ga-tracking.js" type="text/javascript"></script>
 	</body>
 </html>
