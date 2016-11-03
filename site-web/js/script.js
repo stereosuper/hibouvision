@@ -99,53 +99,57 @@ $(document).ready(function() {
 	});
 
 	$("button").click(function() {
-	  //cas desktop
-	  	if($('html').hasClass('isDesk')){
-		  	if($(this).parent(".categorie").hasClass("active")){
-		  		$(this).parent(".categorie").toggleClass("active");
-		  	}else{
-		  		$('#pricer .categorie.active').removeClass('active')
-		  		$(this).parent(".categorie").toggleClass("active");
-		  	}
-		  	//scroll
-		  	var posiScroll;
-		  	if($("#clone-container").hasClass("disable")){
-		  		posiScroll = 160;
-		  	}else{
-	  			posiScroll = 260;
-		  	}
-		  	var posElement =$('.isDesk #pricer .categorie.active').offset().top-posiScroll;
-		  	$('html,body').animate({scrollTop: posElement}, 400);
-	  	}
-	  	//cas mobile
-	  if($('html').hasClass('isMobile')){
-	  		var posElement = 0 ;
+		//cas desktop
+		//if($('html').hasClass('isDesk')){
+		if($(window).outerWidth()>767){
+			if($(this).parent(".categorie").hasClass("active")){
+				$(this).parent(".categorie").toggleClass("active");
+			}else{
+				$('#pricer .categorie.active').removeClass('active')
+				$(this).parent(".categorie").toggleClass("active");
+			}
+			//scroll
+			var posiScroll;
+			if($("#clone-container").hasClass("disable")){
+				posiScroll = 160;
+			}else{
+				posiScroll = 260;
+			}
+			if($('.isDesk #pricer .categorie').hasClass('active')){
+				var posElement =$('.isDesk #pricer .categorie.active').offset().top-posiScroll;
+				$('html,body').animate({scrollTop: posElement}, 400);
+			}
+		}else{
+		//cas mobile
+		// if($('html').hasClass('isMobile')){
+			var posElement = 0 ;
 
-		  	//CHOIX CATEGORIE
-		  	if($(this).parent().hasClass('categorie')){
-			  	if($(this).parent(".categorie").hasClass("active-cate")){
-			  		$(this).parent().removeClass("active-cate");
-			  	}else{
-			  		$(this).parent(".categorie").addClass("active-cate");
-			  	}
-		  		posElement =$(this).parent(".categorie").offset().top;
-		 	 }
-		  	//CHOIX OFFRE
-		  	if($(this).hasClass('offre-btn')){
-			  	if($(this).parent(".offre").hasClass("active")){
-			  		$(this).parent(".offre").removeClass("active");
-			  	}else{
-			  		//$(".offre.active").removeClass("active");
-			  		$(this).parent(".offre").addClass("active");
-
-			  	}
-		  		//scroll
-		  		posElement =$(this).parent('.offre.active').offset().top;
-		  	}
-		  	$('html,body').animate({scrollTop: posElement}, 400);
-
-	  	}
-
+			//CHOIX CATEGORIE
+			if($(this).parent().hasClass('categorie')){
+				if($(this).parent(".categorie").hasClass("active-cate")){
+					$(this).parent().removeClass("active-cate");
+				}else{
+					$(this).parent(".categorie").addClass("active-cate");
+				}
+				posElement =$(this).parent(".categorie").offset().top;
+				$('html,body').animate({scrollTop: posElement}, 400);
+			}
+			//CHOIX OFFRE
+			if($(this).hasClass('offre-btn')){
+				if($(this).parent(".offre").hasClass("active")){
+					$(this).parent(".offre").removeClass("active");
+				}else{
+					//$(".offre.active").removeClass("active");
+					$(this).parent(".offre").addClass("active");
+				}
+				//scroll
+				if($(this).parent('.offre').hasClass('active')){
+					posElement =$(this).parent('.offre.active').offset().top;
+					$('html,body').animate({scrollTop: posElement}, 400);
+				}
+				
+			}
+		}
 	});
 
 	//seeThru video

@@ -1234,7 +1234,7 @@ header .btn.active a {
 }
 #pricer-mobile .table-slide-toggle table tr td.mighty-td {
   background: rgba(62, 60, 67, 0.9);
-  color: #fff;
+  color: #ffffff;
 }
 #pricer-mobile .table-slide-toggle table tr td:nth-child(2) {
   text-align: center;
@@ -2026,6 +2026,12 @@ fieldset.big-margin {
   #main #nav-left-fixed ul li {
     display: inline-block;
     margin-right: 60px;
+  }
+  #clone-container {
+    display: none;
+  }
+  #clone-container.active {
+    display: none;
   }
 }
 @media (max-width: 460px) {
