@@ -43,9 +43,9 @@
 	<body>
 		<header> 
 			<div class="container clearfix">
-				<h1 id="logo"><a href='./'>Hibouvision</a></h1>
+				<h1 id="logo"><a href='en.php'>Hibouvision</a></h1>
 				<ul class="nav" id='mainMenu'>
-					<li id="flag"><a href="disclaimer" title="english version" class="lang">&nbsp;</a></li>
+					<li id="flag" class="en"><a href="notions-importantes.php" title="english version" class="lang">&nbsp;</a></li>
 				</ul>
 			</div>
 		</header>

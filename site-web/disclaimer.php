@@ -43,9 +43,9 @@
 	<body class="disclaimer">
 		<header>
 			<div class="container clearfix">
-				<h1 id="logo"><a href='en'>Hibouvision</a></h1>
+				<h1 id="logo"><a href='en.php'>Hibouvision</a></h1>
 				<ul class="nav" id='mainMenu'>
-					<li id="flag" class="en"><a href="mentions-legales" title="version française" class="lang">&nbsp;</a></li>
+					<li id="flag" class="en"><a href="mentions-legales.php" title="version française" class="lang">&nbsp;</a></li>
 				</ul>
 			</div>
 		</header>
@@ -69,7 +69,7 @@
 			<div class="container-small">
 				<ul>
 					<li>©2016</li>
-					<li><a href="http://www.hibouvision.com/disclaimer">Disclaimer</a></li>
+					<li><a href="http://www.hibouvision.com/disclaimer.php">Disclaimer</a></li>
 					<li><a href="http://stereosuper.fr" target='_blank'>Credit</a></li>
 				</ul>
 				<ul id="sensor">

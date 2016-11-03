@@ -170,7 +170,7 @@ if(isset($_POST['submit'])){
 					<li><a href="#specifications" title="Spécifications">Spécifications</a></li>
 					<li><a href="#formules" title="Formules">Formules</a></li>
 					<li class="btn"><a href="#contact" title="Contact" class="ga-tracking" title="Menu Contact">Contact</a></li>
-					<li id="flag"><a href="en" title="english version" class="lang">&nbsp;</a></li>
+					<li id="flag"><a href="en.php" title="english version" class="lang">&nbsp;</a></li>
 					<li id="connect"><a href="http://support.hibouvision.com" title="connexion" class="connect">&nbsp;</a></li>
 				</ul>
 			</div>

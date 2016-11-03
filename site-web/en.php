@@ -163,14 +163,14 @@ if(isset($_POST['submit'])){
 		</div>
 		<header>
 			<div class="container clearfix">
-				<h1 id="logo"><a href='./'>Hibouvision</a></h1>
+				<h1 id="logo"><a href='en.php'>Hibouvision</a></h1>
 				<ul class="nav" id='mainMenu'>
 					<li><a href="#simple" title="Simple">100% Easy</a></li>
 					<li><a href="#efficace" title="Efficace">100% Efficient</a></li>
 					<li><a href="#specifications" title="Spécifications">Specifications</a></li>
 					<li><a href="#formules" title="Formules">Offers</a></li>
 					<li class="btn"><a href="#contact" title="Contact" class="ga-tracking" title="Menu Contact">Contact</a></li>
-					<li id="flag"><a href="en" title="english version" class="lang">&nbsp;</a></li>
+					<li id="flag" class='en'><a href="index.php" title="version française" class="lang">&nbsp;</a></li>
 					<li id="connect"><a href="http://support.hibouvision.com" title="connexion" class="connect">&nbsp;</a></li>
 				</ul>
 			</div>
