@@ -51,9 +51,8 @@
 
 
 			$subject2 = utf8_decode("Hibouvision - Votre Livre Blanc");
-			$content2 = "Merci <strong>".$nom."</strong> !<br><br>Peu de domaine dans l'informatique sont aussi complexes à maîtriser que la supervision d’un système d’information.<br>Transversalité des compétences, temps à y consacrer, budgets à défendre sont autant de challenges qu’il faut remporter pour arriver à mettre en œuvre et surtout maintenir dans le temps une plate-forme de supervision.<br><br>Les solutions techniques sont multiples, ne permettent jamais de couvrir toutes les facettes du système d’information ce qui vient ajouter à la difficulté de construire et maintenir une supervision efficace.<br><br>" . "\r\n" .
-				"Comment conduire sa voiture avec un pare-brise opaque ? Cette image est pourtant celle qui s’impose à bon nombre de professionnels de l’IT. Parce que les projets métiers ont toujours la priorité, parce que le maintien en condition opérationnelle de votre infrastructure accapare toutes vos ressources, vous ne parvenez pas à tirer la quintessence de vos outils de monitoring.<br><br>C'est pourquoi nous vous mettons à disposition ce livre blanc pour vous permettre de démarrer votre projet de déploiement de supervision en vous posant les bonnes questions. Cette démarche est nécessaire pour obtenir au final une plate-forme de supervision qui soutienne efficacement vos processus et services IT." . "\r\n" .
-				"Toute l’équipe Sensor Factory s’associe à moi pour vous remercier de l'attention que vous portez à ce livre blanc. Nous sommes à votre entière disposition pour répondre à vos questions et vous accompagner dans cette démarche.<br><br><a href='http://www.sensorfactory.eu/livreblanc/livreblanc.pdf'>Télécharger le livre blanc</a><br><br>" . "\r\n" .
+			$content2 = "Merci <strong>".$nom."</strong> !<br><br><strong>Supervision en mode SaaS ou Hébergée maison ?</strong><br><br>" . "\r\n" .
+				"C’est une des premières questions que l’on se pose naturellement lorsqu’on envisage de confier à un partenaire le soin de fournir un service non-critique que l’on peut à priori réaliser soi même.<br><br>Résumer ce choix complexe à une étude comparative des prix est sans doute un peu rapide. Pour avoir une vision plus complète de chacune des solutions il faut intégrer l’ensemble des coûts liés au cycle de vie de votre projet.<br><br>Voici quelques points clés à prendre en considération.<br><br><a href='http://www.hibouvision.com/livre-blanc/livreblanc.pdf'>Télécharger le livre blanc</a><br><br>" . "\r\n" .
 				"En téléchargeant ce document, vous acceptez que vos noms et coordonnées soient utilisées par Sensor Factory pour vous contacter au sujet des produits et prestations présentés dans ce document. Sensor Factory ne partage pas ces informations avec des tiers.<br><br><br>Bien à vous,<br><br>Matthieu Noirbusson<br>Co-fondateur et Associé<br><br>3, chemin du Pressoir Chênaie<br>44100 Nantes<br>Tel: + 33 2 57 48 00 13<br><a href='http://www.sensorfactory.eu'>www.sensorfactory.eu</a><br><a href='http://www.hibouvision.com'>www.hibouvision.com</a><br><a href='https://twitter.com/sensorfactory'>https://twitter.com/sensorfactory</a>";
 			$headers2 = 'From: "Matthieu Noirbusson" <' . $from . '>' . "\r\n" .
 					    'Reply-To: ' . $from . "\r\n" .
@@ -145,7 +144,7 @@
 					Supervision en mode SaaS ou Hébergée maison ?
 				</h1>
 				<h2 class="mg-lg tc-paynes-grey">
-					Livre blanc - mai 2016
+					Livre blanc - octobre 2016
 				</h2>
 				<?php if($status != 'succes'){ ?>
 					<p class="mg-lg ">
