@@ -275,7 +275,7 @@ if(isset($_POST['submit'])){
 							<div id="hibou6" class="hd">
 								<img src="layoutImg/hibou-vieux.png" srcset="layoutImg/hibou-vieuxdegeu.png 1x, layoutImg/hibou-vieuxdegeu2x.png 2x" alt="">
 							</div>
-							<h4>Partenaire hibouvision</h4>
+							<h4>Hibouvision's partner</h4>
 							<p><a href="#contact" class="btnScroll underline ga-tracking" title="Devenez partenaire">Become an Hibouvision's partner</a> or<br><span class="underline"><a href="#contact" class="btnScroll ga-tracking" title="Trouvez un partenaire">find the plan that suits you.</a></span></p>
 						</div>
 					</div>
